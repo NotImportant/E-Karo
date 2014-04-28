@@ -1,0 +1,13 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/resource_managed/main/public/stylesheets/login.min.css,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/public/stylesheets/login.min.css)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/resource_managed/main/public/stylesheets/login.css,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/public/stylesheets/login.css)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/resource_managed/main/public/stylesheets/main.min.css,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/public/stylesheets/main.min.css)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/resource_managed/main/public/stylesheets/main.css,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/public/stylesheets/main.css)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/resource_managed/main/public/javascripts/main.js,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/public/javascripts/main.js)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/resource_managed/main/public/javascripts/main.min.js,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/public/javascripts/main.min.js)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/conf/application.conf,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/conf/evolutions,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/evolutions)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/conf/initial-data.yml,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/initial-data.yml)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/conf/routes,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/conf/evolutions/default,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/evolutions/default)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/conf/evolutions/default/1.sql,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/evolutions/default/1.sql)[0m

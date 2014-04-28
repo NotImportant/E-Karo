@@ -1,0 +1,141 @@
+2014-04-27 23:41:31,263 - [INFO] - from play in pool-4-thread-4 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2014-04-27 23:43:23,612 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2014-04-27 23:43:26,537 - [ERROR] - from application in New I/O worker #1 
+
+
+! @6i3gac8h8 - Internal server error, for (GET) [/] ->
+
+play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution![An SQL script need to be run on your database.]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1$$anonfun$apply$1.apply$mcV$sp(Evolutions.scala:486) ~[play-jdbc_2.10.jar:2.2.2]
+	at play.api.db.evolutions.EvolutionsPlugin.withLock(Evolutions.scala:507) ~[play-jdbc_2.10.jar:2.2.2]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:461) ~[play-jdbc_2.10.jar:2.2.2]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:459) ~[play-jdbc_2.10.jar:2.2.2]
+	at scala.collection.immutable.List.foreach(List.scala:318) ~[scala-library.jar:na]
+	at play.api.db.evolutions.EvolutionsPlugin.onStart(Evolutions.scala:459) ~[play-jdbc_2.10.jar:2.2.2]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:88) ~[play_2.10.jar:2.2.2]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:88) ~[play_2.10.jar:2.2.2]
+	at scala.collection.immutable.List.foreach(List.scala:318) ~[scala-library.jar:na]
+	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:88) ~[play_2.10.jar:2.2.2]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:88) ~[play_2.10.jar:2.2.2]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:88) ~[play_2.10.jar:2.2.2]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10.jar:2.2.2]
+	at play.api.Play$.start(Play.scala:87) ~[play_2.10.jar:2.2.2]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:139) ~[play_2.10.jar:2.2.2]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:112) ~[play_2.10.jar:2.2.2]
+	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:112) ~[play_2.10.jar:2.2.2]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:110) ~[play_2.10.jar:2.2.2]
+	at scala.util.Success.flatMap(Try.scala:200) ~[scala-library.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:110) ~[play_2.10.jar:2.2.2]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10.jar:2.2.2]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library.jar:na]
+
+2014-04-27 23:43:35,024 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2014-04-27 23:43:37,547 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2014-04-27 23:45:45,632 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2014-04-27 23:45:45,758 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2014-04-27 23:49:37,811 - [ERROR] - from play in play-internal-execution-context-1 
+Cannot invoke the action, eventually got an error: javax.persistence.PersistenceException: ERROR executing DML bindLog[] error[Referential integrity constraint violation: "CONSTRAINT_2: PUBLIC.TASK FOREIGN KEY(ASSIGNED_TO_EMAIL) REFERENCES PUBLIC.ACCOUNT(EMAIL) ('willW@sample.com')"; SQL statement:\n insert into task (id, title, done, due_date, folder, assigned_to_email, project_id) values (?,?,?,?,?,?,?) [23506-172]]
+
+2014-04-27 23:49:37,970 - [ERROR] - from application in play-internal-execution-context-1 
+
+
+! @6i3gb7c4e - Internal server error, for (POST) [/projects/9/tasks?folder=Todo] ->
+
+play.api.Application$$anon$1: Execution exception[[PersistenceException: ERROR executing DML bindLog[] error[Referential integrity constraint violation: "CONSTRAINT_2: PUBLIC.TASK FOREIGN KEY(ASSIGNED_TO_EMAIL) REFERENCES PUBLIC.ACCOUNT(EMAIL) ('willW@sample.com')"; SQL statement:\n insert into task (id, title, done, due_date, folder, assigned_to_email, project_id) values (?,?,?,?,?,?,?) [23506-172]]]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.2]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10.jar:2.2.2]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.2]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.2]
+	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.2]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:257) [play_2.10.jar:2.2.2]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10.jar:2.2.2]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
+Caused by: javax.persistence.PersistenceException: ERROR executing DML bindLog[] error[Referential integrity constraint violation: "CONSTRAINT_2: PUBLIC.TASK FOREIGN KEY(ASSIGNED_TO_EMAIL) REFERENCES PUBLIC.ACCOUNT(EMAIL) ('willW@sample.com')"; SQL statement:\n insert into task (id, title, done, due_date, folder, assigned_to_email, project_id) values (?,?,?,?,?,?,?) [23506-172]]
+	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:97) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.insert(DmlBeanPersister.java:57) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.persist.DefaultPersistExecute.executeInsertBean(DefaultPersistExecute.java:66) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeNow(PersistRequestBean.java:448) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeOrQueue(PersistRequestBean.java:478) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.persist.DefaultPersister.insert(DefaultPersister.java:335) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.persist.DefaultPersister.saveEnhanced(DefaultPersister.java:310) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.persist.DefaultPersister.saveRecurse(DefaultPersister.java:280) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.persist.DefaultPersister.save(DefaultPersister.java:248) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServer.save(DefaultServer.java:1568) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServer.save(DefaultServer.java:1558) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebean.Ebean.save(Ebean.java:453) ~[avaje-ebeanorm.jar:na]
+	at play.db.ebean.Model.save(Model.java:91) ~[play-java-ebean_2.10.jar:2.2.2]
+	at models.Task.create(Task.java:93) ~[na:na]
+	at controllers.Tasks.add(Tasks.java:46) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(routes_routing.scala:229) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(routes_routing.scala:229) ~[na:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10.jar:2.2.2]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10.jar:2.2.2]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10.jar:2.2.2]
+	at play.GlobalSettings$1.call(GlobalSettings.java:64) ~[play_2.10.jar:2.2.2]
+	at play.mvc.Security$AuthenticatedAction.call(Security.java:45) ~[play_2.10.jar:2.2.2]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10.jar:2.2.2]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10.jar:2.2.2]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.2]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.2]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) ~[scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10.jar:2.2.2]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10.jar:2.2.0]
+	... 4 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLException: Referential integrity constraint violation: "CONSTRAINT_2: PUBLIC.TASK FOREIGN KEY(ASSIGNED_TO_EMAIL) REFERENCES PUBLIC.ACCOUNT(EMAIL) ('willW@sample.com')"; SQL statement:
+insert into task (id, title, done, due_date, folder, assigned_to_email, project_id) values (?,?,?,?,?,?,?) [23506-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329) ~[h2.jar:1.3.172]
+	at org.h2.message.DbException.get(DbException.java:169) ~[h2.jar:1.3.172]
+	at org.h2.message.DbException.get(DbException.java:146) ~[h2.jar:1.3.172]
+	at org.h2.constraint.ConstraintReferential.checkRowOwnTable(ConstraintReferential.java:368) ~[h2.jar:1.3.172]
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:310) ~[h2.jar:1.3.172]
+	at org.h2.table.Table.fireConstraints(Table.java:880) ~[h2.jar:1.3.172]
+	at org.h2.table.Table.fireAfterRow(Table.java:897) ~[h2.jar:1.3.172]
+	at org.h2.command.dml.Insert.insertRows(Insert.java:128) ~[h2.jar:1.3.172]
+	at org.h2.command.dml.Insert.update(Insert.java:86) ~[h2.jar:1.3.172]
+	at org.h2.command.CommandContainer.update(CommandContainer.java:79) ~[h2.jar:1.3.172]
+	at org.h2.command.Command.executeUpdate(Command.java:235) ~[h2.jar:1.3.172]
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:154) ~[h2.jar:1.3.172]
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:140) ~[h2.jar:1.3.172]
+	at com.jolbox.bonecp.PreparedStatementHandle.executeUpdate(PreparedStatementHandle.java:205) ~[bonecp.jar:na]
+	at com.avaje.ebeaninternal.server.type.DataBind.executeUpdate(DataBind.java:55) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.persist.dml.InsertHandler.execute(InsertHandler.java:134) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:86) ~[avaje-ebeanorm.jar:na]
+	... 35 common frames omitted
+

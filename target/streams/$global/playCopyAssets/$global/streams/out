@@ -1,0 +1,24 @@
+[0m[[0mdebug[0m] [0mCopy play resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/public/images/arrow-left.png,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/public/images/arrow-left.png)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/public/images/breadcrumb-1.png,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/public/images/breadcrumb-1.png)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/public/images/breadcrumb-2.png,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/public/images/breadcrumb-2.png)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/public/images/breadcrumb.png,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/public/images/breadcrumb.png)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/public/images/loading.gif,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/public/images/loading.gif)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/public/images/pattern.png,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/public/images/pattern.png)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/public/images/icons/addRemove.png,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/public/images/icons/addRemove.png)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/public/images/icons/clock.png,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/public/images/icons/clock.png)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/public/images/icons/delete.png,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/public/images/icons/delete.png)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/public/images/icons/drawer.folder.png,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/public/images/icons/drawer.folder.png)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/public/images/icons/folder.png,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/public/images/icons/folder.png)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/public/images/icons/home.png,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/public/images/icons/home.png)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/public/images/icons/options.png,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/public/images/icons/options.png)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/public/images/icons/user.png,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/public/images/icons/user.png)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/public/images/icons/user2.png,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/public/images/icons/user2.png)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/public/javascripts/backbone-min.js,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/public/javascripts/backbone-min.js)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/public/javascripts/underscore-min.js,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/public/javascripts/underscore-min.js)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/resource_managed/main/public/stylesheets/login.min.css,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/public/stylesheets/login.min.css)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/resource_managed/main/public/stylesheets/login.css,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/public/stylesheets/login.css)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/resource_managed/main/public/stylesheets/main.min.css,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/public/stylesheets/main.min.css)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/resource_managed/main/public/stylesheets/main.css,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/public/stylesheets/main.css)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/resource_managed/main/public/javascripts/main.js,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/public/javascripts/main.js)[0m
+[0m[[0mdebug[0m] [0m	(/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/resource_managed/main/public/javascripts/main.min.js,/Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes/public/javascripts/main.min.js)[0m
