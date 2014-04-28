@@ -1,4 +1,4 @@
-name := "zentask"
+name := "E-Karo"
 
 version := "1.0-SNAPSHOT"
 

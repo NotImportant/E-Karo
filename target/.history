@@ -1,2 +1,7 @@
 run
 eclipse with-source=true
+run
+clean
+compile
+run
+compile
