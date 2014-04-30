@@ -5,3 +5,37 @@ clean
 compile
 run
 compile
+run
+start
+gae:deploy myapp
+run
+clean
+compile
+run
+compile
+ryn
+run
+compile
+run
+compile
+run
+clean
+run
+compile
+run
+clean
+compile
+play run
+run
+clear
+clean
+compile
+run
+clean
+run
+ls
+play run
+test
+play
+compile
+test

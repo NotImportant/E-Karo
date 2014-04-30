@@ -5,7 +5,7 @@ users:
 
     - !!models.User
         email:      guillaume@sample.com
-        name:       Guillaume Bort
+        name:       Titus Chirchir
         password:   secret
     
     - !!models.User

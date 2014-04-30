@@ -1,41 +1,25 @@
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mInitial source changes: [0m
 [0m[[0mdebug[0m] [0m	removed:Set()[0m
-[0m[[0mdebug[0m] [0m	added: Set(/Users/tituschirchir/E-Karo/E-Karo/app/models/Student.java, /Users/tituschirchir/E-Karo/E-Karo/app/models/School.java, /Users/tituschirchir/E-Karo/E-Karo/app/models/Fees.java, /Users/tituschirchir/E-Karo/E-Karo/app/models/Guardian.java)[0m
-[0m[[0mdebug[0m] [0m	modified: Set()[0m
+[0m[[0mdebug[0m] [0m	added: Set()[0m
+[0m[[0mdebug[0m] [0m	modified: Set(/Users/tituschirchir/E-Karo/E-Karo/app/models/Permission.java)[0m
 [0m[[0mdebug[0m] [0mRemoved products: Set()[0m
 [0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
 [0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
-[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/Users/tituschirchir/E-Karo/E-Karo/app/models/Student.java, /Users/tituschirchir/E-Karo/E-Karo/app/models/School.java, /Users/tituschirchir/E-Karo/E-Karo/app/models/Fees.java, /Users/tituschirchir/E-Karo/E-Karo/app/models/Guardian.java)[0m
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/Users/tituschirchir/E-Karo/E-Karo/app/models/Permission.java)[0m
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
 [0m[[0mdebug[0m] [0m	product: Set()[0m
 [0m[[0mdebug[0m] [0m	binary dep: Set()[0m
 [0m[[0mdebug[0m] [0m	external source: Set()[0m
-[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/Users/tituschirchir/E-Karo/E-Karo/app/models/Student.java, /Users/tituschirchir/E-Karo/E-Karo/app/models/School.java, /Users/tituschirchir/E-Karo/E-Karo/app/models/Fees.java, /Users/tituschirchir/E-Karo/E-Karo/app/models/Guardian.java)[0m
-[0m[[0minfo[0m] [0mCompiling 4 Java sources to /Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes...[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/Users/tituschirchir/E-Karo/E-Karo/app/models/Permission.java)[0m
+[0m[[0minfo[0m] [0mCompiling 1 Java source to /Users/tituschirchir/E-Karo/E-Karo/target/scala-2.10/classes...[0m
 [0m[[0mdebug[0m] [0mAttempting to call javac directly...[0m
 [0m[[0mdebug[0m] [0mcom.sun.tools.javac.Main not found with appropriate method signature; forking javac instead[0m
-[0m[[0mdebug[0m] [0mForking javac: javac @/var/folders/34/0bfwdr6j0md2r6snk2987dzr0000gn/T/sbt_c44c602e/argfile[0m
+[0m[[0mdebug[0m] [0mForking javac: javac @/var/folders/34/0bfwdr6j0md2r6snk2987dzr0000gn/T/sbt_e3d9a917/argfile[0m
 [0m[[0mdebug[0m] [0mjavac returned exit code: 0[0m
-[0m[[0mdebug[0m] [0mJava compilation took 5.614048 s[0m
-[0m[[0mdebug[0m] [0mJava analysis took 0.492195 s[0m
-[0m[[0mdebug[0m] [0mInvalidating by inheritance (transitively)...[0m
-[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/tituschirchir/E-Karo/E-Karo/app/models/Student.java)[0m
-[0m[[0mdebug[0m] [0mInvalidated by transitive public inheritance: Set(/Users/tituschirchir/E-Karo/E-Karo/app/models/Student.java)[0m
-[0m[[0mdebug[0m] [0mInvalidated by direct dependency: Set(/Users/tituschirchir/E-Karo/E-Karo/app/models/Student.java, /Users/tituschirchir/E-Karo/E-Karo/app/models/School.java)[0m
-[0m[[0mdebug[0m] [0mInvalidating by inheritance (transitively)...[0m
-[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/tituschirchir/E-Karo/E-Karo/app/models/School.java)[0m
-[0m[[0mdebug[0m] [0mInvalidated by transitive public inheritance: Set(/Users/tituschirchir/E-Karo/E-Karo/app/models/School.java)[0m
-[0m[[0mdebug[0m] [0mInvalidated by direct dependency: Set(/Users/tituschirchir/E-Karo/E-Karo/app/models/School.java)[0m
-[0m[[0mdebug[0m] [0mInvalidating by inheritance (transitively)...[0m
-[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/tituschirchir/E-Karo/E-Karo/app/models/Fees.java)[0m
-[0m[[0mdebug[0m] [0mInvalidated by transitive public inheritance: Set(/Users/tituschirchir/E-Karo/E-Karo/app/models/Fees.java)[0m
-[0m[[0mdebug[0m] [0mInvalidated by direct dependency: Set(/Users/tituschirchir/E-Karo/E-Karo/app/models/Student.java, /Users/tituschirchir/E-Karo/E-Karo/app/models/Fees.java)[0m
-[0m[[0mdebug[0m] [0mInvalidating by inheritance (transitively)...[0m
-[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/tituschirchir/E-Karo/E-Karo/app/models/Guardian.java)[0m
-[0m[[0mdebug[0m] [0mInvalidated by transitive public inheritance: Set(/Users/tituschirchir/E-Karo/E-Karo/app/models/Guardian.java)[0m
-[0m[[0mdebug[0m] [0mInvalidated by direct dependency: Set(/Users/tituschirchir/E-Karo/E-Karo/app/models/Guardian.java, /Users/tituschirchir/E-Karo/E-Karo/app/models/Student.java)[0m
+[0m[[0mdebug[0m] [0mJava compilation took 12.130731 s[0m
+[0m[[0mdebug[0m] [0mJava analysis took 0.060312 s[0m
 [0m[[0mdebug[0m] [0mNew invalidations:[0m
 [0m[[0mdebug[0m] [0m	Set()[0m
 [0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m

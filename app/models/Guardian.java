@@ -1,19 +1,20 @@
 package models;
 
-import java.util.*;
+import javax.persistence.Entity;
 
-import javax.persistence.*;
-
-import play.db.ebean.*;
-
-import com.avaje.ebean.*;
+import play.db.ebean.Model;
 
 /**
  * Project entity managed by Ebean
  */
 @Entity 
-public class Guardian extends Model {
+public class Guardian extends Model implements Person {
 
     public static Model.Finder<Long,Guardian> find = new Model.Finder<Long,Guardian>(Long.class, Guardian.class);
+
+	@Override
+	public Permission getPermission() {
+		return Permission.GUARDIAN;
+	}
 
 }

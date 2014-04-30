@@ -1,12 +1,12 @@
 package controllers;
 
-import play.*;
-import play.mvc.*;
-import play.data.*;
-import static play.data.Form.*;
-
-import models.*;
-import views.html.*;
+import static play.data.Form.form;
+import models.User;
+import play.Routes;
+import play.data.Form;
+import play.mvc.Controller;
+import play.mvc.Result;
+import views.html.login;
 
 public class Application extends Controller {
   
@@ -25,7 +25,7 @@ public class Application extends Controller {
         }
         
     }
-
+    
     /**
      * Login page.
      */
