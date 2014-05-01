@@ -1,23 +1,36 @@
-2014-04-29 22:31:36,178 - [INFO] - from play in pool-34-thread-4 
+2014-04-30 22:27:01,708 - [INFO] - from play in pool-6-thread-1 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2014-04-29 22:33:13,849 - [ERROR] - from application in New I/O worker #1 
+2014-04-30 22:27:49,893 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2014-04-30 22:27:53,220 - [ERROR] - from application in New I/O worker #1 
 
 
-! @6i44fa61g - Internal server error, for (GET) [/] ->
+! @6i4bljkdp - Internal server error, for (GET) [/] ->
 
-play.PlayExceptions$CompilationException: Compilation error[error: cannot find symbol]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution![An SQL script need to be run on your database.]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1$$anonfun$apply$1.apply$mcV$sp(Evolutions.scala:486) ~[play-jdbc_2.10.jar:2.2.2]
+	at play.api.db.evolutions.EvolutionsPlugin.withLock(Evolutions.scala:507) ~[play-jdbc_2.10.jar:2.2.2]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:461) ~[play-jdbc_2.10.jar:2.2.2]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:459) ~[play-jdbc_2.10.jar:2.2.2]
+	at scala.collection.immutable.List.foreach(List.scala:318) ~[scala-library.jar:na]
+	at play.api.db.evolutions.EvolutionsPlugin.onStart(Evolutions.scala:459) ~[play-jdbc_2.10.jar:2.2.2]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:88) ~[play_2.10.jar:2.2.2]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:88) ~[play_2.10.jar:2.2.2]
+	at scala.collection.immutable.List.foreach(List.scala:318) ~[scala-library.jar:na]
+	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:88) ~[play_2.10.jar:2.2.2]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:88) ~[play_2.10.jar:2.2.2]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:88) ~[play_2.10.jar:2.2.2]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10.jar:2.2.2]
+	at play.api.Play$.start(Play.scala:87) ~[play_2.10.jar:2.2.2]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:139) ~[play_2.10.jar:2.2.2]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:112) ~[play_2.10.jar:2.2.2]
 	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library.jar:na]
-	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10.jar:2.2.2]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:112) ~[play_2.10.jar:2.2.2]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:110) ~[play_2.10.jar:2.2.2]
+	at scala.util.Success.flatMap(Try.scala:200) ~[scala-library.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:110) ~[play_2.10.jar:2.2.2]
 	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10.jar:2.2.2]
 	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
 	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
@@ -27,6 +40,9 @@ play.PlayExceptions$CompilationException: Compilation error[error: cannot find s
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library.jar:na]
 
-2014-04-29 22:33:14,119 - [WARN] - from play in New I/O worker #1 
-No application found at invoker init
+2014-04-30 22:28:12,259 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2014-04-30 22:28:16,184 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
 

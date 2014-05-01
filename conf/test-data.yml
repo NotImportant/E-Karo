@@ -1,0 +1,23 @@
+
+# SchoolCodes
+     - !!models.SchoolCode
+        schoolType:      Kindergarten
+        status:       Private
+
+     - !!models.SchoolCode
+        schoolType:      Kindergarten
+        status:       Public
+        
+     - !!models.SchoolCode
+        schoolType:      Primary
+        status:       Public
+        
+     - !!models.SchoolCode
+        schoolType:      Secondary
+        status:       Private
+        
+     - !!models.SchoolCode
+        schoolType:      Secondary
+        status:       Private
+    
+            

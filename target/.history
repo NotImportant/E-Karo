@@ -39,3 +39,13 @@ test
 play
 compile
 test
+run
+test
+compile
+run
+test
+clean
+compile
+test
+debug
+test

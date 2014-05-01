@@ -1,12 +1,13 @@
 package models;
 
-import java.util.*;
+import java.util.List;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
-import play.db.ebean.*;
-
-import com.avaje.ebean.*;
+import play.data.validation.Constraints;
+import play.db.ebean.Model;
 
 /**
  * Project entity managed by Ebean
@@ -14,21 +15,40 @@ import com.avaje.ebean.*;
 @Entity 
 public class School extends Model {
 	@Id
-	Long id;
-	Long schoolCode;
-	String schoolType; //primary, secondary, University
-	String name;
+	public Long id;
 	
-    @ManyToMany
-    public List<Student> students = new ArrayList<Student>();
+	@OneToOne
+	public SchoolCode schoolCode;
+	
+	@Constraints.Required
+	public String name;
     
-    public School(Long schoolCode, String schoolType, String name, Student student)
-    {
-    	this.schoolCode = schoolCode;
-    	this.schoolType = schoolType;
-    	this.name = name;
-    	this.students.add(student);
-    }
     public static Model.Finder<Long,School> find = new Model.Finder<Long,School>(Long.class, School.class);
+
+	/**
+	 * Retrieve all schools.
+	 */
+	public static List<School> findAll() {
+		return find.all();
+	}
+
+	/**
+	 * Retrieve all schools by schoolCode
+	 */
+	public static List<School> findAllBySchoolCode(SchoolCode schoolCode) {
+		return find.where().eq("schoolCode", schoolCode).findList();
+	}
+
+	/**
+	 * Retrieve a School by name.
+	 */
+	public static School findByName(String name) {
+		return find.where().eq("name", name).findUnique();
+	}
+
+	@Override
+	public String toString() {
+		return "School(" + name + ")";
+	}
 
 }
