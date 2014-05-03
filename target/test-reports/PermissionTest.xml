@@ -1,11 +1,87 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testsuite hostname="Titus-Chirchirs-MacBook-Pro.local" name="models.PermissionTest" tests="1" errors="0" failures="0" time="0.457">
+<testsuite hostname="tituschchirsmbp.home" name="models.PermissionTest" tests="1" errors="0" failures="1" time="0.29">
         <properties>
       <property name="jline.esc.timeout" value="0"/><property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/><property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib"/><property name="java.vm.version" value="25.0-b70"/><property name="gopherProxySet" value="false"/><property name="java.vm.vendor" value="Oracle Corporation"/><property name="java.vendor.url" value="http://java.oracle.com/"/><property name="path.separator" value=":"/><property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/><property name="file.encoding.pkg" value="sun.io"/><property name="user.country" value="US"/><property name="sun.java.launcher" value="SUN_STANDARD"/><property name="sun.os.patch.level" value="unknown"/><property name="java.vm.specification.name" value="Java Virtual Machine Specification"/><property name="user.dir" value="/Users/tituschirchir/E-Karo/E-Karo"/><property name="java.runtime.version" value="1.8.0-b132"/><property name="sbt.boot.properties" value="/Users/tituschirchir/Downloads/play-2.2.2/framework/sbt/sbt.boot.properties"/><property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/><property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/endorsed"/><property name="os.arch" value="x86_64"/><property name="java.io.tmpdir" value="/var/folders/34/0bfwdr6j0md2r6snk2987dzr0000gn/T/"/><property name="line.separator" value="
-"/><property name="java.vm.specification.vendor" value="Oracle Corporation"/><property name="os.name" value="Mac OS X"/><property name="sun.jnu.encoding" value="UTF-8"/><property name="java.library.path" value="/Users/tituschirchir/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/><property name="java.specification.name" value="Java Platform API Specification"/><property name="java.class.version" value="52.0"/><property name="play.home" value="/Users/tituschirchir/Downloads/play-2.2.2/framework"/><property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/><property name="os.version" value="10.9.2"/><property name="user.home" value="/Users/tituschirchir"/><property name="user.timezone" value="America/New_York"/><property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/><property name="file.encoding" value="UTF-8"/><property name="java.specification.version" value="1.8"/><property name="java.class.path" value="/Users/tituschirchir/Downloads/play-2.2.2/framework/sbt/sbt-launch.jar"/><property name="user.name" value="tituschirchir"/><property name="jline.shutdownhook" value="false"/><property name="play.version" value="2.2.2"/><property name="java.vm.specification.version" value="1.8"/><property name="sun.java.command" value="/Users/tituschirchir/Downloads/play-2.2.2/framework/sbt/sbt-launch.jar play"/><property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre"/><property name="sun.arch.data.model" value="64"/><property name="user.language" value="en"/><property name="java.specification.vendor" value="Oracle Corporation"/><property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/><property name="java.vm.info" value="mixed mode"/><property name="java.version" value="1.8.0"/><property name="java.ext.dirs" value="/Users/tituschirchir/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/><property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/classes"/><property name="java.vendor" value="Oracle Corporation"/><property name="file.separator" value="/"/><property name="sbt.scala.version" value="2.10.3"/><property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/><property name="sun.io.unicode.encoding" value="UnicodeBig"/><property name="sun.cpu.endian" value="little"/><property name="sun.cpu.isalist" value=""/>
+"/><property name="java.vm.specification.vendor" value="Oracle Corporation"/><property name="os.name" value="Mac OS X"/><property name="sun.jnu.encoding" value="UTF-8"/><property name="java.library.path" value="/Users/tituschirchir/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/><property name="java.specification.name" value="Java Platform API Specification"/><property name="java.class.version" value="52.0"/><property name="play.home" value="/Users/tituschirchir/Downloads/play-2.2.2/framework"/><property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/><property name="os.version" value="10.9.2"/><property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/><property name="user.home" value="/Users/tituschirchir"/><property name="user.timezone" value="America/New_York"/><property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/><property name="file.encoding" value="UTF-8"/><property name="java.specification.version" value="1.8"/><property name="java.class.path" value="/Users/tituschirchir/Downloads/play-2.2.2/framework/sbt/sbt-launch.jar"/><property name="user.name" value="tituschirchir"/><property name="jline.shutdownhook" value="false"/><property name="play.version" value="2.2.2"/><property name="java.vm.specification.version" value="1.8"/><property name="sun.java.command" value="/Users/tituschirchir/Downloads/play-2.2.2/framework/sbt/sbt-launch.jar play"/><property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre"/><property name="sun.arch.data.model" value="64"/><property name="user.language" value="en"/><property name="java.specification.vendor" value="Oracle Corporation"/><property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/><property name="java.vm.info" value="mixed mode"/><property name="java.version" value="1.8.0"/><property name="java.ext.dirs" value="/Users/tituschirchir/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/><property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/classes"/><property name="java.vendor" value="Oracle Corporation"/><property name="file.separator" value="/"/><property name="sbt.scala.version" value="2.10.3"/><property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/><property name="sun.io.unicode.encoding" value="UnicodeBig"/><property name="sun.cpu.endian" value="little"/><property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/><property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/><property name="sun.cpu.isalist" value=""/>
     </properties>
         <testcase classname="models.PermissionTest" name="testPermissions" time="0.0">
-      
+      <failure message="ERROR executing DML bindLog[] error[Table &quot;SCHOOL_CODE&quot; not found; SQL statement:\n insert into school_code (id, school_type, status) values (?,?,?) [42102-172]]" type="sbt.ForkMain$ForkError">
+              sbt.ForkMain$ForkError: ERROR executing DML bindLog[] error[Table &quot;SCHOOL_CODE&quot; not found; SQL statement:\n insert into school_code (id, school_type, status) values (?,?,?) [42102-172]]
+	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:97)
+	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.insert(DmlBeanPersister.java:57)
+	at com.avaje.ebeaninternal.server.persist.DefaultPersistExecute.executeInsertBean(DefaultPersistExecute.java:66)
+	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeNow(PersistRequestBean.java:448)
+	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeOrQueue(PersistRequestBean.java:478)
+	at com.avaje.ebeaninternal.server.persist.DefaultPersister.insert(DefaultPersister.java:335)
+	at com.avaje.ebeaninternal.server.persist.DefaultPersister.saveEnhanced(DefaultPersister.java:310)
+	at com.avaje.ebeaninternal.server.persist.DefaultPersister.saveRecurse(DefaultPersister.java:280)
+	at com.avaje.ebeaninternal.server.persist.DefaultPersister.save(DefaultPersister.java:248)
+	at com.avaje.ebeaninternal.server.core.DefaultServer.save(DefaultServer.java:1759)
+	at com.avaje.ebeaninternal.server.core.DefaultServer.save(DefaultServer.java:1737)
+	at com.avaje.ebean.Ebean.save(Ebean.java:526)
+	at com.avaje.ebean.Ebean.save(Ebean.java:533)
+	at models.PermissionTest.setUp(PermissionTest.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at com.novocode.junit.JUnitRunner.run(JUnitRunner.java:90)
+	at sbt.RunnerWrapper$1.runRunner2(FrameworkWrapper.java:223)
+	at sbt.RunnerWrapper$1.execute(FrameworkWrapper.java:236)
+	at sbt.ForkMain$Run$2.call(ForkMain.java:294)
+	at sbt.ForkMain$Run$2.call(ForkMain.java:284)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: sbt.ForkMain$ForkError: Table &quot;SCHOOL_CODE&quot; not found; SQL statement:
+insert into school_code (id, school_type, status) values (?,?,?) [42102-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.command.Parser.readTableOrView(Parser.java:4824)
+	at org.h2.command.Parser.readTableOrView(Parser.java:4802)
+	at org.h2.command.Parser.parseInsert(Parser.java:966)
+	at org.h2.command.Parser.parsePrepared(Parser.java:375)
+	at org.h2.command.Parser.parse(Parser.java:279)
+	at org.h2.command.Parser.parse(Parser.java:251)
+	at org.h2.command.Parser.prepareCommand(Parser.java:218)
+	at org.h2.engine.Session.prepareLocal(Session.java:425)
+	at org.h2.engine.Session.prepareCommand(Session.java:374)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcPreparedStatement.&lt;init&gt;(JdbcPreparedStatement.java:70)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:267)
+	at com.jolbox.bonecp.ConnectionHandle.prepareStatement(ConnectionHandle.java:1024)
+	at com.avaje.ebeaninternal.server.persist.dml.InsertHandler.getPstmt(InsertHandler.java:125)
+	at com.avaje.ebeaninternal.server.persist.dml.InsertHandler.bind(InsertHandler.java:105)
+	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:79)
+	... 50 more
+
+            </failure>
     </testcase>
         <system-out>
           

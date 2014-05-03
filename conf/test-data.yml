@@ -1,23 +1,26 @@
 
 # SchoolCodes
      - !!models.SchoolCode
-        schoolType:      Kindergarten
-        status:       Private
+         id        :      1
+         schoolType:       Kindergarten
+         status:       Private
 
      - !!models.SchoolCode
-        schoolType:      Kindergarten
-        status:       Public
+         id        :      2
+         schoolType:       Kindergarten
+         status:           Public
         
      - !!models.SchoolCode
-        schoolType:      Primary
-        status:       Public
+         id        :      3
+         schoolType:       Primary
+         status:           Public
         
      - !!models.SchoolCode
-        schoolType:      Secondary
-        status:       Private
+         id        :      4
+         schoolType:       Secondary
+         status:           Private
         
      - !!models.SchoolCode
-        schoolType:      Secondary
-        status:       Private
-    
-            
+         id        :      5
+         schoolType:       University
+         status:           Parallel          

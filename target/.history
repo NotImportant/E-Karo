@@ -49,3 +49,6 @@ compile
 test
 debug
 test
+compile
+run
+test

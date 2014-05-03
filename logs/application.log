@@ -1,13 +1,13 @@
-2014-04-30 22:27:01,708 - [INFO] - from play in pool-6-thread-1 
+2014-04-30 22:53:23,738 - [INFO] - from play in pool-12-thread-2 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2014-04-30 22:27:49,893 - [INFO] - from play in play-internal-execution-context-1 
+2014-04-30 22:53:35,003 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:h2:mem:play
 
-2014-04-30 22:27:53,220 - [ERROR] - from application in New I/O worker #1 
+2014-04-30 22:53:36,224 - [ERROR] - from application in New I/O worker #1 
 
 
-! @6i4bljkdp - Internal server error, for (GET) [/] ->
+! @6i4bp3f21 - Internal server error, for (GET) [/] ->
 
 play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution![An SQL script need to be run on your database.]
 	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1$$anonfun$apply$1.apply$mcV$sp(Evolutions.scala:486) ~[play-jdbc_2.10.jar:2.2.2]
@@ -40,9 +40,9 @@ play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evoluti
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library.jar:na]
 
-2014-04-30 22:28:12,259 - [INFO] - from play in play-internal-execution-context-1 
+2014-04-30 22:53:46,894 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:h2:mem:play
 
-2014-04-30 22:28:16,184 - [INFO] - from play in play-internal-execution-context-1 
+2014-04-30 22:53:47,590 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 

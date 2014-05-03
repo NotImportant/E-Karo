@@ -1,16 +1,55 @@
 [0m[[0mdebug[0m] [0mForking tests - parallelism = false[0m
 [0m[[0mdebug[0m] [0mCreate a single-thread test executor[0m
 [0m[[0mdebug[0m] [0mRunner for sbt.FrameworkWrapper produced 1 initial tasks for 1 tests.[0m
-[0m[[0mdebug[0m] [0m  Running TaskDef(models.PermissionTest, sbt.ForkMain$AnnotatedFingerscan@4410e537, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(models.PermissionTest, sbt.ForkMain$AnnotatedFingerscan@1fda259f, false, [SuiteSelector])[0m
 [0m[[0mdebug[0m] [0m[34mTest run started[0m[0m
 [0m[[0mdebug[0m] [0mTest models.[33mPermissionTest[0m.[36mtestPermissions[0m started[0m
+[0m[[31merror[0m] [0mTest models.[33mPermissionTest[0m.[31mtestPermissions[0m failed: javax.persistence.[31mPersistenceException[0m: ERROR executing DML bindLog[] error[Table "SCHOOL_CODE" not found; SQL statement:\n insert into school_code (id, school_type, status) values (?,?,?) [42102-172]][0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:97)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.insert(DmlBeanPersister.java:57)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.persist.DefaultPersistExecute.executeInsertBean(DefaultPersistExecute.java:66)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeNow(PersistRequestBean.java:448)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeOrQueue(PersistRequestBean.java:478)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.persist.DefaultPersister.insert(DefaultPersister.java:335)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.persist.DefaultPersister.saveEnhanced(DefaultPersister.java:310)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.persist.DefaultPersister.saveRecurse(DefaultPersister.java:280)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.persist.DefaultPersister.save(DefaultPersister.java:248)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.core.DefaultServer.save(DefaultServer.java:1759)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.core.DefaultServer.save(DefaultServer.java:1737)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebean.Ebean.save(Ebean.java:526)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebean.Ebean.save(Ebean.java:533)[0m
+[0m[[31merror[0m] [0m    at models.PermissionTest.setUp([35mPermissionTest.java[0m:[33m24[0m)[0m
+[0m[[31merror[0m] [0m    ...[0m
+[0m[[31merror[0m] [0mCaused by: org.h2.jdbc.JdbcSQLException: Table "SCHOOL_CODE" not found; SQL statement:[0m
+[0m[[31merror[0m] [0minsert into school_code (id, school_type, status) values (?,?,?) [42102-172][0m
+[0m[[31merror[0m] [0m    at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)[0m
+[0m[[31merror[0m] [0m    at org.h2.message.DbException.get(DbException.java:169)[0m
+[0m[[31merror[0m] [0m    at org.h2.message.DbException.get(DbException.java:146)[0m
+[0m[[31merror[0m] [0m    at org.h2.command.Parser.readTableOrView(Parser.java:4824)[0m
+[0m[[31merror[0m] [0m    at org.h2.command.Parser.readTableOrView(Parser.java:4802)[0m
+[0m[[31merror[0m] [0m    at org.h2.command.Parser.parseInsert(Parser.java:966)[0m
+[0m[[31merror[0m] [0m    at org.h2.command.Parser.parsePrepared(Parser.java:375)[0m
+[0m[[31merror[0m] [0m    at org.h2.command.Parser.parse(Parser.java:279)[0m
+[0m[[31merror[0m] [0m    at org.h2.command.Parser.parse(Parser.java:251)[0m
+[0m[[31merror[0m] [0m    at org.h2.command.Parser.prepareCommand(Parser.java:218)[0m
+[0m[[31merror[0m] [0m    at org.h2.engine.Session.prepareLocal(Session.java:425)[0m
+[0m[[31merror[0m] [0m    at org.h2.engine.Session.prepareCommand(Session.java:374)[0m
+[0m[[31merror[0m] [0m    at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)[0m
+[0m[[31merror[0m] [0m    at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:70)[0m
+[0m[[31merror[0m] [0m    at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:267)[0m
+[0m[[31merror[0m] [0m    at com.jolbox.bonecp.ConnectionHandle.prepareStatement(ConnectionHandle.java:1024)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.persist.dml.InsertHandler.getPstmt(InsertHandler.java:125)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.persist.dml.InsertHandler.bind(InsertHandler.java:105)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:79)[0m
+[0m[[31merror[0m] [0m    ... 50 more[0m
 [0m[[0mdebug[0m] [0mTest models.[33mPermissionTest[0m.[36mtestPermissions[0m finished[0m
-[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 4.061s[0m[0m
+[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[31m1 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 18.432s[0m[0m
 [0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 1 events.[0m
 [0m[[0mdebug[0m] [0mFramework implementation 'org.specs2.runner.Specs2Framework' not present.[0m
 [0m[[0mdebug[0m] [0mRunner for sbt.FrameworkWrapper produced 0 initial tasks for 0 tests.[0m
 [0m[[0mdebug[0m] [0mSummary for JUnit not available.[0m
 [0m[[0mdebug[0m] [0mSummary for specs2 not available.[0m
-[0m[[0minfo[0m] [0mPassed: Total 1, Failed 0, Errors 0, Passed 1[0m
-[0m[[0mdebug[0m] [0mPassed tests:[0m
-[0m[[0mdebug[0m] [0m	models.PermissionTest[0m
+[0m[[31merror[0m] [0mFailed: Total 1, Failed 1, Errors 0, Passed 0[0m
+[0m[[31merror[0m] [0mFailed tests:[0m
+[0m[[31merror[0m] [0m	models.PermissionTest[0m
+[0m[[31merror[0m] [0m(test:[31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m
