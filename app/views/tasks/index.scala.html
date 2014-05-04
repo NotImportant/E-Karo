@@ -12,8 +12,8 @@
                 <h3>Team mates</h3>
                 <div class="list">
                     @project.members.map { user =>
-                        <dl data-user-id="@user.email">
-                            <dt>@user.name <span>(@user.email)<span>(@user.phoneNumber)</span></dt>
+                        <dl data-user-id="@user.username">
+                            <dt>@user.username <span>(@user.email)</span></dt>
                             <dd class="action">Action</dd>
                         </dl>
                     }
@@ -21,8 +21,8 @@
                 <h3>Add a team mate</h3>
                 <div class="addUserList">
                     @User.findAll.diff(project.members).map { user =>
-                        <dl data-user-id="@user.email">
-                            <dt>@user.name <span>(@user.email)</span></dt>
+                        <dl data-user-id="@user.username">
+                            <dt>@user.username <span>(@user.email)</span></dt>
                             <dd class="action">Action</dd>
                         </dl>
                     }

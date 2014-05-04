@@ -1,4 +1,4 @@
-@(form: Form[Application.Login])
+@(form: Form[Application.SignUp])
 
 <html>
     <head>
@@ -12,7 +12,7 @@
             <a href="@routes.Projects.index" id="logo"><span>E-</span>Karo</a>
         </header>
         
-        @helper.form(routes.Application.authenticate) {
+        @helper.form(action = routes.Application.authenticateSignUp()) {
             
             <h1>Sign in</h1>
             
@@ -27,17 +27,25 @@
                     @flash.get("success")
                 </p>
             }
-            
             <p>
-                <input type="username" name="username" placeholder="Username" value="@form("username").value">
+              Email:  <input type="email" name="email" value="@form("email").value">
             </p>
             <p>
-                <input type="password" name="password" placeholder="Password">
+              Username:  <input type="username" name="username" value="@form("username").value">
             </p>
             <p>
-                <button type="submit">Login</button>
+               Password: <input type="password" name="password">
             </p>
-            Do not have an account? <a href="@routes.Projects.index" id="register">Sign Up </a> here!           
+            <p>
+               Re-Enter Password: <input type="password2" name="password2">
+            </p>
+             <p>
+               Role: <input type="role" name="role">
+            </p>
+            <p>
+                <button type="submit">Register</button>
+            </p>
+            Already Registered? <a href="@routes.Application.login" id="register">Login </a> here!           
         }
         
             

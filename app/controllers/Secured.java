@@ -1,15 +1,16 @@
 package controllers;
 
-import play.mvc.*;
-import play.mvc.Http.*;
-
-import models.*;
+import models.Project;
+import models.Task;
+import play.mvc.Http.Context;
+import play.mvc.Result;
+import play.mvc.Security;
 
 public class Secured extends Security.Authenticator {
     
     @Override
     public String getUsername(Context ctx) {
-        return ctx.session().get("email");
+		return ctx.session().get("username");
     }
     
     @Override
@@ -32,5 +33,5 @@ public class Secured extends Security.Authenticator {
             Context.current().request().username()
         );
     }
-    
+
 }

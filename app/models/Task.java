@@ -51,7 +51,7 @@ public class Task extends Model {
        return find.fetch("project")
            .where()
                 .eq("done", false)
-                .eq("project.members.email", user)
+				.eq("project.members.username", user)
            .findList();
     }
     
@@ -112,7 +112,7 @@ public class Task extends Model {
      */
     public static boolean isOwner(Long task, String user) {
         return find.where()
-            .eq("project.members.email", user)
+.eq("project.members.username", user)
             .eq("id", task)
             .findRowCount() > 0;
     }

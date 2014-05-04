@@ -1,11 +1,15 @@
 package models;
 
-import java.util.*;
-import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
-import play.db.ebean.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
-import com.avaje.ebean.*;
+import play.db.ebean.Model;
+
+import com.avaje.ebean.Ebean;
 
 /**
  * Project entity managed by Ebean
@@ -38,10 +42,8 @@ public class Project extends Model {
     /**
      * Retrieve project for user
      */
-    public static List<Project> findInvolving(String user) {
-        return find.where()
-            .eq("members.email", user)
-            .findList();
+	public static List<Project> findInvolving(String username) {
+		return find.where().eq("members.username", username).findList();
     }
     
     /**
@@ -87,7 +89,8 @@ public class Project extends Model {
      * Add a member to this project
      */
     public static void addMember(Long project, String user) {
-        Project p = Project.find.setId(project).fetch("members", "email").findUnique();
+		Project p = Project.find.setId(project).fetch("members", "username")
+				.findUnique();
         p.members.add(
             User.find.ref(user)
         );
@@ -98,7 +101,8 @@ public class Project extends Model {
      * Remove a member from this project
      */
     public static void removeMember(Long project, String user) {
-        Project p = Project.find.setId(project).fetch("members", "email").findUnique();
+		Project p = Project.find.setId(project).fetch("members", "username")
+				.findUnique();
         p.members.remove(
             User.find.ref(user)
         );
@@ -110,14 +114,15 @@ public class Project extends Model {
      */
     public static boolean isMember(Long project, String user) {
         return find.where()
-            .eq("members.email", user)
+.eq("members.username", user)
             .eq("id", project)
             .findRowCount() > 0;
     } 
     
     // --
     
-    public String toString() {
+    @Override
+	public String toString() {
         return "Project(" + id + ") with " + (members == null ? "null" : members.size()) + " members";
     }
 

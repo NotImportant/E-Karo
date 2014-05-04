@@ -70,3 +70,7 @@ run
 cleam
 clean
 run
+compile
+run
+clean
+run

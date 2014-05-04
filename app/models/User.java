@@ -22,18 +22,16 @@ public class User extends Model {
 	@Id
     @Constraints.Required
     @Formats.NonEmpty
-    public String email;
+	public String username;
 
 	@Constraints.Required
-	@Formats.NonEmpty
-	public String phoneNumber;
-
-    @Constraints.Required
-    public String name;
+	public String email;
     
     @Constraints.Required
     public String password;
     
+	public String role;
+
     // -- Queries
     
     public static Model.Finder<String,User> find = new Model.Finder<String,User>(String.class, User.class);
@@ -51,23 +49,41 @@ public class User extends Model {
     public static User findByEmail(String email) {
         return find.where().eq("email", email).findUnique();
     }
+
+	/**
+	 * Retrieve a User from username.
+	 */
+	public static User findByUsername(String username) {
+		return find.where().eq("username", username).findUnique();
+	}
     
     /**
      * Authenticate a User.
      */
-    public static User authenticate(String email, String password) {
-        return find.where()
-            .eq("email", email)
-            .eq("password", password)
-            .findUnique();
+	public static User authenticate(String username, String password) {
+		return find.where().eq("username", username).eq("password", password)
+				.findUnique();
     }
     
+	public static User authenticateRegistration(String username) {
+		return find.where().eq("username", username).findUnique();
+	}
+
     // --
     
     @Override
 	public String toString() {
         return "User(" + email + ")";
     }
+
+	public static boolean authenticateRegistration(String username,
+			String password, String password2, String email, String role) {
+		return password2 != password
+				|| find.where().eq("username", username)
+						.eq("password", password)
+				.findUnique().equals(username)
+				|| password.length() < 7 & email.contains("@");
+	}
 
 }
 

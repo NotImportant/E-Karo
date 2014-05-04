@@ -14,18 +14,40 @@ public class Application extends Controller {
     
     public static class Login {
         
-        public String email;
+		public String username;
         public String password;
         
         public String validate() {
-            if(User.authenticate(email, password) == null) {
-                return "Invalid user or password";
+			if (User.authenticate(username, password) == null) {
+				return "Invalid username or password";
             }
             return null;
         }
         
     }
     
+	public static class SignUp {
+		public String username;
+		public String password;
+		public String password2;
+		public String email;
+		public String role;
+
+		public String validate() {
+			if (User.authenticateRegistration(username, password, password2,
+					email, role)) {
+				return "Registration invalid. Try again.";
+			}
+			User newUser = new User();
+			newUser.email = email;
+			newUser.username = username;
+			newUser.password = password;
+			newUser.role = role;
+			newUser.save();
+			return null;
+		}
+	}
+
     /**
      * Login page.
      */
@@ -35,21 +57,40 @@ public class Application extends Controller {
         );
     }
     
-    /**
-     * Handle login form submission.
-     */
+	/**
+	 * Handle login form submission.
+	 */
     public static Result authenticate() {
         Form<Login> loginForm = form(Login.class).bindFromRequest();
         if(loginForm.hasErrors()) {
             return badRequest(login.render(loginForm));
         } else {
-            session("email", loginForm.get().email);
+			session("username", loginForm.get().username);
             return redirect(
                 routes.Projects.index()
             );
         }
     }
 
+	/**
+	 * Registration page.
+	 */
+	public static Result signup() {
+		return ok(signup.render(form(SignUp.class)));
+	}
+
+	/**
+	 * Handle registration form submission.
+	 */
+	public static Result authenticateSignUp() {
+		Form<SignUp> signupform = form(SignUp.class).bindFromRequest();
+		if (signupform.hasErrors()) {
+			return badRequest(signup.render(signupform));
+		} else {
+			session("username", signupform.get().username);
+			return redirect(routes.Projects.index());
+		}
+	}
     /**
      * Logout and clean the session.
      */
