@@ -7,6 +7,7 @@ import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.login;
+import views.html.signup;
 
 public class Application extends Controller {
   
@@ -34,7 +35,7 @@ public class Application extends Controller {
 		public String role;
 
 		public String validate() {
-			if (User.authenticateRegistration(username, password, password2,
+			if (!User.authenticateRegistration(username, password, password2,
 					email, role)) {
 				return "Registration invalid. Try again.";
 			}
@@ -56,7 +57,7 @@ public class Application extends Controller {
             login.render(form(Login.class))
         );
     }
-    
+
 	/**
 	 * Handle login form submission.
 	 */
@@ -72,6 +73,12 @@ public class Application extends Controller {
         }
     }
 
+	/**
+     * 
+     */
+	public static Result moreInformation() {
+
+	}
 	/**
 	 * Registration page.
 	 */
