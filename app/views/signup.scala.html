@@ -12,7 +12,7 @@
             <a href="@routes.Projects.index" id="logo"><span>E-</span>Karo</a>
         </header>
         
-        @helper.form(action = routes.Application.authenticateSignUp()) {
+        @helper.form(routes.Application.authenticateSignUp) {
             
             <h1>Sign in</h1>
             
