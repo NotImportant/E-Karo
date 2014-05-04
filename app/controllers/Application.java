@@ -1,8 +1,8 @@
 package controllers;
 
 import static play.data.Form.form;
-import views.html.moreinfo;
 import models.Guardian;
+import views.html.*;
 import models.User;
 import play.Routes;
 import play.data.Form;
@@ -87,12 +87,12 @@ public class Application extends Controller {
 		if (userForm.hasErrors()) {
 				return badRequest(moreinfo.render(username, userForm));
 		} else {
-				return ok(moreinfo.render(username, Guardian.create(user.email,
-						userForm.get().lastName, userForm.get().firstName,
-						userForm.get().middleName, userForm.get().phoneNumber)));
+				return ok(moreinfo.render(username, userForm));
 			}
-			return null;
-		}
+
+	
+	}
+return ok();
 	}
 
 	/**
@@ -112,7 +112,7 @@ public class Application extends Controller {
 		} else {
 			session("username", signupform.get().username);
 			return redirect(routes.Application.moreInformation(
-					signupform.get().username, signupform.get().role));
+signupform.get().username));
 		}
 	}
     /**
