@@ -1,7 +1,7 @@
 package controllers;
 
 import static play.data.Form.form;
-import views.html.myinfo;
+import views.html.moreinfo;
 import models.Guardian;
 import models.User;
 import play.Routes;
