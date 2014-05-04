@@ -1,51 +1,26 @@
 package models;
 
-import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
-import play.data.validation.Constraints;
 import play.db.ebean.Model;
 
 /**
- * Project entity managed by Ebean
+ * Project entity managed by Ebean schoolCode | name | type | status
  */
 @Entity 
+@Table(name = "school")
 public class School extends Model {
 	@Id
-	public Long id;
-	
-	@OneToOne
-	public SchoolCode schoolCode;
-	
-	@Constraints.Required
+	public int schoolCode;
 	public String name;
-    
-    public static Model.Finder<Long,School> find = new Model.Finder<Long,School>(Long.class, School.class);
-
-	/**
-	 * Retrieve all schools.
-	 */
-	public static List<School> findAll() {
-		return find.all();
-	}
-
-	/**
-	 * Retrieve all schools by schoolCode
-	 */
-	public static List<School> findAllBySchoolCode(SchoolCode schoolCode) {
-		return find.where().eq("schoolCode", schoolCode).findList();
-	}
-
-	/**
-	 * Retrieve a School by name.
-	 */
-	public static School findByName(String name) {
-		return find.where().eq("name", name).findUnique();
-	}
-
+	public int type;
+	public int status;
+	
+	public static Finder<Integer, School> find = new Finder<Integer, School>(
+			Integer.class, School.class);
+	
 	@Override
 	public String toString() {
 		return "School(" + name + ")";

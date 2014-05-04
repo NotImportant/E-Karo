@@ -1,27 +1,47 @@
+#School Status
+
+school_statuses:
+
+    - !!models.SchoolStatus
+        id:          100
+        description: Public
+        
+    - !!models.SchoolStatus
+        id:          200
+        description: Private
+
+    - !!models.SchoolStatus
+        id:          300
+        description: Non-Profit
+       
 
 # Users
 
 users:
 
     - !!models.User
-        email:      guillaume@sample.com
-        name:       Titus Chirchir
-        password:   secret
+        email:       guillaume@sample.com
+        name:        Titus Chirchir
+        password:    secret
+        phoneNumber: 4139937843
     
     - !!models.User
-        email:      maxime@sample.com
-        name:       Maxime Dantec
-        password:   secret
+        email:       maxime@sample.com
+        name:        Maxime Dantec
+        password:    secret
+        phoneNumber: 2429937843
     
     - !!models.User
-        email:      sadek@sample.com
-        name:       Sadek Drobi
-        password:   secret
+        email:       sadek@sample.com
+        name:        Sadek Drobi
+        password:    secret
+        phoneNumber: 6549937843
     
     - !!models.User
-        email:      erwan@sample.com
-        name:       Erwan Loisant
-        password:   secret
+        email:       erwan@sample.com
+        name:        Erwan Loisant
+        password:    secret
+        phoneNumber: 3219937843
     
 # Projects
 

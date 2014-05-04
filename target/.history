@@ -52,3 +52,21 @@ test
 compile
 run
 test
+clean
+compile
+test
+compile
+test
+compile
+test
+run
+compile
+cd ..
+run
+clean
+run
+clean
+run
+cleam
+clean
+run

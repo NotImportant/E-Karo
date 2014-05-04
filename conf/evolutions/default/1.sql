@@ -1,11 +1,11 @@
 
 # --- !Ups
-
 create table account (
   email                     varchar(255) not null,
   name                      varchar(255),
   password                  varchar(255),
-  constraint pk_account primary key (email)
+  phone_number               varchar(255),
+  constraint pk_account2 primary key (email)
 );
 
 create table project (
@@ -41,11 +41,15 @@ create sequence task_seq start with 1000;
 
 # --- !Downs
 
+drop table if exists guardian;
+drop table if exists SCHOOL_STATUS;
+drop table if exists SCHOOL_TYPE;
+drop table if exists SCHOOL;
+drop table if exists STUDENT;
 drop table if exists task;
 drop table if exists project_account;
 drop table if exists project;
 drop table if exists account;
-
 drop sequence if exists project_seq;
 drop sequence if exists task_seq;
 

@@ -1,15 +1,17 @@
-import play.*;
-import play.libs.*;
+import java.util.List;
+import java.util.Map;
 
-import java.util.*;
+import models.User;
+import play.Application;
+import play.GlobalSettings;
+import play.libs.Yaml;
 
-import com.avaje.ebean.*;
-
-import models.*;
+import com.avaje.ebean.Ebean;
 
 public class Global extends GlobalSettings {
     
-    public void onStart(Application app) {
+    @Override
+	public void onStart(Application app) {
         InitialData.insert(app);
     }
     
@@ -19,8 +21,9 @@ public class Global extends GlobalSettings {
             if(Ebean.find(User.class).findRowCount() == 0) {
                 
                 @SuppressWarnings("unchecked")
-								Map<String,List<Object>> all = (Map<String,List<Object>>)Yaml.load("initial-data.yml");
-
+				Map<String, List<Object>> all = (Map<String, List<Object>>) Yaml
+						.load("initial-data.yml");
+				Ebean.save(all.get("school_statuses"));
                 // Insert users first
                 Ebean.save(all.get("users"));
 

@@ -5,6 +5,7 @@ import static play.data.Form.form;
 import java.util.ArrayList;
 
 import models.Project;
+import models.SchoolStatus;
 import models.Task;
 import play.data.Form;
 import play.mvc.Controller;
@@ -28,10 +29,9 @@ public class Tasks extends Controller {
             return ok(
                 index.render(
                     Project.find.byId(project),
-                    Task.findByProject(project)
-                )
-            );
-        } else {
+					Task.findByProject(project), SchoolStatus.find.byId(100)));
+        }
+        else {
             return forbidden();
         }
     }

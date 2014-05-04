@@ -1,18 +1,22 @@
 package models;
 
-import java.util.*;
-import javax.persistence.*;
+import java.util.Date;
+import java.util.List;
 
-import play.db.ebean.*;
-import play.data.format.*;
-import play.data.validation.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
-import com.avaje.ebean.*;
+import play.data.format.Formats;
+import play.data.validation.Constraints;
+import play.db.ebean.Model;
+
+import com.avaje.ebean.Ebean;
 
 /**
  * Task entity managed by Ebean
  */
-@Entity 
+@Entity
 public class Task extends Model {
 
     private static final long serialVersionUID = 1L;
@@ -115,7 +119,8 @@ public class Task extends Model {
 
     // --
 
-    public String toString() {
+    @Override
+	public String toString() {
         return "Task(" + id + ") in project " + project;
     }
 

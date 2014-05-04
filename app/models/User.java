@@ -1,17 +1,20 @@
 package models;
 
-import java.util.*;
-import javax.persistence.*;
+import java.util.List;
 
-import play.db.ebean.*;
-import play.data.format.*;
-import play.data.validation.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import play.data.format.Formats;
+import play.data.validation.Constraints;
+import play.db.ebean.Model;
 
 /**
  * User entity managed by Ebean
  */
 @Entity 
-@Table(name="account")
+@Table(name = "account")
 public class User extends Model {
 
     private static final long serialVersionUID = 1L;
@@ -20,7 +23,11 @@ public class User extends Model {
     @Constraints.Required
     @Formats.NonEmpty
     public String email;
-    
+
+	@Constraints.Required
+	@Formats.NonEmpty
+	public String phoneNumber;
+
     @Constraints.Required
     public String name;
     
@@ -57,7 +64,8 @@ public class User extends Model {
     
     // --
     
-    public String toString() {
+    @Override
+	public String toString() {
         return "User(" + email + ")";
     }
 
