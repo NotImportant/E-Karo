@@ -14,4 +14,7 @@ public class SchoolType extends Model {
 	public int code;
 	public String description;
 
+	public static Model.Finder<Integer, SchoolType> find = new Model.Finder<Integer, SchoolType>(
+			Integer.class, SchoolType.class);
+
 }
