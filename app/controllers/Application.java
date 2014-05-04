@@ -1,6 +1,8 @@
 package controllers;
 
 import static play.data.Form.form;
+import views.html.myinfo;
+import models.Guardian;
 import models.User;
 import play.Routes;
 import play.data.Form;
@@ -8,7 +10,6 @@ import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.login;
 import views.html.signup;
-
 public class Application extends Controller {
   
     // -- Authentication
@@ -39,12 +40,7 @@ public class Application extends Controller {
 					email, role)) {
 				return "Registration invalid. Try again.";
 			}
-			User newUser = new User();
-			newUser.email = email;
-			newUser.username = username;
-			newUser.password = password;
-			newUser.role = role;
-			newUser.save();
+			User.create(username, email, password, role);
 			return null;
 		}
 	}
@@ -74,11 +70,31 @@ public class Application extends Controller {
     }
 
 	/**
-     * 
-     */
-	public static Result moreInformation() {
-
+	 * more Info page page.
+	 */
+	public static Result moreinfo() {
+		return ok(moreinfo.render(null, form(models.Guardian.class)));
 	}
+
+	/**
+	 * Add User info a user.
+	 */
+	public static Result moreInformation(String username) {
+		User user = User.findByUsername(username);
+		String role = user.role;
+		if (role == "Guardian") {
+			Form<Guardian> userForm = form(Guardian.class).bindFromRequest();
+		if (userForm.hasErrors()) {
+				return badRequest(moreinfo.render(username, userForm));
+		} else {
+				return ok(moreinfo.render(username, Guardian.create(user.email,
+						userForm.get().lastName, userForm.get().firstName,
+						userForm.get().middleName, userForm.get().phoneNumber)));
+			}
+			return null;
+		}
+	}
+
 	/**
 	 * Registration page.
 	 */
@@ -95,7 +111,8 @@ public class Application extends Controller {
 			return badRequest(signup.render(signupform));
 		} else {
 			session("username", signupform.get().username);
-			return redirect(routes.Projects.index());
+			return redirect(routes.Application.moreInformation(
+					signupform.get().username, signupform.get().role));
 		}
 	}
     /**
