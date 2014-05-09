@@ -1,6 +1,6 @@
 // @SOURCE:/Users/tituschirchir/E-Karo/E-Karo/conf/routes
-// @HASH:e6e1747d2c1b4d3834919baeea7b6584978fb8fd
-// @DATE:Sun May 04 03:50:01 EDT 2014
+// @HASH:31f275c7a8260c78823a0ff9aae3305c469d7006
+// @DATE:Sun May 04 10:40:25 EDT 2014
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -13,23 +13,25 @@ import play.libs.F
 import Router.queryString
 
 
-// @LINE:42
-// @LINE:39
+// @LINE:44
+// @LINE:41
+// @LINE:38
+// @LINE:37
 // @LINE:36
-// @LINE:35
 // @LINE:34
+// @LINE:33
 // @LINE:32
 // @LINE:31
-// @LINE:30
-// @LINE:29
-// @LINE:26
+// @LINE:28
+// @LINE:27
 // @LINE:25
-// @LINE:23
+// @LINE:24
 // @LINE:22
+// @LINE:21
 // @LINE:20
-// @LINE:19
 // @LINE:18
-// @LINE:16
+// @LINE:15
+// @LINE:14
 // @LINE:13
 // @LINE:12
 // @LINE:11
@@ -38,53 +40,53 @@ import Router.queryString
 // @LINE:6
 package controllers {
 
+// @LINE:38
+// @LINE:37
 // @LINE:36
-// @LINE:35
 // @LINE:34
+// @LINE:33
 // @LINE:32
 // @LINE:31
-// @LINE:30
-// @LINE:29
 class ReverseTasks {
     
 
-// @LINE:32
+// @LINE:34
 def delete(task:Long): Call = {
    Call("DELETE", _prefix + { _defaultPrefix } + "tasks/" + implicitly[PathBindable[Long]].unbind("task", task))
 }
                                                 
 
-// @LINE:36
+// @LINE:38
 def renameFolder(project:Long, folder:String): Call = {
    Call("PUT", _prefix + { _defaultPrefix } + "project/" + implicitly[PathBindable[Long]].unbind("project", project) + "/tasks/folder" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("folder", folder)))))
 }
                                                 
 
-// @LINE:34
+// @LINE:36
 def addFolder(): Call = {
    Call("POST", _prefix + { _defaultPrefix } + "tasks/folder")
 }
                                                 
 
-// @LINE:35
+// @LINE:37
 def deleteFolder(project:Long, folder:String): Call = {
    Call("DELETE", _prefix + { _defaultPrefix } + "projects/" + implicitly[PathBindable[Long]].unbind("project", project) + "/tasks/folder" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("folder", folder)))))
 }
                                                 
 
-// @LINE:31
+// @LINE:33
 def update(task:Long): Call = {
    Call("PUT", _prefix + { _defaultPrefix } + "tasks/" + implicitly[PathBindable[Long]].unbind("task", task))
 }
                                                 
 
-// @LINE:29
+// @LINE:31
 def index(project:Long): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "projects/" + implicitly[PathBindable[Long]].unbind("project", project) + "/tasks")
 }
                                                 
 
-// @LINE:30
+// @LINE:32
 def add(project:Long, folder:String): Call = {
    Call("POST", _prefix + { _defaultPrefix } + "projects/" + implicitly[PathBindable[Long]].unbind("project", project) + "/tasks" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("folder", folder)))))
 }
@@ -93,61 +95,61 @@ def add(project:Long, folder:String): Call = {
 }
                           
 
-// @LINE:26
+// @LINE:28
+// @LINE:27
 // @LINE:25
-// @LINE:23
+// @LINE:24
 // @LINE:22
+// @LINE:21
 // @LINE:20
-// @LINE:19
 // @LINE:18
-// @LINE:16
 // @LINE:6
 class ReverseProjects {
     
 
-// @LINE:18
+// @LINE:20
 def addGroup(): Call = {
    Call("POST", _prefix + { _defaultPrefix } + "projects/groups")
 }
                                                 
 
-// @LINE:22
+// @LINE:24
 def delete(project:Long): Call = {
    Call("DELETE", _prefix + { _defaultPrefix } + "projects/" + implicitly[PathBindable[Long]].unbind("project", project))
 }
                                                 
 
-// @LINE:23
+// @LINE:25
 def rename(project:Long): Call = {
    Call("PUT", _prefix + { _defaultPrefix } + "projects/" + implicitly[PathBindable[Long]].unbind("project", project))
 }
                                                 
 
-// @LINE:26
+// @LINE:28
 def removeUser(project:Long): Call = {
    Call("DELETE", _prefix + { _defaultPrefix } + "projects/" + implicitly[PathBindable[Long]].unbind("project", project) + "/team")
 }
                                                 
 
-// @LINE:19
+// @LINE:21
 def deleteGroup(group:String): Call = {
    Call("DELETE", _prefix + { _defaultPrefix } + "projects/groups" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("group", group)))))
 }
                                                 
 
-// @LINE:20
+// @LINE:22
 def renameGroup(group:String): Call = {
    Call("PUT", _prefix + { _defaultPrefix } + "projects/groups" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("group", group)))))
 }
                                                 
 
-// @LINE:16
+// @LINE:18
 def add(): Call = {
    Call("POST", _prefix + { _defaultPrefix } + "projects")
 }
                                                 
 
-// @LINE:25
+// @LINE:27
 def addUser(project:Long): Call = {
    Call("POST", _prefix + { _defaultPrefix } + "projects/" + implicitly[PathBindable[Long]].unbind("project", project) + "/team")
 }
@@ -162,11 +164,11 @@ def index(): Call = {
 }
                           
 
-// @LINE:42
+// @LINE:44
 class ReverseAssets {
     
 
-// @LINE:42
+// @LINE:44
 def at(file:String): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
 }
@@ -175,7 +177,9 @@ def at(file:String): Call = {
 }
                           
 
-// @LINE:39
+// @LINE:41
+// @LINE:15
+// @LINE:14
 // @LINE:13
 // @LINE:12
 // @LINE:11
@@ -190,15 +194,27 @@ def authenticateSignUp(): Call = {
 }
                                                 
 
+// @LINE:13
+def moreinfo(username:String): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "moreinfo" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("username", username)))))
+}
+                                                
+
 // @LINE:11
 def signup(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "signup")
 }
                                                 
 
-// @LINE:13
+// @LINE:15
 def logout(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "logout")
+}
+                                                
+
+// @LINE:14
+def moreInformation(username:String): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "moreinfo" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("username", username)))))
 }
                                                 
 
@@ -208,7 +224,7 @@ def authenticate(): Call = {
 }
                                                 
 
-// @LINE:39
+// @LINE:41
 def javascriptRoutes(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "assets/javascripts/routes")
 }
@@ -226,23 +242,25 @@ def login(): Call = {
                   
 
 
-// @LINE:42
-// @LINE:39
+// @LINE:44
+// @LINE:41
+// @LINE:38
+// @LINE:37
 // @LINE:36
-// @LINE:35
 // @LINE:34
+// @LINE:33
 // @LINE:32
 // @LINE:31
-// @LINE:30
-// @LINE:29
-// @LINE:26
+// @LINE:28
+// @LINE:27
 // @LINE:25
-// @LINE:23
+// @LINE:24
 // @LINE:22
+// @LINE:21
 // @LINE:20
-// @LINE:19
 // @LINE:18
-// @LINE:16
+// @LINE:15
+// @LINE:14
 // @LINE:13
 // @LINE:12
 // @LINE:11
@@ -251,17 +269,17 @@ def login(): Call = {
 // @LINE:6
 package controllers.javascript {
 
+// @LINE:38
+// @LINE:37
 // @LINE:36
-// @LINE:35
 // @LINE:34
+// @LINE:33
 // @LINE:32
 // @LINE:31
-// @LINE:30
-// @LINE:29
 class ReverseTasks {
     
 
-// @LINE:32
+// @LINE:34
 def delete : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Tasks.delete",
    """
@@ -272,7 +290,7 @@ def delete : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:36
+// @LINE:38
 def renameFolder : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Tasks.renameFolder",
    """
@@ -283,7 +301,7 @@ def renameFolder : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:34
+// @LINE:36
 def addFolder : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Tasks.addFolder",
    """
@@ -294,7 +312,7 @@ def addFolder : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:35
+// @LINE:37
 def deleteFolder : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Tasks.deleteFolder",
    """
@@ -305,7 +323,7 @@ def deleteFolder : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:31
+// @LINE:33
 def update : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Tasks.update",
    """
@@ -316,7 +334,7 @@ def update : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:29
+// @LINE:31
 def index : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Tasks.index",
    """
@@ -327,7 +345,7 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:30
+// @LINE:32
 def add : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Tasks.add",
    """
@@ -341,19 +359,19 @@ def add : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:26
+// @LINE:28
+// @LINE:27
 // @LINE:25
-// @LINE:23
+// @LINE:24
 // @LINE:22
+// @LINE:21
 // @LINE:20
-// @LINE:19
 // @LINE:18
-// @LINE:16
 // @LINE:6
 class ReverseProjects {
     
 
-// @LINE:18
+// @LINE:20
 def addGroup : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Projects.addGroup",
    """
@@ -364,7 +382,7 @@ def addGroup : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:22
+// @LINE:24
 def delete : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Projects.delete",
    """
@@ -375,7 +393,7 @@ def delete : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:23
+// @LINE:25
 def rename : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Projects.rename",
    """
@@ -386,7 +404,7 @@ def rename : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:26
+// @LINE:28
 def removeUser : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Projects.removeUser",
    """
@@ -397,7 +415,7 @@ def removeUser : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:19
+// @LINE:21
 def deleteGroup : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Projects.deleteGroup",
    """
@@ -408,7 +426,7 @@ def deleteGroup : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:20
+// @LINE:22
 def renameGroup : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Projects.renameGroup",
    """
@@ -419,7 +437,7 @@ def renameGroup : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:16
+// @LINE:18
 def add : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Projects.add",
    """
@@ -430,7 +448,7 @@ def add : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:25
+// @LINE:27
 def addUser : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Projects.addUser",
    """
@@ -455,11 +473,11 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:42
+// @LINE:44
 class ReverseAssets {
     
 
-// @LINE:42
+// @LINE:44
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Assets.at",
    """
@@ -473,7 +491,9 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:39
+// @LINE:41
+// @LINE:15
+// @LINE:14
 // @LINE:13
 // @LINE:12
 // @LINE:11
@@ -493,6 +513,17 @@ def authenticateSignUp : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
+// @LINE:13
+def moreinfo : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.moreinfo",
+   """
+      function(username) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "moreinfo" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("username", username)])})
+      }
+   """
+)
+                        
+
 // @LINE:11
 def signup : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.signup",
@@ -504,12 +535,23 @@ def signup : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:13
+// @LINE:15
 def logout : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.logout",
    """
       function() {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "logout"})
+      }
+   """
+)
+                        
+
+// @LINE:14
+def moreInformation : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.moreInformation",
+   """
+      function(username) {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "moreinfo" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("username", username)])})
       }
    """
 )
@@ -526,7 +568,7 @@ def authenticate : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:39
+// @LINE:41
 def javascriptRoutes : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.javascriptRoutes",
    """
@@ -554,23 +596,25 @@ def login : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
-// @LINE:42
-// @LINE:39
+// @LINE:44
+// @LINE:41
+// @LINE:38
+// @LINE:37
 // @LINE:36
-// @LINE:35
 // @LINE:34
+// @LINE:33
 // @LINE:32
 // @LINE:31
-// @LINE:30
-// @LINE:29
-// @LINE:26
+// @LINE:28
+// @LINE:27
 // @LINE:25
-// @LINE:23
+// @LINE:24
 // @LINE:22
+// @LINE:21
 // @LINE:20
-// @LINE:19
 // @LINE:18
-// @LINE:16
+// @LINE:15
+// @LINE:14
 // @LINE:13
 // @LINE:12
 // @LINE:11
@@ -580,53 +624,53 @@ def login : JavascriptReverseRoute = JavascriptReverseRoute(
 package controllers.ref {
 
 
+// @LINE:38
+// @LINE:37
 // @LINE:36
-// @LINE:35
 // @LINE:34
+// @LINE:33
 // @LINE:32
 // @LINE:31
-// @LINE:30
-// @LINE:29
 class ReverseTasks {
     
 
-// @LINE:32
+// @LINE:34
 def delete(task:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Tasks.delete(task), HandlerDef(this, "controllers.Tasks", "delete", Seq(classOf[Long]), "DELETE", """""", _prefix + """tasks/$task<[^/]+>""")
 )
                       
 
-// @LINE:36
+// @LINE:38
 def renameFolder(project:Long, folder:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Tasks.renameFolder(project, folder), HandlerDef(this, "controllers.Tasks", "renameFolder", Seq(classOf[Long], classOf[String]), "PUT", """""", _prefix + """project/$project<[^/]+>/tasks/folder""")
 )
                       
 
-// @LINE:34
+// @LINE:36
 def addFolder(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Tasks.addFolder(), HandlerDef(this, "controllers.Tasks", "addFolder", Seq(), "POST", """""", _prefix + """tasks/folder""")
 )
                       
 
-// @LINE:35
+// @LINE:37
 def deleteFolder(project:Long, folder:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Tasks.deleteFolder(project, folder), HandlerDef(this, "controllers.Tasks", "deleteFolder", Seq(classOf[Long], classOf[String]), "DELETE", """""", _prefix + """projects/$project<[^/]+>/tasks/folder""")
 )
                       
 
-// @LINE:31
+// @LINE:33
 def update(task:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Tasks.update(task), HandlerDef(this, "controllers.Tasks", "update", Seq(classOf[Long]), "PUT", """""", _prefix + """tasks/$task<[^/]+>""")
 )
                       
 
-// @LINE:29
+// @LINE:31
 def index(project:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Tasks.index(project), HandlerDef(this, "controllers.Tasks", "index", Seq(classOf[Long]), "GET", """ Tasks""", _prefix + """projects/$project<[^/]+>/tasks""")
 )
                       
 
-// @LINE:30
+// @LINE:32
 def add(project:Long, folder:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Tasks.add(project, folder), HandlerDef(this, "controllers.Tasks", "add", Seq(classOf[Long], classOf[String]), "POST", """""", _prefix + """projects/$project<[^/]+>/tasks""")
 )
@@ -635,61 +679,61 @@ def add(project:Long, folder:String): play.api.mvc.HandlerRef[_] = new play.api.
 }
                           
 
-// @LINE:26
+// @LINE:28
+// @LINE:27
 // @LINE:25
-// @LINE:23
+// @LINE:24
 // @LINE:22
+// @LINE:21
 // @LINE:20
-// @LINE:19
 // @LINE:18
-// @LINE:16
 // @LINE:6
 class ReverseProjects {
     
 
-// @LINE:18
+// @LINE:20
 def addGroup(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Projects.addGroup(), HandlerDef(this, "controllers.Projects", "addGroup", Seq(), "POST", """""", _prefix + """projects/groups""")
 )
                       
 
-// @LINE:22
+// @LINE:24
 def delete(project:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Projects.delete(project), HandlerDef(this, "controllers.Projects", "delete", Seq(classOf[Long]), "DELETE", """""", _prefix + """projects/$project<[^/]+>""")
 )
                       
 
-// @LINE:23
+// @LINE:25
 def rename(project:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Projects.rename(project), HandlerDef(this, "controllers.Projects", "rename", Seq(classOf[Long]), "PUT", """""", _prefix + """projects/$project<[^/]+>""")
 )
                       
 
-// @LINE:26
+// @LINE:28
 def removeUser(project:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Projects.removeUser(project), HandlerDef(this, "controllers.Projects", "removeUser", Seq(classOf[Long]), "DELETE", """""", _prefix + """projects/$project<[^/]+>/team""")
 )
                       
 
-// @LINE:19
+// @LINE:21
 def deleteGroup(group:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Projects.deleteGroup(group), HandlerDef(this, "controllers.Projects", "deleteGroup", Seq(classOf[String]), "DELETE", """""", _prefix + """projects/groups""")
 )
                       
 
-// @LINE:20
+// @LINE:22
 def renameGroup(group:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Projects.renameGroup(group), HandlerDef(this, "controllers.Projects", "renameGroup", Seq(classOf[String]), "PUT", """""", _prefix + """projects/groups""")
 )
                       
 
-// @LINE:16
+// @LINE:18
 def add(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Projects.add(), HandlerDef(this, "controllers.Projects", "add", Seq(), "POST", """ Projects""", _prefix + """projects""")
 )
                       
 
-// @LINE:25
+// @LINE:27
 def addUser(project:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Projects.addUser(project), HandlerDef(this, "controllers.Projects", "addUser", Seq(classOf[Long]), "POST", """""", _prefix + """projects/$project<[^/]+>/team""")
 )
@@ -704,11 +748,11 @@ def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
-// @LINE:42
+// @LINE:44
 class ReverseAssets {
     
 
-// @LINE:42
+// @LINE:44
 def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /public path""", _prefix + """assets/$file<.+>""")
 )
@@ -717,7 +761,9 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
                           
 
-// @LINE:39
+// @LINE:41
+// @LINE:15
+// @LINE:14
 // @LINE:13
 // @LINE:12
 // @LINE:11
@@ -732,15 +778,27 @@ def authenticateSignUp(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerR
 )
                       
 
+// @LINE:13
+def moreinfo(username:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.moreinfo(username), HandlerDef(this, "controllers.Application", "moreinfo", Seq(classOf[String]), "GET", """""", _prefix + """moreinfo""")
+)
+                      
+
 // @LINE:11
 def signup(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.signup(), HandlerDef(this, "controllers.Application", "signup", Seq(), "GET", """""", _prefix + """signup""")
 )
                       
 
-// @LINE:13
+// @LINE:15
 def logout(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.logout(), HandlerDef(this, "controllers.Application", "logout", Seq(), "GET", """""", _prefix + """logout""")
+)
+                      
+
+// @LINE:14
+def moreInformation(username:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.moreInformation(username), HandlerDef(this, "controllers.Application", "moreInformation", Seq(classOf[String]), "POST", """""", _prefix + """moreinfo""")
 )
                       
 
@@ -750,7 +808,7 @@ def authenticate(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 )
                       
 
-// @LINE:39
+// @LINE:41
 def javascriptRoutes(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.javascriptRoutes(), HandlerDef(this, "controllers.Application", "javascriptRoutes", Seq(), "GET", """ Javascript routing""", _prefix + """assets/javascripts/routes""")
 )

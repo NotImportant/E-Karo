@@ -10,6 +10,8 @@ GET     /login                              controllers.Application.login()
 POST    /login                              controllers.Application.authenticate()
 GET     /signup                             controllers.Application.signup()
 POST    /signup                             controllers.Application.authenticateSignUp()
+GET     /moreinfo                             controllers.Application.moreinfo(username: String)
+POST    /moreinfo                             controllers.Application.moreInformation(username: String)
 GET     /logout                             controllers.Application.logout()
 
 # Projects

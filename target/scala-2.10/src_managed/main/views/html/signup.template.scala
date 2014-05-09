@@ -30,7 +30,7 @@ Seq[Any](format.raw/*1.34*/("""
 
 <html>
     <head>
-        <title>E-Karo</title>
+        <title>E-Karo - Sign Up</title>
         <link rel="shortcut icon" type="image/png" href=""""),_display_(Seq[Any](/*6.59*/routes/*6.65*/.Assets.at("images/favicon.png"))),format.raw/*6.97*/("""">
         <link rel="stylesheet" type="text/css" media="screen" href=""""),_display_(Seq[Any](/*7.70*/routes/*7.76*/.Assets.at("stylesheets/login.css"))),format.raw/*7.111*/("""">
     </head>
@@ -40,9 +40,9 @@ Seq[Any](format.raw/*1.34*/("""
             <a href=""""),_display_(Seq[Any](/*12.23*/routes/*12.29*/.Projects.index)),format.raw/*12.44*/("""" id="logo"><span>E-</span>Karo</a>
         </header>
         
-        """),_display_(Seq[Any](/*15.10*/helper/*15.16*/.form(routes.Application.authenticateSignUp))),format.raw/*15.60*/(""", 'id -> myForm' """),format.raw/*15.77*/("""{"""),format.raw/*15.78*/("""
+        """),_display_(Seq[Any](/*15.10*/helper/*15.16*/.form(routes.Application.authenticateSignUp)/*15.60*/ {_display_(Seq[Any](format.raw/*15.62*/("""
             
-            <h1>Sign in</h1>
+            <h1>Sign Up</h1>
             
             """),_display_(Seq[Any](/*19.14*/if(form.hasGlobalErrors)/*19.38*/ {_display_(Seq[Any](format.raw/*19.40*/(""" 
                 <p class="error">
@@ -56,25 +56,33 @@ Seq[Any](format.raw/*1.34*/("""
                 </p>
             """)))})),format.raw/*29.14*/("""
             <p>
-              Email:  <input type="email" name="email" value=""""),_display_(Seq[Any](/*31.64*/form("email")/*31.77*/.value)),format.raw/*31.83*/("""">
+              Email  <input type="email" name="email" value=""""),_display_(Seq[Any](/*31.63*/form("email")/*31.76*/.value)),format.raw/*31.82*/("""">
             </p>
             <p>
-              Username:  <input type="username" name="username" value=""""),_display_(Seq[Any](/*34.73*/form("username")/*34.89*/.value)),format.raw/*34.95*/("""">
+              Username  <input type="username" name="username" value=""""),_display_(Seq[Any](/*34.72*/form("username")/*34.88*/.value)),format.raw/*34.94*/("""">
             </p>
             <p>
-               Password: <input type="password" name="password">
+               Password <input type="password" name="password">
             </p>
             <p>
-               Re-Enter Password: <input type="password2" name="password2">
+               Re-Enter Password <input type="password" name="password2">
             </p>
              <p>
-               Role: <input type="role" name="role">
+            Role  <select name="role">
+                  <option value="Student">Student</option>
+        		  <option value="Admin">Admin</option>
+  					<option value="Guardian">Guardian</option>
+  					<option value="Treasurer">Treasurer</option>
+					</select>
             </p>
+            <span>
+            
+            </span>
             <p>
                 <button type="submit">Register</button>
             </p>
-            Already Registered? <a href=""""),_display_(Seq[Any](/*48.43*/routes/*48.49*/.Application.login)),format.raw/*48.67*/("""" id="register">Login </a> here!           
-        """),format.raw/*49.9*/("""}"""),format.raw/*49.10*/("""
+            Already Registered? <button><a href=""""),_display_(Seq[Any](/*56.51*/routes/*56.57*/.Application.login)),format.raw/*56.75*/("""" id="register">Login </a></button>           
+        """)))})),format.raw/*57.10*/("""
         
             
     </body>
@@ -94,11 +102,11 @@ Seq[Any](format.raw/*1.34*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Sun May 04 03:59:17 EDT 2014
+                    DATE: Sun May 04 08:38:04 EDT 2014
                     SOURCE: /Users/tituschirchir/E-Karo/E-Karo/app/views/signup.scala.html
-                    HASH: 478cd00a5e889c4e6584cab61303502d557befc4
-                    MATRIX: 793->1|919->33|1062->141|1076->147|1129->179|1236->251|1250->257|1307->292|1417->366|1432->372|1469->387|1577->459|1592->465|1658->509|1703->526|1732->527|1837->596|1870->620|1910->622|2003->679|2016->683|2058->703|2125->738|2188->765|2226->794|2266->796|2360->854|2374->859|2411->874|2478->909|2594->989|2616->1002|2644->1008|2788->1116|2813->1132|2841->1138|3322->1583|3337->1589|3377->1607|3456->1659|3485->1660
-                    LINES: 26->1|29->1|34->6|34->6|34->6|35->7|35->7|35->7|40->12|40->12|40->12|43->15|43->15|43->15|43->15|43->15|47->19|47->19|47->19|49->21|49->21|49->21|51->23|53->25|53->25|53->25|55->27|55->27|55->27|57->29|59->31|59->31|59->31|62->34|62->34|62->34|76->48|76->48|76->48|77->49|77->49
+                    HASH: 4d874f5e9ea7c1dfc60f1dad6891ccc5cef7d34b
+                    MATRIX: 793->1|919->33|1072->151|1086->157|1139->189|1246->261|1260->267|1317->302|1427->376|1442->382|1479->397|1587->469|1602->475|1655->519|1695->521|1800->590|1833->614|1873->616|1966->673|1979->677|2021->697|2088->732|2151->759|2189->788|2229->790|2323->848|2337->853|2374->868|2441->903|2556->982|2578->995|2606->1001|2749->1108|2774->1124|2802->1130|3551->1843|3566->1849|3606->1867|3694->1923
+                    LINES: 26->1|29->1|34->6|34->6|34->6|35->7|35->7|35->7|40->12|40->12|40->12|43->15|43->15|43->15|43->15|47->19|47->19|47->19|49->21|49->21|49->21|51->23|53->25|53->25|53->25|55->27|55->27|55->27|57->29|59->31|59->31|59->31|62->34|62->34|62->34|84->56|84->56|84->56|85->57
                     -- GENERATED --
                 */
             

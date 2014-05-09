@@ -74,3 +74,8 @@ compile
 run
 clean
 run
+clean
+compile
+clean
+compile
+run

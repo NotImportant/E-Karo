@@ -2,13 +2,13 @@ package controllers;
 
 import static play.data.Form.form;
 import models.Guardian;
-import views.html.*;
 import models.User;
 import play.Routes;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.login;
+import views.html.moreinfo;
 import views.html.signup;
 public class Application extends Controller {
   
@@ -70,10 +70,15 @@ public class Application extends Controller {
     }
 
 	/**
-	 * more Info page page.
+	 * more Info page.
 	 */
-	public static Result moreinfo() {
-		return ok(moreinfo.render(null, form(models.Guardian.class)));
+	public static Result moreinfo(String username) {
+		if (User.find.where().eq("username", username).findUnique().role
+				.equalsIgnoreCase("Guardian")) {
+		return ok(moreinfo.render(username, form(models.Guardian.class)));
+		}
+		session("username", username);
+		return redirect(routes.Projects.index());
 	}
 
 	/**
@@ -87,12 +92,14 @@ public class Application extends Controller {
 		if (userForm.hasErrors()) {
 				return badRequest(moreinfo.render(username, userForm));
 		} else {
-				return ok(moreinfo.render(username, userForm));
+				session("firstName", userForm.get().firstName);
+				Guardian.create(userForm.get(), username).save();
+				return redirect(routes.Projects.index());
 			}
 
 	
 	}
-return ok();
+		return redirect(routes.Projects.index());
 	}
 
 	/**

@@ -1,0 +1,61 @@
+@(username: String, form: Form[Guardian])
+
+<html>
+    <head>
+        <title>E-Karo - Sign Up</title>
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+        <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/login.css")">
+    </head>
+    <body>
+        
+        <header>
+            <a href="@routes.Projects.index" id="logo"><span>E-</span>Karo</a>
+        </header>
+        Welcome to E-Karo <h1>@username</h1>!
+        @helper.form(routes.Application.moreInformation(username)) {
+            
+            <h1>More Information</h1>
+            
+            @if(form.hasGlobalErrors) { 
+                <p class="error">
+                    @form.globalError.message
+                </p>
+            }
+            
+            @if(flash.contains("success")) {
+                <p class="success">
+                    @flash.get("success")
+                </p>
+            }
+            <p>
+              First Name  <input type="firstName" name="firstName" value="@form("firstName").value">
+            </p>
+            <p>
+              Last Name  <input type="lastName" name="lastName" value="@form("lastName").value">
+            </p>
+             <p>
+              M.I. <input type="lastName" name="lastName" value="@form("middleName").value">
+            </p>
+            <p>
+             Phone Number <input type="phoneNumber" name="phoneNumber">
+            </p>
+ 
+            <p>
+                <button type="submit">Finish Registration</button>
+            </p>
+            <span>
+            
+            </span>
+            <p>
+            Already Registered? <button><a href="@routes.Application.login" id="register">Login </a></button>  
+            </p>
+            <p>
+            Begin Registration? <button><a href="@routes.Application.signup" id="register">Back to SignUp </a></button>  </p>         
+        }
+        
+            
+    </body>
+</html>
+    
+
+

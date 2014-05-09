@@ -69,6 +69,19 @@ public class User extends Model {
 		return find.where().eq("username", username).findUnique();
 	}
 
+	/**
+	 * Create a task
+	 */
+	public static User create(String username, String email, String password,
+			String role) {
+		User newUser = new User();
+		newUser.email = email;
+		newUser.username = username;
+		newUser.password = password;
+		newUser.role = role;
+		newUser.save();
+		return newUser;
+	}
     // --
     
     @Override
@@ -78,11 +91,11 @@ public class User extends Model {
 
 	public static boolean authenticateRegistration(String username,
 			String password, String password2, String email, String role) {
-		return password2 != password
-				|| find.where().eq("username", username)
-						.eq("password", password)
-				.findUnique().equals(username)
-				|| password.length() < 7 & email.contains("@");
+
+		return password2.equals(password)
+				&& find.where().eq("username", username)
+						.eq("password", password).findList().size() == 0
+				&& password.length() > 6 && email.contains("@");
 	}
 
 }

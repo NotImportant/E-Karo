@@ -16,7 +16,7 @@ import play.db.ebean.Model;
 public class Guardian extends Model implements Person {
 
 	@Id
-	public int guardianId;
+	public Long guardianId;
 	public String email;
 	@Constraints.Required
 	public String firstName;
@@ -26,9 +26,18 @@ public class Guardian extends Model implements Person {
 	public String phoneNumber;
     public static Model.Finder<Long,Guardian> find = new Model.Finder<Long,Guardian>(Long.class, Guardian.class);
 
+
 	@Override
 	public Permission getPermission() {
 		return Permission.GUARDIAN;
+	}
+
+	public static Guardian create(Guardian guardian, String username) {
+		guardian.guardianId = Guardian.find.nextId();
+		guardian.email = User.find.where().eq("username", username)
+				.findUnique().email;
+		guardian.save();
+		return guardian;
 	}
 
 }

@@ -1,7 +1,7 @@
 @(projects: List[Project], user: User)(body: Html)
 <html>
     <head>
-        <title>E-Karo</title>
+        <title>Welcome to E-Karo</title>
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
         <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
         <script type="text/javascript" src="@routes.Assets.at("javascripts/jquery-1.7.1.js")"></script>
@@ -14,6 +14,7 @@
     <body>
         <header>
             <a href="@routes.Projects.index" id="logo"><span>E-</span>Karo</a>
+           <dl><input id="search"></dl>
             <dl id="user">
                 <dt>@user.username <span>(@user.email)</span></dt>
                 <dd>

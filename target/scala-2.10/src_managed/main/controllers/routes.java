@@ -1,6 +1,6 @@
 // @SOURCE:/Users/tituschirchir/E-Karo/E-Karo/conf/routes
-// @HASH:e6e1747d2c1b4d3834919baeea7b6584978fb8fd
-// @DATE:Sun May 04 03:50:01 EDT 2014
+// @HASH:31f275c7a8260c78823a0ff9aae3305c469d7006
+// @DATE:Sun May 04 10:40:25 EDT 2014
 
 package controllers;
 
