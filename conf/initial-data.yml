@@ -21,25 +21,25 @@ users:
 
     - !!models.User
         email:       guillaume@sample.com
-        name:        Titus Chirchir
+        username:        Titus Chirchir
         password:    secret
         phoneNumber: 4139937843
     
     - !!models.User
         email:       maxime@sample.com
-        name:        Maxime Dantec
+        username:        Maxime Dantec
         password:    secret
         phoneNumber: 2429937843
     
     - !!models.User
         email:       sadek@sample.com
-        name:        Sadek Drobi
+        username:        Sadek Drobi
         password:    secret
         phoneNumber: 6549937843
     
     - !!models.User
         email:       erwan@sample.com
-        name:        Erwan Loisant
+        username:        Erwan Loisant
         password:    secret
         phoneNumber: 3219937843
     

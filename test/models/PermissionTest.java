@@ -43,8 +43,4 @@ public class PermissionTest extends WithApplication {
 				.getRole());
 
 	}
-
-	public void testSchoolCode() {
-		assertEquals(3, SchoolCode.findByStatus("Private").size());
-	}
 }
