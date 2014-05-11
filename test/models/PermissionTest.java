@@ -21,11 +21,11 @@ public class PermissionTest extends WithApplication {
 
 	@Test
 	public void testPermissions() {
-		Person admin = new Admin();
-		Person student = new Student();
-		Person treasurer = new Treasurer();
-		Person interestedParty = new InterestedParty();
-		Person guardian = new Guardian();
+		Admin admin = new Admin();
+		Student student = new Student();
+		Treasurer treasurer = new Treasurer();
+		InterestedParty interestedParty = new InterestedParty();
+		Guardian guardian = new Guardian();
 		assertTrue(Permission.hasPermission(255, admin.getPermission()));
 		assertFalse(Permission.hasPermission(128, admin.getPermission()));
 		assertTrue(Permission.hasPermission(128, treasurer.getPermission()));
@@ -46,7 +46,8 @@ public class PermissionTest extends WithApplication {
 
 	@Test
 	public void testCreateUser() {
-		User user = User.create("ribkajj", "ribkajj@yahoo.com", "password",
+		User user = User.createAndInsert("ribkajj", "ribkajj@yahoo.com",
+				"password",
 				"Guardian");
 		assertEquals("ribkajj",
 				User.find.where().eq("email", "ribkajj@yahoo.com").findUnique());
