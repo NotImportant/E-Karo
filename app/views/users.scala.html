@@ -1,0 +1,21 @@
+@(institution : Institution, students: List[Student])
+
+<html>
+<head>
+<title>E-Karo - Users</title>
+<link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+<link rel="stylesheet" type="text/css" media="screen"
+	href="@routes.Assets.at("stylesheets/login.css")">
+</head>
+<body>
+<h1>Welcome @institution.name!</h1>
+<ul>
+@for( student <- students) {
+ <li>@student.name</li>
+}
+</ul>
+</body>
+</html>
+
+
+

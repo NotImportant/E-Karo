@@ -2,7 +2,10 @@ package controllers;
 
 import static play.data.Form.form;
 import models.Guardian;
+import models.Institution;
+import models.Student;
 import models.User;
+import models.UserStatistics;
 import play.Routes;
 import play.data.Form;
 import play.mvc.Controller;
@@ -10,7 +13,7 @@ import play.mvc.Result;
 import views.html.changePassword;
 import views.html.login;
 import views.html.moreinfo;
-import views.html.signup;
+import views.html.*;
 public class Application extends Controller {
 
 	// -- Authentication
@@ -24,6 +27,7 @@ public class Application extends Controller {
 			if (User.authenticate(username, password) == null) {
 				return "Invalid username or password";
 			}
+			UserStatistics.recordLogin(username);
 			return null;
 		}
 	}
@@ -86,6 +90,10 @@ public class Application extends Controller {
 		return redirect(routes.Projects.index());
 	}
 
+	public static Result institution() {
+		return ok(users.render(Institution.find.byId(248), Student.find.where()
+				.eq("institutionId", 248)));
+	}
 	/**
 	 * Add User info a user.
 	 */

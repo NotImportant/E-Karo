@@ -1,6 +1,7 @@
 package models;
 
 import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -100,9 +101,9 @@ public class User extends Model {
 		newUser.password = password;
 		newUser.role = role.toUpperCase().charAt(0);
 		newUser.id = User.find.nextId();
-		newUser.updateDate = DateConstants.NOW.businessDate;
+		newUser.updateDate = new Timestamp(new Date().getTime());
 		if (isNew) {
-			newUser.registrationDate = DateConstants.NOW.businessDate;
+			newUser.registrationDate = new Timestamp(new Date().getTime());
 		}
 		newUser.removeDate = DateConstants.INFINITY.businessDate;
 		return newUser;
@@ -131,10 +132,11 @@ public class User extends Model {
 		if (oldPassword.equals(userToUpdate.password)
 				&& newPassword1.equals(newPassword2)) {
 
-			userToUpdate.removeDate = DateConstants.NOW.businessDate;
+			userToUpdate.removeDate = new Timestamp(new Date().getTime());
 			userToUpdate.save();
 			User user = createOrUpdate(username, userToUpdate.email,
 					newPassword1, String.valueOf(userToUpdate.role), false);
+			user.updateDate = userToUpdate.removeDate;
 			user.registrationDate = userToUpdate.registrationDate;
 			user.save();
 			return null;

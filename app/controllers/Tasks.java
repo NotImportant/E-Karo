@@ -2,6 +2,8 @@ package controllers;
 
 import java.util.ArrayList;
 
+import static play.data.Form.form;
+
 import models.Project;
 import models.Task;
 import play.data.Form;

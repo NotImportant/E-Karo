@@ -114,8 +114,7 @@ public class Project extends Model {
      * Check if a user is a member of this project
      */
 	public static boolean isMember(Long project, String user) {
-        return find.where()
-.eq("members.id", user)
+		return find.where().eq("members.id", user)
             .eq("id", project)
             .findRowCount() > 0;
     } 
