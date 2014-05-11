@@ -1,64 +1,61 @@
 @(form: Form[Application.SignUp])
 
 <html>
-    <head>
-        <title>E-Karo - Sign Up</title>
-        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
-        <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/login.css")">
-    </head>
-    <body>
-        
-        <header>
-            <a href="@routes.Projects.index" id="logo"><span>E-</span>Karo</a>
-        </header>
-        
-        @helper.form(routes.Application.authenticateSignUp) {
-            
-            <h1>Sign Up</h1>
-            
-            @if(form.hasGlobalErrors) { 
-                <p class="error">
-                    @form.globalError.message
-                </p>
-            }
-            
-            @if(flash.contains("success")) {
-                <p class="success">
-                    @flash.get("success")
-                </p>
-            }
-            <p>
-              Email  <input type="email" name="email" value="@form("email").value">
-            </p>
-            <p>
-              Username  <input type="username" name="username" value="@form("username").value">
-            </p>
-            <p>
-               Password <input type="password" name="password">
-            </p>
-            <p>
-               Re-Enter Password <input type="password" name="password2">
-            </p>
-             <p>
-            Role  <select name="role">
-                  <option value="Student">Student</option>
-        		  <option value="Admin">Admin</option>
-  					<option value="Guardian">Guardian</option>
-  					<option value="Treasurer">Treasurer</option>
-					</select>
-            </p>
-            <span>
-            
-            </span>
-            <p>
-                <button type="submit">Register</button>
-            </p>
-            Already Registered? <button><a href="@routes.Application.login" id="register">Login </a></button>           
-        }
-        
-            
-    </body>
+<head>
+<title>E-Karo - Sign Up</title>
+<link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+<link rel="stylesheet" type="text/css" media="screen"
+	href="@routes.Assets.at("stylesheets/login.css")">
+</head>
+<body>
+
+	<header>
+		<a href="@routes.Projects.index" id="logo"><span>E-</span>Karo</a>
+	</header>
+
+	@helper.form(routes.Application.authenticateSignUp) {
+
+	<h1>Sign Up</h1>
+
+	@if(form.hasGlobalErrors) {
+	<p class="error">@form.globalError.message</p>
+	} @if(flash.contains("success")) {
+	<p class="success">@flash.get("success")</p>
+	}
+	<p>
+		Email <input type="email" name="email" value="@form("email").value">
+	</p>
+	<p>
+		Username <input type="username" name="username" value="@form("username").value">
+	</p>
+	<p>
+		Password <input type="password" name="password">
+	</p>
+	<p>
+		Re-Enter Password <input type="password" name="password2">
+	</p>
+	<p>
+		Role <select name="role">
+			<option value="Student">Student</option>
+			<option value="Admin">Admin</option>
+			<option value="Guardian">Guardian</option>
+			<option value="Treasurer">Treasurer</option>
+			<option value="Institution">Institution</option>
+		</select>
+	</p>
+	<span> </span>
+	<p>
+		<button type="submit">Register</button>
+	</p>
+	Already Registered?
+	<button>
+		<a href="@routes.Application.login" id="register">Login </a>
+	</button>
+	}
+
+
+</body>
 </html>
-    
+
 
 
