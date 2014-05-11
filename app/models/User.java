@@ -69,9 +69,13 @@ public class User extends Model {
 	 * Retrieve a User from username.
 	 */
 	public static User findByUsername(String username) {
-		return find.where().eq("username", username).findUnique();
+		return find.where().eq("username", username)
+				.findUnique();
 	}
-    
+
+	public static List<User> findManyByUsername(String username) {
+		return find.where().eq("username", username).findList();
+	}
     /**
      * Authenticate a User.
      */
@@ -88,37 +92,53 @@ public class User extends Model {
 	 * Create a user
 	 */
 	public static User create(String username, String email, String password,
-			String role) {
+			String role, boolean isNew) {
 		User newUser = new User();
 		newUser.email = email;
 		newUser.username = username;
 		newUser.password = password;
 		newUser.role = role.toUpperCase().charAt(0);
 		newUser.id = User.find.nextId();
-		newUser.registrationDate = newUser.updateDate = DateConstants.NOW.businessDate;
+		newUser.updateDate = DateConstants.NOW.businessDate;
+		if (isNew) {
+			newUser.registrationDate = DateConstants.NOW.businessDate;
+		}
 		newUser.removeDate = DateConstants.INFINITY.businessDate;
 		newUser.save();
 		return newUser;
 	}
 
 	public static boolean isValidUser(User user) {
-		return user.removeDate.getNanos() > DateConstants.NOW.businessDate
-				.getNanos();
+		return user.removeDate == null
+				|| user.removeDate.after(DateConstants.NOW.businessDate);
 	}
 	/*
 	 * Update User Password
 	 */
+	public static User getValidUserFromList(List<User> users) {
+
+		for (User user : users) {
+			if (isValidUser(user)) {
+				return user;
+			}
+		}
+		return null;
+	}
+
 	public static String changePassword(String username, String oldPassword,
 			String newPassword1, String newPassword2) {
-		User userToUpdate = User.findByUsername(username);
-		if (User.authenticate(username, oldPassword) != null
-				&& newPassword1.equals(newPassword2)
-				&& isValidUser(userToUpdate)) {
 
-			userToUpdate.password = newPassword1;
-			userToUpdate.updateDate = DateConstants.NOW.businessDate;
+		User userToUpdate = getValidUserFromList(findManyByUsername(username));
 
+		System.out.print(userToUpdate.username + " " + userToUpdate.email + " "
+				+ userToUpdate.password + " ");
+		if (oldPassword.equals(userToUpdate.password)
+				&& newPassword1.equals(newPassword2)) {
+
+			userToUpdate.removeDate = DateConstants.NOW.businessDate;
 			userToUpdate.save();
+			create(username, userToUpdate.email, newPassword1,
+					String.valueOf(userToUpdate.role), false);
 			return null;
 		}
  else {

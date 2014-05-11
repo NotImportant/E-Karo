@@ -7,9 +7,10 @@ import play.Routes;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
-import views.html.*;
+import views.html.login;
 import views.html.moreinfo;
 import views.html.signup;
+import views.html.changePassword;
 public class Application extends Controller {
   
     // -- Authentication
@@ -40,7 +41,7 @@ public class Application extends Controller {
 					email, role)) {
 				return "Registration invalid. Try again.";
 			}
-			User.create(username, email, password, role);
+			User.create(username, email, password, role, true);
 			return null;
 		}
 	}

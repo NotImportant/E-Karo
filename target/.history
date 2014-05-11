@@ -88,3 +88,6 @@ run
 run 5275
 run 5050
 test
+clean
+compile
+run 5050
