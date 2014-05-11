@@ -1,6 +1,7 @@
 package models;
 
 import javax.persistence.Entity;
+import javax.persistence.MappedSuperclass;
 import javax.persistence.Table;
 
 import play.data.validation.Constraints;
@@ -12,6 +13,7 @@ import play.db.ebean.Model;
  */
 @Entity 
 @Table(name = "student")
+@MappedSuperclass
 public class Student extends Person {
 
 	@Constraints.Required

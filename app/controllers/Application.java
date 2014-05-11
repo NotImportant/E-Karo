@@ -11,7 +11,6 @@ import views.html.changePassword;
 import views.html.login;
 import views.html.moreinfo;
 import views.html.signup;
-
 public class Application extends Controller {
 
 	// -- Authentication

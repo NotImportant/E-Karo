@@ -1,848 +1,229 @@
-2014-05-10 23:29:52,786 - [INFO] - from play in pool-6-thread-2 
-Listening for HTTP on /0:0:0:0:0:0:0:0:5050
+2014-05-11 14:38:14,755 - [INFO] - from play in pool-4-thread-1 
+Listening for HTTP on /0:0:0:0:0:0:0:0:5555
 
-2014-05-10 23:30:40,620 - [INFO] - from play in play-internal-execution-context-1 
+2014-05-11 14:40:26,527 - [ERROR] - from application in New I/O worker #1 
+
+
+! @6i7bc3k98 - Internal server error, for (GET) [/] ->
+
+play.PlayExceptions$CompilationException: Compilation error[error: method render in class dashboard cannot be applied to given types;]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10.jar:2.2.2]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10.jar:2.2.2]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library.jar:na]
+
+2014-05-11 14:40:27,257 - [WARN] - from play in New I/O worker #1 
+No application found at invoker init
+
+2014-05-11 15:37:44,581 - [ERROR] - from application in New I/O worker #3 
+
+
+! @6i7bjhab3 - Internal server error, for (GET) [/signup] ->
+
+play.PlayExceptions$CompilationException: Compilation error[error: method render in class dashboard cannot be applied to given types;]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10.jar:2.2.2]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10.jar:2.2.2]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library.jar:na]
+
+2014-05-11 15:39:34,626 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:postgresql://localhost:9999/ElectronicKaro
 
-2014-05-10 23:30:46,784 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2014-05-10 23:35:52,236 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:postgresql://localhost:9999/ElectronicKaro
-
-2014-05-10 23:35:53,444 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2014-05-10 23:37:15,868 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:postgresql://localhost:9999/ElectronicKaro
-
-2014-05-10 23:37:16,477 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2014-05-10 23:37:47,821 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:postgresql://localhost:9999/ElectronicKaro
-
-2014-05-10 23:37:48,118 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2014-05-10 23:39:00,940 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:postgresql://localhost:9999/ElectronicKaro
-
-2014-05-10 23:39:01,369 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2014-05-10 23:39:01,768 - [ERROR] - from play in play-internal-execution-context-1 
-Cannot invoke the action, eventually got an error: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-
-2014-05-10 23:39:02,180 - [ERROR] - from application in play-internal-execution-context-1 
-
-
-! @6i76nkfl1 - Internal server error, for (POST) [/changePassword] ->
-
-play.api.Application$$anon$1: Execution exception[[RuntimeException: java.lang.reflect.InvocationTargetException]]
-	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.2]
-	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10.jar:2.2.2]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.2]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.2]
+2014-05-11 15:39:36,951 - [ERROR] - from com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager in play-internal-execution-context-1 
+Error in deployment
+javax.persistence.PersistenceException: Error with [models.Student] I believe it is not enhanced but it's superClass [class models.Person] is? (You are not allowed to mix enhancement in a single inheritance hierarchy)
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.setBeanReflect(BeanDescriptorManager.java:1357) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.createByteCode(BeanDescriptorManager.java:1154) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.readDeployAssociations(BeanDescriptorManager.java:1070) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.readEntityDeploymentAssociations(BeanDescriptorManager.java:547) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.deploy(BeanDescriptorManager.java:237) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.InternalConfiguration.<init>(InternalConfiguration.java:114) [avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServerFactory.createServer(DefaultServerFactory.java:204) [avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServerFactory.createServer(DefaultServerFactory.java:65) [avaje-ebeanorm.jar:na]
+	at com.avaje.ebean.EbeanServerFactory.create(EbeanServerFactory.java:58) [avaje-ebeanorm.jar:na]
+	at play.db.ebean.EbeanPlugin.onStart(EbeanPlugin.java:79) [play-java-ebean_2.10.jar:2.2.2]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:88) [play_2.10.jar:2.2.2]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:88) [play_2.10.jar:2.2.2]
+	at scala.collection.immutable.List.foreach(List.scala:318) [scala-library.jar:na]
+	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:88) [play_2.10.jar:2.2.2]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:88) [play_2.10.jar:2.2.2]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:88) [play_2.10.jar:2.2.2]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) [play_2.10.jar:2.2.2]
+	at play.api.Play$.start(Play.scala:87) [play_2.10.jar:2.2.2]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:139) [play_2.10.jar:2.2.2]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:112) [play_2.10.jar:2.2.2]
 	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.2]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:257) [play_2.10.jar:2.2.2]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10.jar:2.2.2]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:112) [play_2.10.jar:2.2.2]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:110) [play_2.10.jar:2.2.2]
+	at scala.util.Success.flatMap(Try.scala:200) [scala-library.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:110) [play_2.10.jar:2.2.2]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) [play_2.10.jar:2.2.2]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
-Caused by: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at play.data.Form.bind(Form.java:391) ~[play-java_2.10.jar:2.2.2]
-	at play.data.Form.bindFromRequest(Form.java:215) ~[play-java_2.10.jar:2.2.2]
-	at controllers.Application.authenticateChangePassword(Application.java:155) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$5$$anonfun$apply$5.apply(routes_routing.scala:181) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$5$$anonfun$apply$5.apply(routes_routing.scala:181) ~[na:na]
-	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10.jar:2.2.2]
-	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10.jar:2.2.2]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10.jar:2.2.2]
-	at play.GlobalSettings$1.call(GlobalSettings.java:64) ~[play_2.10.jar:2.2.2]
-	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10.jar:2.2.2]
-	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10.jar:2.2.2]
-	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.2]
-	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.2]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) ~[scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10.jar:2.2.2]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10.jar:2.2.0]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10.jar:2.2.0]
-	... 4 common frames omitted
-Caused by: java.lang.reflect.InvocationTargetException: null
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0]
-	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0]
-	at play.data.Form.bind(Form.java:388) ~[play-java_2.10.jar:2.2.2]
-	... 22 common frames omitted
-Caused by: javax.persistence.PersistenceException: ERROR executing DML bindLog[] error[ERROR: null value in column "password" violates not-null constraint]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:97) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.update(DmlBeanPersister.java:66) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersistExecute.executeUpdateBean(DefaultPersistExecute.java:82) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeNow(PersistRequestBean.java:452) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeOrQueue(PersistRequestBean.java:478) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersister.update(DefaultPersister.java:365) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersister.saveEnhanced(DefaultPersister.java:308) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersister.saveRecurse(DefaultPersister.java:280) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersister.save(DefaultPersister.java:248) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServer.save(DefaultServer.java:1568) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServer.save(DefaultServer.java:1558) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebean.Ebean.save(Ebean.java:453) ~[avaje-ebeanorm.jar:na]
-	at play.db.ebean.Model.save(Model.java:91) ~[play-java-ebean_2.10.jar:2.2.2]
-	at models.User.changePassword(User.java:120) ~[na:na]
-	at controllers.Application$ChangePassword.validate(Application.java:55) ~[na:na]
-	... 27 common frames omitted
-Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "password" violates not-null constraint
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2161) ~[postgresql-9.3-1100-jdbc4.jar:na]
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1890) ~[postgresql-9.3-1100-jdbc4.jar:na]
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255) ~[postgresql-9.3-1100-jdbc4.jar:na]
-	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:560) ~[postgresql-9.3-1100-jdbc4.jar:na]
-	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:417) ~[postgresql-9.3-1100-jdbc4.jar:na]
-	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeUpdate(AbstractJdbc2Statement.java:363) ~[postgresql-9.3-1100-jdbc4.jar:na]
-	at com.jolbox.bonecp.PreparedStatementHandle.executeUpdate(PreparedStatementHandle.java:205) ~[bonecp.jar:na]
-	at com.avaje.ebeaninternal.server.type.DataBind.executeUpdate(DataBind.java:55) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.UpdateHandler.execute(UpdateHandler.java:80) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:86) ~[avaje-ebeanorm.jar:na]
-	... 41 common frames omitted
-
-2014-05-10 23:42:31,443 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:postgresql://localhost:9999/ElectronicKaro
-
-2014-05-10 23:42:32,358 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2014-05-10 23:52:55,574 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:postgresql://localhost:9999/ElectronicKaro
-
-2014-05-10 23:52:56,438 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2014-05-10 23:53:36,037 - [ERROR] - from play in play-internal-execution-context-1 
-Cannot invoke the action, eventually got an error: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-
-2014-05-10 23:53:36,068 - [ERROR] - from application in play-internal-execution-context-1 
-
-
-! @6i76pi8l9 - Internal server error, for (POST) [/changePassword] ->
-
-play.api.Application$$anon$1: Execution exception[[RuntimeException: java.lang.reflect.InvocationTargetException]]
-	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.2]
-	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10.jar:2.2.2]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.2]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.2]
-	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.2]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:257) [play_2.10.jar:2.2.2]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10.jar:2.2.2]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
-Caused by: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at play.data.Form.bind(Form.java:391) ~[play-java_2.10.jar:2.2.2]
-	at play.data.Form.bindFromRequest(Form.java:215) ~[play-java_2.10.jar:2.2.2]
-	at controllers.Application.authenticateChangePassword(Application.java:155) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$5$$anonfun$apply$5.apply(routes_routing.scala:181) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$5$$anonfun$apply$5.apply(routes_routing.scala:181) ~[na:na]
-	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10.jar:2.2.2]
-	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10.jar:2.2.2]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10.jar:2.2.2]
-	at play.GlobalSettings$1.call(GlobalSettings.java:64) ~[play_2.10.jar:2.2.2]
-	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10.jar:2.2.2]
-	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10.jar:2.2.2]
-	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.2]
-	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.2]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) ~[scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10.jar:2.2.2]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10.jar:2.2.0]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10.jar:2.2.0]
-	... 4 common frames omitted
-Caused by: java.lang.reflect.InvocationTargetException: null
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0]
-	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0]
-	at play.data.Form.bind(Form.java:388) ~[play-java_2.10.jar:2.2.2]
-	... 22 common frames omitted
-Caused by: javax.persistence.PersistenceException: No ScalarType registered for class models.DateConstants
-	at com.avaje.ebeaninternal.server.persist.Binder.bindObject(Binder.java:165) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.CQueryPredicates.bind(CQueryPredicates.java:152) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.CQuery.prepareBindExecuteQuery(CQuery.java:374) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.CQueryEngine.findMany(CQueryEngine.java:162) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.DefaultOrmQueryEngine.findMany(DefaultOrmQueryEngine.java:77) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.core.OrmQueryRequest.findList(OrmQueryRequest.java:265) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServer.findList(DefaultServer.java:1460) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServer.findUnique(DefaultServer.java:1230) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.querydefn.DefaultOrmQuery.findUnique(DefaultOrmQuery.java:903) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.util.DefaultExpressionList.findUnique(DefaultExpressionList.java:193) ~[avaje-ebeanorm.jar:na]
-	at models.User.findByUsername(User.java:73) ~[na:na]
-	at models.User.changePassword(User.java:115) ~[na:na]
-	at controllers.Application$ChangePassword.validate(Application.java:55) ~[na:na]
-	... 27 common frames omitted
-
-2014-05-10 23:54:59,769 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:postgresql://localhost:9999/ElectronicKaro
-
-2014-05-10 23:55:01,636 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2014-05-10 23:55:17,986 - [ERROR] - from play in play-internal-execution-context-1 
-Cannot invoke the action, eventually got an error: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-
-2014-05-10 23:55:17,996 - [ERROR] - from application in play-internal-execution-context-1 
-
-
-! @6i76po3gd - Internal server error, for (POST) [/changePassword] ->
-
-play.api.Application$$anon$1: Execution exception[[RuntimeException: java.lang.reflect.InvocationTargetException]]
-	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.2]
-	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10.jar:2.2.2]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.2]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.2]
-	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.2]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:257) [play_2.10.jar:2.2.2]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10.jar:2.2.2]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
-Caused by: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at play.data.Form.bind(Form.java:391) ~[play-java_2.10.jar:2.2.2]
-	at play.data.Form.bindFromRequest(Form.java:215) ~[play-java_2.10.jar:2.2.2]
-	at controllers.Application.authenticateChangePassword(Application.java:155) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$5$$anonfun$apply$5.apply(routes_routing.scala:181) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$5$$anonfun$apply$5.apply(routes_routing.scala:181) ~[na:na]
-	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10.jar:2.2.2]
-	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10.jar:2.2.2]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10.jar:2.2.2]
-	at play.GlobalSettings$1.call(GlobalSettings.java:64) ~[play_2.10.jar:2.2.2]
-	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10.jar:2.2.2]
-	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10.jar:2.2.2]
-	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.2]
-	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.2]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) ~[scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10.jar:2.2.2]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10.jar:2.2.0]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10.jar:2.2.0]
-	... 4 common frames omitted
-Caused by: java.lang.reflect.InvocationTargetException: null
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0]
-	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0]
-	at play.data.Form.bind(Form.java:388) ~[play-java_2.10.jar:2.2.2]
-	... 22 common frames omitted
-Caused by: java.lang.NullPointerException: null
-	at models.User.isValidUser(User.java:107) ~[na:na]
-	at models.User.changePassword(User.java:119) ~[na:na]
-	at controllers.Application$ChangePassword.validate(Application.java:55) ~[na:na]
-	... 27 common frames omitted
-
-2014-05-10 23:57:42,104 - [ERROR] - from play in play-internal-execution-context-1 
-Cannot invoke the action, eventually got an error: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-
-2014-05-10 23:57:42,147 - [ERROR] - from application in play-internal-execution-context-1 
-
-
-! @6i77068mj - Internal server error, for (POST) [/changePassword] ->
-
-play.api.Application$$anon$1: Execution exception[[RuntimeException: java.lang.reflect.InvocationTargetException]]
-	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.2]
-	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10.jar:2.2.2]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.2]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.2]
-	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.2]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:257) [play_2.10.jar:2.2.2]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10.jar:2.2.2]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
-Caused by: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at play.data.Form.bind(Form.java:391) ~[play-java_2.10.jar:2.2.2]
-	at play.data.Form.bindFromRequest(Form.java:215) ~[play-java_2.10.jar:2.2.2]
-	at controllers.Application.authenticateChangePassword(Application.java:155) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$5$$anonfun$apply$5.apply(routes_routing.scala:181) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$5$$anonfun$apply$5.apply(routes_routing.scala:181) ~[na:na]
-	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10.jar:2.2.2]
-	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10.jar:2.2.2]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10.jar:2.2.2]
-	at play.GlobalSettings$1.call(GlobalSettings.java:64) ~[play_2.10.jar:2.2.2]
-	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10.jar:2.2.2]
-	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10.jar:2.2.2]
-	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.2]
-	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.2]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) ~[scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10.jar:2.2.2]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10.jar:2.2.0]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10.jar:2.2.0]
-	... 4 common frames omitted
-Caused by: java.lang.reflect.InvocationTargetException: null
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0]
-	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0]
-	at play.data.Form.bind(Form.java:388) ~[play-java_2.10.jar:2.2.2]
-	... 22 common frames omitted
-Caused by: java.lang.NullPointerException: null
-	at models.User.isValidUser(User.java:107) ~[na:na]
-	at models.User.changePassword(User.java:119) ~[na:na]
-	at controllers.Application$ChangePassword.validate(Application.java:55) ~[na:na]
-	... 27 common frames omitted
-
-2014-05-10 23:58:37,256 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:postgresql://localhost:9999/ElectronicKaro
-
-2014-05-10 23:58:38,109 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2014-05-11 00:00:49,647 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:postgresql://localhost:9999/ElectronicKaro
-
-2014-05-11 00:00:50,473 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2014-05-11 00:03:41,537 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:postgresql://localhost:9999/ElectronicKaro
-
-2014-05-11 00:03:42,462 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2014-05-11 00:05:54,056 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:postgresql://localhost:9999/ElectronicKaro
-
-2014-05-11 00:05:54,898 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2014-05-11 00:07:05,086 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:postgresql://localhost:9999/ElectronicKaro
-
-2014-05-11 00:07:06,761 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2014-05-11 00:08:07,089 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:postgresql://localhost:9999/ElectronicKaro
-
-2014-05-11 00:08:07,909 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2014-05-11 00:09:05,007 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:postgresql://localhost:9999/ElectronicKaro
-
-2014-05-11 00:09:05,250 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2014-05-11 00:22:08,422 - [INFO] - from play in play-internal-execution-context-2 
-database [default] connected at jdbc:postgresql://localhost:9999/ElectronicKaro
-
-2014-05-11 00:22:09,889 - [INFO] - from play in play-internal-execution-context-2 
-Application started (Dev)
-
-2014-05-11 00:22:55,222 - [ERROR] - from play in play-internal-execution-context-2 
-Cannot invoke the action, eventually got an error: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-
-2014-05-11 00:22:55,250 - [ERROR] - from application in play-internal-execution-context-2 
-
-
-! @6i773eb50 - Internal server error, for (POST) [/changePassword] ->
-
-play.api.Application$$anon$1: Execution exception[[RuntimeException: java.lang.reflect.InvocationTargetException]]
-	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.2]
-	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10.jar:2.2.2]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.2]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.2]
-	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.2]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:257) [play_2.10.jar:2.2.2]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10.jar:2.2.2]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
-Caused by: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at play.data.Form.bind(Form.java:391) ~[play-java_2.10.jar:2.2.2]
-	at play.data.Form.bindFromRequest(Form.java:215) ~[play-java_2.10.jar:2.2.2]
-	at controllers.Application.authenticateChangePassword(Application.java:155) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$5$$anonfun$apply$5.apply(routes_routing.scala:181) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$5$$anonfun$apply$5.apply(routes_routing.scala:181) ~[na:na]
-	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10.jar:2.2.2]
-	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10.jar:2.2.2]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10.jar:2.2.2]
-	at play.GlobalSettings$1.call(GlobalSettings.java:64) ~[play_2.10.jar:2.2.2]
-	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10.jar:2.2.2]
-	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10.jar:2.2.2]
-	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.2]
-	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.2]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) ~[scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10.jar:2.2.2]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10.jar:2.2.0]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10.jar:2.2.0]
-	... 4 common frames omitted
-Caused by: java.lang.reflect.InvocationTargetException: null
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0]
-	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0]
-	at play.data.Form.bind(Form.java:388) ~[play-java_2.10.jar:2.2.2]
-	... 22 common frames omitted
-Caused by: java.lang.NullPointerException: null
-	at models.User.changePassword(User.java:126) ~[na:na]
-	at controllers.Application$ChangePassword.validate(Application.java:55) ~[na:na]
-	... 27 common frames omitted
-
-2014-05-11 00:24:41,773 - [INFO] - from play in play-internal-execution-context-2 
-database [default] connected at jdbc:postgresql://localhost:9999/ElectronicKaro
-
-2014-05-11 00:24:43,435 - [INFO] - from play in play-internal-execution-context-2 
-Application started (Dev)
-
-2014-05-11 00:28:41,814 - [INFO] - from play in play-internal-execution-context-2 
-database [default] connected at jdbc:postgresql://localhost:9999/ElectronicKaro
-
-2014-05-11 00:28:45,370 - [INFO] - from play in play-internal-execution-context-2 
-Application started (Dev)
-
-2014-05-11 00:34:51,115 - [INFO] - from play in play-internal-execution-context-5 
-database [default] connected at jdbc:postgresql://localhost:9999/ElectronicKaro
-
-2014-05-11 00:34:51,922 - [INFO] - from play in play-internal-execution-context-5 
-Application started (Dev)
-
-2014-05-11 00:38:15,616 - [ERROR] - from play in play-internal-execution-context-5 
-Cannot invoke the action, eventually got an error: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-
-2014-05-11 00:38:15,625 - [ERROR] - from application in play-internal-execution-context-5 
-
-
-! @6i775eki0 - Internal server error, for (POST) [/changePassword] ->
-
-play.api.Application$$anon$1: Execution exception[[RuntimeException: java.lang.reflect.InvocationTargetException]]
-	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.2]
-	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10.jar:2.2.2]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.2]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.2]
-	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.2]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:257) [play_2.10.jar:2.2.2]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10.jar:2.2.2]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
-Caused by: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at play.data.Form.bind(Form.java:391) ~[play-java_2.10.jar:2.2.2]
-	at play.data.Form.bindFromRequest(Form.java:215) ~[play-java_2.10.jar:2.2.2]
-	at controllers.Application.authenticateChangePassword(Application.java:155) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$5$$anonfun$apply$5.apply(routes_routing.scala:181) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$5$$anonfun$apply$5.apply(routes_routing.scala:181) ~[na:na]
-	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10.jar:2.2.2]
-	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10.jar:2.2.2]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10.jar:2.2.2]
-	at play.GlobalSettings$1.call(GlobalSettings.java:64) ~[play_2.10.jar:2.2.2]
-	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10.jar:2.2.2]
-	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10.jar:2.2.2]
-	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.2]
-	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.2]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) ~[scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10.jar:2.2.2]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10.jar:2.2.0]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10.jar:2.2.0]
-	... 4 common frames omitted
-Caused by: java.lang.reflect.InvocationTargetException: null
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0]
-	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0]
-	at play.data.Form.bind(Form.java:388) ~[play-java_2.10.jar:2.2.2]
-	... 22 common frames omitted
-Caused by: javax.persistence.PersistenceException: Error loading on models.User.role
-	at com.avaje.ebeaninternal.server.query.SqlBeanLoad.load(SqlBeanLoad.java:113) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.deploy.BeanProperty.load(BeanProperty.java:587) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.SqlTreeNodeBean.load(SqlTreeNodeBean.java:257) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.CQuery.readRow(CQuery.java:497) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.CQuery.readBeanInternal(CQuery.java:531) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.CQuery.hasNextBean(CQuery.java:658) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.CQuery.readTheRows(CQuery.java:645) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.CQuery.readCollection(CQuery.java:611) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.CQueryEngine.findMany(CQueryEngine.java:172) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.DefaultOrmQueryEngine.findMany(DefaultOrmQueryEngine.java:77) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.core.OrmQueryRequest.findList(OrmQueryRequest.java:265) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServer.findList(DefaultServer.java:1460) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.querydefn.DefaultOrmQuery.findList(DefaultOrmQuery.java:885) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.util.DefaultExpressionList.findList(DefaultExpressionList.java:177) ~[avaje-ebeanorm.jar:na]
-	at models.User.findManyByUsername(User.java:77) ~[na:na]
-	at models.User.changePassword(User.java:129) ~[na:na]
-	at controllers.Application$ChangePassword.validate(Application.java:55) ~[na:na]
-	... 27 common frames omitted
-Caused by: java.lang.RuntimeException: setIntercept role on [models.User] arg[null] type[models.User] threw error
-	at com.avaje.ebeaninternal.server.deploy.BeanProperty.setValueIntercept(BeanProperty.java:726) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.SqlBeanLoad.load(SqlBeanLoad.java:103) ~[avaje-ebeanorm.jar:na]
-	... 43 common frames omitted
-Caused by: java.lang.NullPointerException: null
-	at models.User._ebean_setFieldIntercept(User.java:1) ~[na:na]
-	at com.avaje.ebeaninternal.server.reflect.EnhanceBeanReflect$Setter.setIntercept(EnhanceBeanReflect.java:184) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.deploy.BeanProperty.setValueIntercept(BeanProperty.java:716) ~[avaje-ebeanorm.jar:na]
-	... 44 common frames omitted
-
-2014-05-11 00:40:24,443 - [INFO] - from play in play-internal-execution-context-5 
-database [default] connected at jdbc:postgresql://localhost:9999/ElectronicKaro
-
-2014-05-11 00:40:24,653 - [INFO] - from play in play-internal-execution-context-5 
-Application started (Dev)
-
-2014-05-11 00:40:24,685 - [ERROR] - from play in play-internal-execution-context-5 
-Cannot invoke the action, eventually got an error: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-
-2014-05-11 00:40:24,702 - [ERROR] - from application in play-internal-execution-context-5 
-
-
-! @6i775m3ge - Internal server error, for (POST) [/changePassword] ->
-
-play.api.Application$$anon$1: Execution exception[[RuntimeException: java.lang.reflect.InvocationTargetException]]
-	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.2]
-	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10.jar:2.2.2]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.2]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.2]
-	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.2]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:257) [play_2.10.jar:2.2.2]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10.jar:2.2.2]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
-Caused by: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at play.data.Form.bind(Form.java:391) ~[play-java_2.10.jar:2.2.2]
-	at play.data.Form.bindFromRequest(Form.java:215) ~[play-java_2.10.jar:2.2.2]
-	at controllers.Application.authenticateChangePassword(Application.java:155) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$5$$anonfun$apply$5.apply(routes_routing.scala:181) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$5$$anonfun$apply$5.apply(routes_routing.scala:181) ~[na:na]
-	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10.jar:2.2.2]
-	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10.jar:2.2.2]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10.jar:2.2.2]
-	at play.GlobalSettings$1.call(GlobalSettings.java:64) ~[play_2.10.jar:2.2.2]
-	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10.jar:2.2.2]
-	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10.jar:2.2.2]
-	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.2]
-	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.2]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) ~[scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10.jar:2.2.2]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10.jar:2.2.0]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10.jar:2.2.0]
-	... 4 common frames omitted
-Caused by: java.lang.reflect.InvocationTargetException: null
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0]
-	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0]
-	at play.data.Form.bind(Form.java:388) ~[play-java_2.10.jar:2.2.2]
-	... 22 common frames omitted
-Caused by: javax.persistence.PersistenceException: Error loading on models.User.role
-	at com.avaje.ebeaninternal.server.query.SqlBeanLoad.load(SqlBeanLoad.java:113) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.deploy.BeanProperty.load(BeanProperty.java:587) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.SqlTreeNodeBean.load(SqlTreeNodeBean.java:257) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.CQuery.readRow(CQuery.java:497) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.CQuery.readBeanInternal(CQuery.java:531) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.CQuery.hasNextBean(CQuery.java:658) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.CQuery.readTheRows(CQuery.java:645) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.CQuery.readCollection(CQuery.java:611) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.CQueryEngine.findMany(CQueryEngine.java:172) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.DefaultOrmQueryEngine.findMany(DefaultOrmQueryEngine.java:77) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.core.OrmQueryRequest.findList(OrmQueryRequest.java:265) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServer.findList(DefaultServer.java:1460) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.querydefn.DefaultOrmQuery.findList(DefaultOrmQuery.java:885) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.util.DefaultExpressionList.findList(DefaultExpressionList.java:177) ~[avaje-ebeanorm.jar:na]
-	at models.User.findManyByUsername(User.java:77) ~[na:na]
-	at models.User.changePassword(User.java:130) ~[na:na]
-	at controllers.Application$ChangePassword.validate(Application.java:55) ~[na:na]
-	... 27 common frames omitted
-Caused by: java.lang.RuntimeException: setIntercept role on [models.User] arg[null] type[models.User] threw error
-	at com.avaje.ebeaninternal.server.deploy.BeanProperty.setValueIntercept(BeanProperty.java:726) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.SqlBeanLoad.load(SqlBeanLoad.java:103) ~[avaje-ebeanorm.jar:na]
-	... 43 common frames omitted
-Caused by: java.lang.NullPointerException: null
-	at models.User._ebean_setFieldIntercept(User.java:1) ~[na:na]
-	at com.avaje.ebeaninternal.server.reflect.EnhanceBeanReflect$Setter.setIntercept(EnhanceBeanReflect.java:184) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.deploy.BeanProperty.setValueIntercept(BeanProperty.java:716) ~[avaje-ebeanorm.jar:na]
-	... 44 common frames omitted
-
-2014-05-11 00:40:48,526 - [ERROR] - from play in play-internal-execution-context-5 
-Cannot invoke the action, eventually got an error: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-
-2014-05-11 00:40:48,536 - [ERROR] - from application in play-internal-execution-context-5 
-
-
-! @6i775ncn5 - Internal server error, for (POST) [/changePassword] ->
-
-play.api.Application$$anon$1: Execution exception[[RuntimeException: java.lang.reflect.InvocationTargetException]]
-	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.2]
-	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10.jar:2.2.2]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.2]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.2]
-	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.2]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:257) [play_2.10.jar:2.2.2]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10.jar:2.2.2]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
-Caused by: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at play.data.Form.bind(Form.java:391) ~[play-java_2.10.jar:2.2.2]
-	at play.data.Form.bindFromRequest(Form.java:215) ~[play-java_2.10.jar:2.2.2]
-	at controllers.Application.authenticateChangePassword(Application.java:155) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$5$$anonfun$apply$5.apply(routes_routing.scala:181) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$5$$anonfun$apply$5.apply(routes_routing.scala:181) ~[na:na]
-	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10.jar:2.2.2]
-	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10.jar:2.2.2]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10.jar:2.2.2]
-	at play.GlobalSettings$1.call(GlobalSettings.java:64) ~[play_2.10.jar:2.2.2]
-	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10.jar:2.2.2]
-	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10.jar:2.2.2]
-	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.2]
-	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.2]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) ~[scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10.jar:2.2.2]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10.jar:2.2.0]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10.jar:2.2.0]
-	... 4 common frames omitted
-Caused by: java.lang.reflect.InvocationTargetException: null
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0]
-	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0]
-	at play.data.Form.bind(Form.java:388) ~[play-java_2.10.jar:2.2.2]
-	... 22 common frames omitted
-Caused by: javax.persistence.PersistenceException: Error loading on models.User.role
-	at com.avaje.ebeaninternal.server.query.SqlBeanLoad.load(SqlBeanLoad.java:113) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.deploy.BeanProperty.load(BeanProperty.java:587) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.SqlTreeNodeBean.load(SqlTreeNodeBean.java:257) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.CQuery.readRow(CQuery.java:497) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.CQuery.readBeanInternal(CQuery.java:531) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.CQuery.hasNextBean(CQuery.java:658) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.CQuery.readTheRows(CQuery.java:645) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.CQuery.readCollection(CQuery.java:611) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.CQueryEngine.findMany(CQueryEngine.java:172) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.DefaultOrmQueryEngine.findMany(DefaultOrmQueryEngine.java:77) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.core.OrmQueryRequest.findList(OrmQueryRequest.java:265) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServer.findList(DefaultServer.java:1460) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.querydefn.DefaultOrmQuery.findList(DefaultOrmQuery.java:885) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.util.DefaultExpressionList.findList(DefaultExpressionList.java:177) ~[avaje-ebeanorm.jar:na]
-	at models.User.findManyByUsername(User.java:77) ~[na:na]
-	at models.User.changePassword(User.java:130) ~[na:na]
-	at controllers.Application$ChangePassword.validate(Application.java:55) ~[na:na]
-	... 27 common frames omitted
-Caused by: java.lang.RuntimeException: setIntercept role on [models.User] arg[null] type[models.User] threw error
-	at com.avaje.ebeaninternal.server.deploy.BeanProperty.setValueIntercept(BeanProperty.java:726) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.SqlBeanLoad.load(SqlBeanLoad.java:103) ~[avaje-ebeanorm.jar:na]
-	... 43 common frames omitted
-Caused by: java.lang.NullPointerException: null
-	at models.User._ebean_setFieldIntercept(User.java:1) ~[na:na]
-	at com.avaje.ebeaninternal.server.reflect.EnhanceBeanReflect$Setter.setIntercept(EnhanceBeanReflect.java:184) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.deploy.BeanProperty.setValueIntercept(BeanProperty.java:716) ~[avaje-ebeanorm.jar:na]
-	... 44 common frames omitted
-
-2014-05-11 00:43:48,083 - [INFO] - from play in play-internal-execution-context-5 
-database [default] connected at jdbc:postgresql://localhost:9999/ElectronicKaro
-
-2014-05-11 00:43:48,328 - [INFO] - from play in play-internal-execution-context-5 
-Application started (Dev)
-
-2014-05-11 00:44:30,436 - [ERROR] - from play in play-internal-execution-context-5 
-Cannot invoke the action, eventually got an error: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-
-2014-05-11 00:44:30,444 - [ERROR] - from application in play-internal-execution-context-5 
-
-
-! @6i776a344 - Internal server error, for (POST) [/changePassword] ->
-
-play.api.Application$$anon$1: Execution exception[[RuntimeException: java.lang.reflect.InvocationTargetException]]
-	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.2]
-	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10.jar:2.2.2]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.2]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.2]
-	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.2]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:257) [play_2.10.jar:2.2.2]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10.jar:2.2.2]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
-Caused by: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at play.data.Form.bind(Form.java:391) ~[play-java_2.10.jar:2.2.2]
-	at play.data.Form.bindFromRequest(Form.java:215) ~[play-java_2.10.jar:2.2.2]
-	at controllers.Application.authenticateChangePassword(Application.java:155) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$5$$anonfun$apply$5.apply(routes_routing.scala:181) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$5$$anonfun$apply$5.apply(routes_routing.scala:181) ~[na:na]
-	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10.jar:2.2.2]
-	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10.jar:2.2.2]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10.jar:2.2.2]
-	at play.GlobalSettings$1.call(GlobalSettings.java:64) ~[play_2.10.jar:2.2.2]
-	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10.jar:2.2.2]
-	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10.jar:2.2.2]
-	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.2]
-	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.2]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) ~[scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10.jar:2.2.2]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10.jar:2.2.0]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10.jar:2.2.0]
-	... 4 common frames omitted
-Caused by: java.lang.reflect.InvocationTargetException: null
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0]
-	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0]
-	at play.data.Form.bind(Form.java:388) ~[play-java_2.10.jar:2.2.2]
-	... 22 common frames omitted
-Caused by: javax.persistence.PersistenceException: Error loading on models.User.role
-	at com.avaje.ebeaninternal.server.query.SqlBeanLoad.load(SqlBeanLoad.java:113) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.deploy.BeanProperty.load(BeanProperty.java:587) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.SqlTreeNodeBean.load(SqlTreeNodeBean.java:257) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.CQuery.readRow(CQuery.java:497) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.CQuery.readBeanInternal(CQuery.java:531) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.CQuery.hasNextBean(CQuery.java:658) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.CQuery.readTheRows(CQuery.java:645) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.CQuery.readCollection(CQuery.java:611) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.CQueryEngine.findMany(CQueryEngine.java:172) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.DefaultOrmQueryEngine.findMany(DefaultOrmQueryEngine.java:77) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.core.OrmQueryRequest.findList(OrmQueryRequest.java:265) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServer.findList(DefaultServer.java:1460) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.querydefn.DefaultOrmQuery.findList(DefaultOrmQuery.java:885) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.util.DefaultExpressionList.findList(DefaultExpressionList.java:177) ~[avaje-ebeanorm.jar:na]
-	at models.User.findManyByUsername(User.java:77) ~[na:na]
-	at models.User.changePassword(User.java:128) ~[na:na]
-	at controllers.Application$ChangePassword.validate(Application.java:55) ~[na:na]
-	... 27 common frames omitted
-Caused by: java.lang.RuntimeException: setIntercept role on [models.User] arg[null] type[models.User] threw error
-	at com.avaje.ebeaninternal.server.deploy.BeanProperty.setValueIntercept(BeanProperty.java:726) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.query.SqlBeanLoad.load(SqlBeanLoad.java:103) ~[avaje-ebeanorm.jar:na]
-	... 43 common frames omitted
-Caused by: java.lang.NullPointerException: null
-	at models.User._ebean_setFieldIntercept(User.java:1) ~[na:na]
-	at com.avaje.ebeaninternal.server.reflect.EnhanceBeanReflect$Setter.setIntercept(EnhanceBeanReflect.java:184) ~[avaje-ebeanorm.jar:na]
-	at com.avaje.ebeaninternal.server.deploy.BeanProperty.setValueIntercept(BeanProperty.java:716) ~[avaje-ebeanorm.jar:na]
-	... 44 common frames omitted
+Caused by: java.lang.IllegalArgumentException: field [id] not found in [models.Student][institutionId, guardianId]
+	at com.avaje.ebeaninternal.server.reflect.EnhanceBeanReflect.getFieldIndex(EnhanceBeanReflect.java:139) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.reflect.EnhanceBeanReflect.getGetter(EnhanceBeanReflect.java:143) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.setBeanReflect(BeanDescriptorManager.java:1341) ~[avaje-ebeanorm.jar:na]
+	... 32 common frames omitted
+
+2014-05-11 15:39:37,022 - [ERROR] - from application in New I/O worker #3 
+
+
+! @6i7bjnkj5 - Internal server error, for (GET) [/signup] ->
+
+play.api.UnexpectedException: Unexpected exception[PersistenceException: Error with [models.Student] I believe it is not enhanced but it's superClass [class models.Person] is? (You are not allowed to mix enhancement in a single inheritance hierarchy)]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:148) ~[play_2.10.jar:2.2.2]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:112) ~[play_2.10.jar:2.2.2]
+	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:112) ~[play_2.10.jar:2.2.2]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:110) ~[play_2.10.jar:2.2.2]
+	at scala.util.Success.flatMap(Try.scala:200) ~[scala-library.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:110) ~[play_2.10.jar:2.2.2]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10.jar:2.2.2]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library.jar:na]
+Caused by: javax.persistence.PersistenceException: Error with [models.Student] I believe it is not enhanced but it's superClass [class models.Person] is? (You are not allowed to mix enhancement in a single inheritance hierarchy)
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.setBeanReflect(BeanDescriptorManager.java:1357) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.createByteCode(BeanDescriptorManager.java:1154) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.readDeployAssociations(BeanDescriptorManager.java:1070) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.readEntityDeploymentAssociations(BeanDescriptorManager.java:547) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.deploy(BeanDescriptorManager.java:237) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.InternalConfiguration.<init>(InternalConfiguration.java:114) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServerFactory.createServer(DefaultServerFactory.java:204) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServerFactory.createServer(DefaultServerFactory.java:65) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebean.EbeanServerFactory.create(EbeanServerFactory.java:58) ~[avaje-ebeanorm.jar:na]
+	at play.db.ebean.EbeanPlugin.onStart(EbeanPlugin.java:79) ~[play-java-ebean_2.10.jar:2.2.2]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:88) ~[play_2.10.jar:2.2.2]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:88) ~[play_2.10.jar:2.2.2]
+	at scala.collection.immutable.List.foreach(List.scala:318) ~[scala-library.jar:na]
+	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:88) ~[play_2.10.jar:2.2.2]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:88) ~[play_2.10.jar:2.2.2]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:88) ~[play_2.10.jar:2.2.2]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10.jar:2.2.2]
+	at play.api.Play$.start(Play.scala:87) ~[play_2.10.jar:2.2.2]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:139) ~[play_2.10.jar:2.2.2]
+	... 14 common frames omitted
+Caused by: java.lang.IllegalArgumentException: field [id] not found in [models.Student][institutionId, guardianId]
+	at com.avaje.ebeaninternal.server.reflect.EnhanceBeanReflect.getFieldIndex(EnhanceBeanReflect.java:139) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.reflect.EnhanceBeanReflect.getGetter(EnhanceBeanReflect.java:143) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.setBeanReflect(BeanDescriptorManager.java:1341) ~[avaje-ebeanorm.jar:na]
+	... 32 common frames omitted
+
+2014-05-11 15:44:52,698 - [ERROR] - from application in New I/O worker #2 
+
+
+! @6i7bkfjj6 - Internal server error, for (GET) [/signup] ->
+
+play.PlayExceptions$CompilationException: Compilation error[not found: type SchoolStatus]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10.jar:2.2.2]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10.jar:2.2.2]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library.jar:na]
+
+2014-05-11 15:46:28,228 - [ERROR] - from application in New I/O worker #2 
+
+
+! @6i7bkl51c - Internal server error, for (GET) [/signup] ->
+
+play.PlayExceptions$CompilationException: Compilation error[error: cannot find symbol]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10.jar:2.2.2]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10.jar:2.2.2]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library.jar:na]
+
+2014-05-11 15:48:33,595 - [ERROR] - from application in New I/O worker #2 
+
+
+! @6i7bl28d7 - Internal server error, for (GET) [/signup] ->
+
+play.PlayExceptions$CompilationException: Compilation error[error: cannot find symbol]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10.jar:2.2.2]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10.jar:2.2.2]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library.jar:na]
 

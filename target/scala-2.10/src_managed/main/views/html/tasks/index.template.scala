@@ -20,13 +20,13 @@ import play.api.data.Field
 import play.mvc.Http.Context.Implicit._
 import views.html._
 /**/
-object index extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template3[Project,List[Task],SchoolStatus,play.api.templates.HtmlFormat.Appendable] {
+object index extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template2[Project,List[Task],play.api.templates.HtmlFormat.Appendable] {
 
     /**/
-    def apply/*1.2*/(project: Project, tasks: List[Task], schoolStatus: SchoolStatus):play.api.templates.HtmlFormat.Appendable = {
+    def apply/*1.2*/(project: Project, tasks: List[Task]):play.api.templates.HtmlFormat.Appendable = {
         _display_ {
 
-Seq[Any](format.raw/*1.67*/("""
+Seq[Any](format.raw/*1.39*/("""
 
 <header>
     <hgroup>
@@ -69,19 +69,19 @@ Seq[Any](format.raw/*1.67*/("""
 """))}
     }
     
-    def render(project:Project,tasks:List[Task],schoolStatus:SchoolStatus): play.api.templates.HtmlFormat.Appendable = apply(project,tasks,schoolStatus)
+    def render(project:Project,tasks:List[Task]): play.api.templates.HtmlFormat.Appendable = apply(project,tasks)
     
-    def f:((Project,List[Task],SchoolStatus) => play.api.templates.HtmlFormat.Appendable) = (project,tasks,schoolStatus) => apply(project,tasks,schoolStatus)
+    def f:((Project,List[Task]) => play.api.templates.HtmlFormat.Appendable) = (project,tasks) => apply(project,tasks)
     
     def ref: this.type = this
 
 }
                 /*
                     -- GENERATED --
-                    DATE: Sat May 10 23:28:49 EDT 2014
+                    DATE: Sun May 11 15:52:40 EDT 2014
                     SOURCE: /Users/tituschirchir/E-Karo/E-Karo/app/views/tasks/index.scala.html
-                    HASH: 322d6425bb1e48802557da423a9ec7aff67245e5
-                    MATRIX: 805->1|964->66|1036->103|1051->110|1079->117|1133->136|1148->143|1174->148|1421->359|1437->366|1458->378|1506->388|1586->432|1599->436|1630->445|1702->481|1715->485|1746->494|1791->503|1804->507|1832->513|1988->637|2152->765|2165->769|2208->803|2256->813|2336->857|2349->861|2380->870|2452->906|2465->910|2496->919|2541->928|2554->932|2582->938|2738->1062|2891->1180|2905->1185|2936->1207|2946->1218|2978->1241|3018->1243|3068->1257|3082->1262|3137->1295|3179->1311
+                    HASH: 9fcc70cae914c207cdb472f5c82aecd3695d28f8
+                    MATRIX: 792->1|923->38|995->75|1010->82|1038->89|1092->108|1107->115|1133->120|1380->331|1396->338|1417->350|1465->360|1545->404|1558->408|1589->417|1661->453|1674->457|1705->466|1750->475|1763->479|1791->485|1947->609|2111->737|2124->741|2167->775|2215->785|2295->829|2308->833|2339->842|2411->878|2424->882|2455->891|2500->900|2513->904|2541->910|2697->1034|2850->1152|2864->1157|2895->1179|2905->1190|2937->1213|2977->1215|3027->1229|3041->1234|3096->1267|3138->1283
                     LINES: 26->1|29->1|33->5|33->5|33->5|34->6|34->6|34->6|42->14|42->14|42->14|42->14|43->15|43->15|43->15|44->16|44->16|44->16|44->16|44->16|44->16|47->19|51->23|51->23|51->23|51->23|52->24|52->24|52->24|53->25|53->25|53->25|53->25|53->25|53->25|56->28|63->35|63->35|63->35|63->36|63->36|63->36|64->37|64->37|64->37|65->39
                     -- GENERATED --
                 */

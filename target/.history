@@ -91,3 +91,7 @@ test
 clean
 compile
 run 5050
+run
+run 5555
+clean
+compile
