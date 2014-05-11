@@ -43,4 +43,12 @@ public class PermissionTest extends WithApplication {
 				.getRole());
 
 	}
+
+	@Test
+	public void testCreateUser() {
+		User user = User.create("ribkajj", "ribkajj@yahoo.com", "password",
+				"Guardian");
+		assertEquals("ribkajj",
+				User.find.where().eq("email", "ribkajj@yahoo.com").findUnique());
+	}
 }

@@ -1,14 +1,18 @@
 package controllers;
 
-import play.mvc.*;
-import static play.data.Form.*;
+import static play.data.Form.form;
 
-import java.util.*;
+import java.util.ArrayList;
 
-import models.*;
-
-import views.html.*;
-import views.html.projects.*;
+import models.Project;
+import models.Task;
+import models.User;
+import play.mvc.Controller;
+import play.mvc.Result;
+import play.mvc.Security;
+import views.html.dashboard;
+import views.html.projects.group;
+import views.html.projects.item;
 
 /**
  * Manage projects related operations.
@@ -22,9 +26,9 @@ public class Projects extends Controller {
     public static Result index() {
         return ok(
             dashboard.render(
-                Project.findInvolving(request().username()),
-                Task.findTodoInvolving(request().username()),
-                User.find.byId(request().username())
+Project.findInvolving(1),
+				Task.findTodoInvolving(1),
+ User.find.byId(28)
             )
         );
     }
@@ -38,7 +42,7 @@ public class Projects extends Controller {
         Project newProject = Project.create(
             "New project", 
             form().bindFromRequest().get("group"),
-            request().username()
+ 1
         );
         return ok(item.render(newProject));
     }
@@ -108,7 +112,8 @@ public class Projects extends Controller {
         if(Secured.isMemberOf(project)) {
             Project.addMember(
                 project,
-                form().bindFromRequest().get("user")
+					Integer.valueOf(form()
+					.bindFromRequest().get("user"))
             );
             return ok();
         } else {
@@ -123,7 +128,8 @@ public class Projects extends Controller {
         if(Secured.isMemberOf(project)) {
             Project.removeMember(
                 project,
-                form().bindFromRequest().get("user")
+					Integer.valueOf(form()
+					.bindFromRequest().get("user"))
             );
             return ok();
         } else {

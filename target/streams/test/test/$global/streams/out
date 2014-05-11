@@ -1,34 +1,52 @@
 [0m[[0mdebug[0m] [0mForking tests - parallelism = false[0m
 [0m[[0mdebug[0m] [0mCreate a single-thread test executor[0m
 [0m[[0mdebug[0m] [0mRunner for sbt.FrameworkWrapper produced 1 initial tasks for 1 tests.[0m
-[0m[[0mdebug[0m] [0m  Running TaskDef(models.PermissionTest, sbt.ForkMain$AnnotatedFingerscan@1fda259f, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(models.PermissionTest, sbt.ForkMain$AnnotatedFingerscan@2d3dd1bf, false, [SuiteSelector])[0m
 [0m[[0mdebug[0m] [0m[34mTest run started[0m[0m
 [0m[[0mdebug[0m] [0mTest models.[33mPermissionTest[0m.[36mtestPermissions[0m started[0m
-[0m[[31merror[0m] [0mTest models.[33mPermissionTest[0m.[31mtestPermissions[0m failed: javax.persistence.[31mPersistenceException[0m: ERROR executing DML bindLog[] error[Table "SCHOOL_CODE" not found; SQL statement:\n insert into school_code (id, school_type, status) values (?,?,?) [42102-172]][0m
-[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:97)[0m
-[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.insert(DmlBeanPersister.java:57)[0m
-[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.persist.DefaultPersistExecute.executeInsertBean(DefaultPersistExecute.java:66)[0m
-[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeNow(PersistRequestBean.java:448)[0m
-[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeOrQueue(PersistRequestBean.java:478)[0m
-[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.persist.DefaultPersister.insert(DefaultPersister.java:335)[0m
-[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.persist.DefaultPersister.saveEnhanced(DefaultPersister.java:310)[0m
-[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.persist.DefaultPersister.saveRecurse(DefaultPersister.java:280)[0m
-[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.persist.DefaultPersister.save(DefaultPersister.java:248)[0m
-[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.core.DefaultServer.save(DefaultServer.java:1759)[0m
-[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.core.DefaultServer.save(DefaultServer.java:1737)[0m
-[0m[[31merror[0m] [0m    at com.avaje.ebean.Ebean.save(Ebean.java:526)[0m
-[0m[[31merror[0m] [0m    at com.avaje.ebean.Ebean.save(Ebean.java:533)[0m
-[0m[[31merror[0m] [0m    at models.PermissionTest.setUp([35mPermissionTest.java[0m:[33m24[0m)[0m
+[0m[[31merror[0m] [0mTest models.[33mPermissionTest[0m.[31mtestPermissions[0m failed: javax.persistence.[31mPersistenceException[0m: Query threw SQLException:Table "EKAROUSER" not found; SQL statement:[0m
+[0m[[31merror[0m] [0mselect count(*) from ekarouser t0 [42102-172] [0m
+[0m[[31merror[0m] [0mBind values:[null] [0m
+[0m[[31merror[0m] [0mQuery was:[0m
+[0m[[31merror[0m] [0mselect count(*) from ekarouser t0 [0m
+[0m[[31merror[0m] [0m[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.query.CQuery.createPersistenceException(CQuery.java:790)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.query.CQueryEngine.findRowCount(CQueryEngine.java:110)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.query.DefaultOrmQueryEngine.findRowCount(DefaultOrmQueryEngine.java:36)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.core.OrmQueryRequest.findRowCount(OrmQueryRequest.java:235)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.core.DefaultServer.findRowCountWithCopy(DefaultServer.java:1301)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.core.DefaultServer.findRowCount(DefaultServer.java:1293)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.querydefn.DefaultOrmQuery.findRowCount(DefaultOrmQuery.java:873)[0m
+[0m[[31merror[0m] [0m    at Global$InitialData.insert(Global.java:21)[0m
+[0m[[31merror[0m] [0m    at Global.onStart(Global.java:15)[0m
+[0m[[31merror[0m] [0m    at play.core.j.JavaGlobalSettingsAdapter.onStart(JavaGlobalSettingsAdapter.scala:18)[0m
+[0m[[31merror[0m] [0m    at play.api.GlobalPlugin.onStart(GlobalSettings.scala:203)[0m
+[0m[[31merror[0m] [0m    at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:88)[0m
+[0m[[31merror[0m] [0m    at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:88)[0m
+[0m[[31merror[0m] [0m    at scala.collection.immutable.List.foreach(List.scala:318)[0m
+[0m[[31merror[0m] [0m    at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:88)[0m
+[0m[[31merror[0m] [0m    at play.api.Play$$anonfun$start$1.apply(Play.scala:88)[0m
+[0m[[31merror[0m] [0m    at play.api.Play$$anonfun$start$1.apply(Play.scala:88)[0m
+[0m[[31merror[0m] [0m    at play.utils.Threads$.withContextClassLoader(Threads.scala:18)[0m
+[0m[[31merror[0m] [0m    at play.api.Play$.start(Play.scala:87)[0m
+[0m[[31merror[0m] [0m    at play.api.Play.start(Play.scala)[0m
+[0m[[31merror[0m] [0m    at play.test.Helpers.start(Helpers.java:359)[0m
+[0m[[31merror[0m] [0m    at play.test.WithApplication.start(WithApplication.java:18)[0m
+[0m[[31merror[0m] [0m    at models.PermissionTest.setUp([35mPermissionTest.java[0m:[33m18[0m)[0m
 [0m[[31merror[0m] [0m    ...[0m
-[0m[[31merror[0m] [0mCaused by: org.h2.jdbc.JdbcSQLException: Table "SCHOOL_CODE" not found; SQL statement:[0m
-[0m[[31merror[0m] [0minsert into school_code (id, school_type, status) values (?,?,?) [42102-172][0m
+[0m[[31merror[0m] [0mCaused by: org.h2.jdbc.JdbcSQLException: Table "EKAROUSER" not found; SQL statement:[0m
+[0m[[31merror[0m] [0mselect count(*) from ekarouser t0 [42102-172][0m
 [0m[[31merror[0m] [0m    at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)[0m
 [0m[[31merror[0m] [0m    at org.h2.message.DbException.get(DbException.java:169)[0m
 [0m[[31merror[0m] [0m    at org.h2.message.DbException.get(DbException.java:146)[0m
 [0m[[31merror[0m] [0m    at org.h2.command.Parser.readTableOrView(Parser.java:4824)[0m
-[0m[[31merror[0m] [0m    at org.h2.command.Parser.readTableOrView(Parser.java:4802)[0m
-[0m[[31merror[0m] [0m    at org.h2.command.Parser.parseInsert(Parser.java:966)[0m
-[0m[[31merror[0m] [0m    at org.h2.command.Parser.parsePrepared(Parser.java:375)[0m
+[0m[[31merror[0m] [0m    at org.h2.command.Parser.readTableFilter(Parser.java:1099)[0m
+[0m[[31merror[0m] [0m    at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:1705)[0m
+[0m[[31merror[0m] [0m    at org.h2.command.Parser.parseSelectSimple(Parser.java:1813)[0m
+[0m[[31merror[0m] [0m    at org.h2.command.Parser.parseSelectSub(Parser.java:1699)[0m
+[0m[[31merror[0m] [0m    at org.h2.command.Parser.parseSelectUnion(Parser.java:1542)[0m
+[0m[[31merror[0m] [0m    at org.h2.command.Parser.parseSelect(Parser.java:1530)[0m
+[0m[[31merror[0m] [0m    at org.h2.command.Parser.parsePrepared(Parser.java:405)[0m
 [0m[[31merror[0m] [0m    at org.h2.command.Parser.parse(Parser.java:279)[0m
 [0m[[31merror[0m] [0m    at org.h2.command.Parser.parse(Parser.java:251)[0m
 [0m[[31merror[0m] [0m    at org.h2.command.Parser.prepareCommand(Parser.java:218)[0m
@@ -38,18 +56,74 @@
 [0m[[31merror[0m] [0m    at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:70)[0m
 [0m[[31merror[0m] [0m    at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:267)[0m
 [0m[[31merror[0m] [0m    at com.jolbox.bonecp.ConnectionHandle.prepareStatement(ConnectionHandle.java:1024)[0m
-[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.persist.dml.InsertHandler.getPstmt(InsertHandler.java:125)[0m
-[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.persist.dml.InsertHandler.bind(InsertHandler.java:105)[0m
-[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:79)[0m
-[0m[[31merror[0m] [0m    ... 50 more[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.query.CQueryRowCount.findRowCount(CQueryRowCount.java:120)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.query.CQueryEngine.findRowCount(CQueryEngine.java:88)[0m
+[0m[[31merror[0m] [0m    ... 58 more[0m
 [0m[[0mdebug[0m] [0mTest models.[33mPermissionTest[0m.[36mtestPermissions[0m finished[0m
-[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[31m1 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 18.432s[0m[0m
-[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0mdebug[0m] [0mTest models.[33mPermissionTest[0m.[36mtestCreateUser[0m started[0m
+[0m[[31merror[0m] [0mTest models.[33mPermissionTest[0m.[31mtestCreateUser[0m failed: javax.persistence.[31mPersistenceException[0m: Query threw SQLException:Table "EKAROUSER" not found; SQL statement:[0m
+[0m[[31merror[0m] [0mselect count(*) from ekarouser t0 [42102-172] [0m
+[0m[[31merror[0m] [0mBind values:[null] [0m
+[0m[[31merror[0m] [0mQuery was:[0m
+[0m[[31merror[0m] [0mselect count(*) from ekarouser t0 [0m
+[0m[[31merror[0m] [0m[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.query.CQuery.createPersistenceException(CQuery.java:790)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.query.CQueryEngine.findRowCount(CQueryEngine.java:110)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.query.DefaultOrmQueryEngine.findRowCount(DefaultOrmQueryEngine.java:36)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.core.OrmQueryRequest.findRowCount(OrmQueryRequest.java:235)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.core.DefaultServer.findRowCountWithCopy(DefaultServer.java:1301)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.core.DefaultServer.findRowCount(DefaultServer.java:1293)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.querydefn.DefaultOrmQuery.findRowCount(DefaultOrmQuery.java:873)[0m
+[0m[[31merror[0m] [0m    at Global$InitialData.insert(Global.java:21)[0m
+[0m[[31merror[0m] [0m    at Global.onStart(Global.java:15)[0m
+[0m[[31merror[0m] [0m    at play.core.j.JavaGlobalSettingsAdapter.onStart(JavaGlobalSettingsAdapter.scala:18)[0m
+[0m[[31merror[0m] [0m    at play.api.GlobalPlugin.onStart(GlobalSettings.scala:203)[0m
+[0m[[31merror[0m] [0m    at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:88)[0m
+[0m[[31merror[0m] [0m    at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:88)[0m
+[0m[[31merror[0m] [0m    at scala.collection.immutable.List.foreach(List.scala:318)[0m
+[0m[[31merror[0m] [0m    at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:88)[0m
+[0m[[31merror[0m] [0m    at play.api.Play$$anonfun$start$1.apply(Play.scala:88)[0m
+[0m[[31merror[0m] [0m    at play.api.Play$$anonfun$start$1.apply(Play.scala:88)[0m
+[0m[[31merror[0m] [0m    at play.utils.Threads$.withContextClassLoader(Threads.scala:18)[0m
+[0m[[31merror[0m] [0m    at play.api.Play$.start(Play.scala:87)[0m
+[0m[[31merror[0m] [0m    at play.api.Play.start(Play.scala)[0m
+[0m[[31merror[0m] [0m    at play.test.Helpers.start(Helpers.java:359)[0m
+[0m[[31merror[0m] [0m    at play.test.WithApplication.start(WithApplication.java:18)[0m
+[0m[[31merror[0m] [0m    at models.PermissionTest.setUp([35mPermissionTest.java[0m:[33m18[0m)[0m
+[0m[[31merror[0m] [0m    ...[0m
+[0m[[31merror[0m] [0mCaused by: org.h2.jdbc.JdbcSQLException: Table "EKAROUSER" not found; SQL statement:[0m
+[0m[[31merror[0m] [0mselect count(*) from ekarouser t0 [42102-172][0m
+[0m[[31merror[0m] [0m    at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)[0m
+[0m[[31merror[0m] [0m    at org.h2.message.DbException.get(DbException.java:169)[0m
+[0m[[31merror[0m] [0m    at org.h2.message.DbException.get(DbException.java:146)[0m
+[0m[[31merror[0m] [0m    at org.h2.command.Parser.readTableOrView(Parser.java:4824)[0m
+[0m[[31merror[0m] [0m    at org.h2.command.Parser.readTableFilter(Parser.java:1099)[0m
+[0m[[31merror[0m] [0m    at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:1705)[0m
+[0m[[31merror[0m] [0m    at org.h2.command.Parser.parseSelectSimple(Parser.java:1813)[0m
+[0m[[31merror[0m] [0m    at org.h2.command.Parser.parseSelectSub(Parser.java:1699)[0m
+[0m[[31merror[0m] [0m    at org.h2.command.Parser.parseSelectUnion(Parser.java:1542)[0m
+[0m[[31merror[0m] [0m    at org.h2.command.Parser.parseSelect(Parser.java:1530)[0m
+[0m[[31merror[0m] [0m    at org.h2.command.Parser.parsePrepared(Parser.java:405)[0m
+[0m[[31merror[0m] [0m    at org.h2.command.Parser.parse(Parser.java:279)[0m
+[0m[[31merror[0m] [0m    at org.h2.command.Parser.parse(Parser.java:251)[0m
+[0m[[31merror[0m] [0m    at org.h2.command.Parser.prepareCommand(Parser.java:218)[0m
+[0m[[31merror[0m] [0m    at org.h2.engine.Session.prepareLocal(Session.java:425)[0m
+[0m[[31merror[0m] [0m    at org.h2.engine.Session.prepareCommand(Session.java:374)[0m
+[0m[[31merror[0m] [0m    at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)[0m
+[0m[[31merror[0m] [0m    at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:70)[0m
+[0m[[31merror[0m] [0m    at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:267)[0m
+[0m[[31merror[0m] [0m    at com.jolbox.bonecp.ConnectionHandle.prepareStatement(ConnectionHandle.java:1024)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.query.CQueryRowCount.findRowCount(CQueryRowCount.java:120)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.query.CQueryEngine.findRowCount(CQueryEngine.java:88)[0m
+[0m[[31merror[0m] [0m    ... 58 more[0m
+[0m[[0mdebug[0m] [0mTest models.[33mPermissionTest[0m.[36mtestCreateUser[0m finished[0m
+[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[31m2 failed[0m[34m, [0m[34m0 ignored[0m[34m, 2 total, 14.475s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 2 events.[0m
 [0m[[0mdebug[0m] [0mFramework implementation 'org.specs2.runner.Specs2Framework' not present.[0m
 [0m[[0mdebug[0m] [0mRunner for sbt.FrameworkWrapper produced 0 initial tasks for 0 tests.[0m
 [0m[[0mdebug[0m] [0mSummary for JUnit not available.[0m
 [0m[[0mdebug[0m] [0mSummary for specs2 not available.[0m
-[0m[[31merror[0m] [0mFailed: Total 1, Failed 1, Errors 0, Passed 0[0m
+[0m[[31merror[0m] [0mFailed: Total 2, Failed 2, Errors 0, Passed 0[0m
 [0m[[31merror[0m] [0mFailed tests:[0m
 [0m[[31merror[0m] [0m	models.PermissionTest[0m
 [0m[[31merror[0m] [0m(test:[31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m

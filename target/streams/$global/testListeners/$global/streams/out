@@ -1,7 +1,8 @@
 [0m[[0minfo[0m] [0mmodels.PermissionTest[0m
 [0m[[0minfo[0m] [0m[33mx[0m testPermissions[0m
+[0m[[0minfo[0m] [0m[33mx[0m testCreateUser[0m
 [0m[[0minfo[0m] [0m[0m
 [0m[[0minfo[0m] [0m[0m
 [0m[[0minfo[0m] [0mTotal for test models.PermissionTest[0m
-[0m[[0minfo[0m] [0m[34mFinished in 0.29 seconds[0m[0m
-[0m[[0minfo[0m] [0m[34m1 tests, 1 failures, 0 errors[0m[0m
+[0m[[0minfo[0m] [0m[34mFinished in 0.003 seconds[0m[0m
+[0m[[0minfo[0m] [0m[34m2 tests, 2 failures, 0 errors[0m[0m

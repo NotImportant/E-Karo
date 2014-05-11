@@ -7,7 +7,7 @@ import play.Routes;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
-import views.html.login;
+import views.html.*;
 import views.html.moreinfo;
 import views.html.signup;
 public class Application extends Controller {
@@ -22,7 +22,7 @@ public class Application extends Controller {
         public String validate() {
 			if (User.authenticate(username, password) == null) {
 				return "Invalid username or password";
-            }
+			}
             return null;
         }
         
@@ -45,6 +45,17 @@ public class Application extends Controller {
 		}
 	}
 
+	public static class ChangePassword {
+		public String username;
+		public String newPassword1;
+		public String newPassword2;
+		public String oldPassword;
+
+		public String validate() {
+			return User.changePassword(username, oldPassword, newPassword1,
+					newPassword2);
+		}
+	}
     /**
      * Login page.
      */
@@ -73,8 +84,7 @@ public class Application extends Controller {
 	 * more Info page.
 	 */
 	public static Result moreinfo(String username) {
-		if (User.find.where().eq("username", username).findUnique().role
-				.equalsIgnoreCase("Guardian")) {
+		if (User.find.where().eq("username", username).findUnique().role == 'G') {
 		return ok(moreinfo.render(username, form(models.Guardian.class)));
 		}
 		session("username", username);
@@ -86,8 +96,8 @@ public class Application extends Controller {
 	 */
 	public static Result moreInformation(String username) {
 		User user = User.findByUsername(username);
-		String role = user.role;
-		if (role == "Guardian") {
+		char role = user.role;
+		if (role == 'G') {
 			Form<Guardian> userForm = form(Guardian.class).bindFromRequest();
 		if (userForm.hasErrors()) {
 				return badRequest(moreinfo.render(username, userForm));
@@ -132,7 +142,24 @@ signupform.get().username));
             routes.Application.login()
         );
     }
-  
+
+	public static Result changePassword() {
+		return ok(changePassword.render(form(ChangePassword.class)));
+	}
+
+	/**
+	 * Handle registration form submission.
+	 */
+	public static Result authenticateChangePassword() {
+		Form<ChangePassword> signupform = form(ChangePassword.class)
+				.bindFromRequest();
+		if (signupform.hasErrors()) {
+			return badRequest(changePassword.render(signupform));
+		} else {
+			session("username", signupform.get().username);
+			return redirect(routes.Projects.index());
+		}
+	}
     // -- Javascript routing
     
     public static Result javascriptRoutes() {

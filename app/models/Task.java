@@ -1,5 +1,6 @@
 package models;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -47,12 +48,12 @@ public class Task extends Model {
     /**
      * Retrieve todo tasks for the user.
      */
-    public static List<Task> findTodoInvolving(String user) {
-       return find.fetch("project")
-           .where()
-                .eq("done", false)
-				.eq("project.members.username", user)
-           .findList();
+	public static List<Task> findTodoInvolving(int id) {
+		return new ArrayList<Task>();/*
+									 * find.fetch("project") .where()
+									 * .eq("done", false)
+									 * .eq("project.members.id", 1) .findList();
+									 */
     }
     
     /**

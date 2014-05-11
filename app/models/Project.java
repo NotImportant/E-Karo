@@ -17,10 +17,10 @@ import com.avaje.ebean.Ebean;
 @Entity 
 public class Project extends Model {
 
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
 	@Id
-    public Long id;
+	public Long id;
     
     public String name;
     
@@ -37,13 +37,14 @@ public class Project extends Model {
     
     // -- Queries
     
-    public static Model.Finder<Long,Project> find = new Model.Finder<Long,Project>(Long.class, Project.class);
+	public static Model.Finder<Long, Project> find = new Model.Finder<Long, Project>(
+			Long.class, Project.class);
     
     /**
      * Retrieve project for user
      */
-	public static List<Project> findInvolving(String username) {
-		return find.where().eq("members.username", username).findList();
+	public static List<Project> findInvolving(int id) {
+		return find.where().eq("members.id", id).findList();
     }
     
     /**
@@ -58,7 +59,7 @@ public class Project extends Model {
     /**
      * Create a new project.
      */
-    public static Project create(String name, String folder, String owner) {
+	public static Project create(String name, String folder, int owner) {
         Project project = new Project(name, folder, User.find.ref(owner));
         project.save();
         project.saveManyToManyAssociations("members");
@@ -68,7 +69,7 @@ public class Project extends Model {
     /**
      * Rename a project
      */
-    public static String rename(Long projectId, String newName) {
+	public static String rename(Long projectId, String newName) {
         Project project = find.ref(projectId);
         project.name = newName;
         project.update();
@@ -88,8 +89,8 @@ public class Project extends Model {
     /**
      * Add a member to this project
      */
-    public static void addMember(Long project, String user) {
-		Project p = Project.find.setId(project).fetch("members", "username")
+	public static void addMember(Long project, int user) {
+		Project p = Project.find.setId(project).fetch("members", "id")
 				.findUnique();
         p.members.add(
             User.find.ref(user)
@@ -100,8 +101,8 @@ public class Project extends Model {
     /**
      * Remove a member from this project
      */
-    public static void removeMember(Long project, String user) {
-		Project p = Project.find.setId(project).fetch("members", "username")
+	public static void removeMember(Long project, int user) {
+		Project p = Project.find.setId(project).fetch("members", "id")
 				.findUnique();
         p.members.remove(
             User.find.ref(user)
@@ -112,9 +113,9 @@ public class Project extends Model {
     /**
      * Check if a user is a member of this project
      */
-    public static boolean isMember(Long project, String user) {
+	public static boolean isMember(Long project, String user) {
         return find.where()
-.eq("members.username", user)
+.eq("members.id", user)
             .eq("id", project)
             .findRowCount() > 0;
     } 

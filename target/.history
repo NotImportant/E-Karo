@@ -82,3 +82,9 @@ run
 test
 clean
 run
+clean
+compile
+run
+run 5275
+run 5050
+test
