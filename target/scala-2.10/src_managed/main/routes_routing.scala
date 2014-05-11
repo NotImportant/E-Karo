@@ -1,6 +1,6 @@
 // @SOURCE:/Users/tituschirchir/E-Karo/E-Karo/conf/routes
 // @HASH:78ec85c8bb3d52bb1392b616ab38aba9f31d4969
-// @DATE:Sun May 11 18:15:27 EDT 2014
+// @DATE:Sun May 11 18:21:33 EDT 2014
 
 
 import play.core._

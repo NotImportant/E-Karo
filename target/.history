@@ -96,3 +96,5 @@ run 5555
 clean
 compile
 run
+clean
+compile

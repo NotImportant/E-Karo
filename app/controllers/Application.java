@@ -10,9 +10,10 @@ import play.Routes;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
+import views.html.*;
 import views.html.changePassword;
 import views.html.login;
-import views.html.*;
+import views.html.moreinfo;
 import views.html.signup;
 public class Application extends Controller {
 
@@ -92,7 +93,7 @@ public class Application extends Controller {
 
 	public static Result users() {
 		return ok(users.render(Institution.find.byId(248), Student.find.where()
-				.eq("institutionId", 248)));
+				.eq("institutionId", 248).findList()));
 	}
 	/**
 	 * Add User info a user.

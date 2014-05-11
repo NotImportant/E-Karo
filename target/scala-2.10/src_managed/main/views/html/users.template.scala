@@ -59,7 +59,7 @@ Seq[Any](format.raw/*1.54*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Sun May 11 18:17:40 EDT 2014
+                    DATE: Sun May 11 18:21:38 EDT 2014
                     SOURCE: /Users/tituschirchir/E-Karo/E-Karo/app/views/users.scala.html
                     HASH: be5d9f9fc1c995621cf6f8d35ef32ab3a7a04fa2
                     MATRIX: 793->1|939->53|1070->149|1084->155|1137->187|1236->252|1250->258|1306->293|1373->324|1393->335|1420->340|1468->353|1509->378|1549->380|1591->387|1607->394|1639->404|1677->411
