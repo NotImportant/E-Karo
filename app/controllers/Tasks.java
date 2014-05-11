@@ -5,15 +5,11 @@ import static play.data.Form.form;
 import java.util.ArrayList;
 
 import models.Project;
-import models.SchoolStatus;
 import models.Task;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Security;
-import views.html.tasks.folder;
-import views.html.tasks.index;
-import views.html.tasks.item;
 
 /**
  * Manage tasks related operations.
@@ -26,10 +22,8 @@ public class Tasks extends Controller {
      */
     public static Result index(Long project) {
         if(Secured.isMemberOf(project)) {
-            return ok(
-                index.render(
-                    Project.find.byId(project),
-					Task.findByProject(project), SchoolStatus.find.byId(100)));
+			return ok(index.render(Project.find.byId(project),
+					Task.findByProject(project)));
         }
         else {
             return forbidden();
