@@ -12,6 +12,9 @@ POST    /login                              controllers.Application.authenticate
 GET     /changePassword                              controllers.Application.changePassword()
 POST    /changePassword                              controllers.Application.authenticateChangePassword()
 
+
+GET     /users                              controllers.Application.users()
+
 GET     /signup                             controllers.Application.signup()
 POST    /signup                             controllers.Application.authenticateSignUp()
 GET     /moreinfo                             controllers.Application.moreinfo(username: String)

@@ -12,8 +12,8 @@ import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.changePassword;
 import views.html.login;
-import views.html.moreinfo;
 import views.html.*;
+import views.html.signup;
 public class Application extends Controller {
 
 	// -- Authentication
@@ -90,7 +90,7 @@ public class Application extends Controller {
 		return redirect(routes.Projects.index());
 	}
 
-	public static Result institution() {
+	public static Result users() {
 		return ok(users.render(Institution.find.byId(248), Student.find.where()
 				.eq("institutionId", 248)));
 	}
