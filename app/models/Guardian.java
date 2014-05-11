@@ -13,7 +13,7 @@ import play.db.ebean.Model;
  */
 @Entity 
 @Table(name = "guardian")
-public class Guardian extends Model implements Person {
+public class Guardian extends Person {
 
 	@Id
 	public Long guardianId;
@@ -27,7 +27,7 @@ public class Guardian extends Model implements Person {
     public static Model.Finder<Long,Guardian> find = new Model.Finder<Long,Guardian>(Long.class, Guardian.class);
 
 
-	@Override
+
 	public Permission getPermission() {
 		return Permission.GUARDIAN;
 	}

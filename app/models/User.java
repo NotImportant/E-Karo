@@ -15,25 +15,25 @@ import play.db.ebean.Model;
 /**
  * User entity managed by Ebean
  */
-@Entity 
+@Entity
 @Table(name = "ekarouser")
 public class User extends Model {
 
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
 	@Id
-	int id;
+	public int id;
 
-    @Constraints.Required
-    @Formats.NonEmpty
+	@Constraints.Required
+	@Formats.NonEmpty
 	public String username;
 
 	@Constraints.Required
 	public String email;
-    
-    @Constraints.Required
-    public String password;
-    
+
+	@Constraints.Required
+	public String password;
+
 	@Column(name = "user_type")
 	public char role;
 
@@ -46,44 +46,45 @@ public class User extends Model {
 	@Column(name = "upd_d")
 	public Timestamp updateDate;
 
-    // -- Queries
-    
+	// -- Queries
+
 	public static Model.Finder<Integer, User> find = new Model.Finder<Integer, User>(
 			Integer.class, User.class);
-    
-    /**
-     * Retrieve all users.
-     */
-    public static List<User> findAll() {
-        return find.all();
-    }
 
-    /**
-     * Retrieve a User from email.
-     */
-    public static User findByEmail(String email) {
-        return find.where().eq("email", email).findUnique();
-    }
+	/**
+	 * Retrieve all users.
+	 */
+	public static List<User> findAll() {
+		return find.all();
+	}
+
+	/**
+	 * Retrieve a User from email.
+	 */
+	public static User findByEmail(String email) {
+		return find.where().eq("email", email).findUnique();
+	}
 
 	/**
 	 * Retrieve a User from username.
 	 */
 	public static User findByUsername(String username) {
-		return find.where().eq("username", username)
-				.findUnique();
+		return getValidUser(username);
 	}
 
 	public static List<User> findManyByUsername(String username) {
 		return find.where().eq("username", username).findList();
 	}
-    /**
-     * Authenticate a User.
-     */
+
+	/**
+	 * Authenticate a User.
+	 */
 	public static User authenticate(String username, String password) {
 		return find.where().eq("username", username).eq("password", password)
+				.eq("removeDate", DateConstants.INFINITY.businessDate)
 				.findUnique();
-    }
-    
+	}
+
 	public static User authenticateRegistration(String username) {
 		return find.where().eq("username", username).findUnique();
 	}
@@ -91,8 +92,8 @@ public class User extends Model {
 	/**
 	 * Create a user
 	 */
-	public static User create(String username, String email, String password,
-			String role, boolean isNew) {
+	public static User createOrUpdate(String username, String email,
+			String password, String role, boolean isNew) {
 		User newUser = new User();
 		newUser.email = email;
 		newUser.username = username;
@@ -104,31 +105,26 @@ public class User extends Model {
 			newUser.registrationDate = DateConstants.NOW.businessDate;
 		}
 		newUser.removeDate = DateConstants.INFINITY.businessDate;
-		newUser.save();
 		return newUser;
 	}
 
-	public static boolean isValidUser(User user) {
-		return user.removeDate == null
-				|| user.removeDate.after(DateConstants.NOW.businessDate);
+	public static User createAndInsert(String username, String email,
+			String password, String role) {
+		User user = createOrUpdate(username, email, password, role, true);
+		user.save();
+		return user;
 	}
-	/*
-	 * Update User Password
-	 */
-	public static User getValidUserFromList(List<User> users) {
 
-		for (User user : users) {
-			if (isValidUser(user)) {
-				return user;
-			}
-		}
-		return null;
+	public static User getValidUser(String username) {
+		return find.where().eq("username", username)
+				.eq("removeDate", DateConstants.INFINITY.businessDate)
+				.findUnique();
 	}
 
 	public static String changePassword(String username, String oldPassword,
 			String newPassword1, String newPassword2) {
 
-		User userToUpdate = getValidUserFromList(findManyByUsername(username));
+		User userToUpdate = getValidUser(username);
 
 		System.out.print(userToUpdate.username + " " + userToUpdate.email + " "
 				+ userToUpdate.password + " ");
@@ -137,19 +133,20 @@ public class User extends Model {
 
 			userToUpdate.removeDate = DateConstants.NOW.businessDate;
 			userToUpdate.save();
-			create(username, userToUpdate.email, newPassword1,
-					String.valueOf(userToUpdate.role), false);
+			User user = createOrUpdate(username, userToUpdate.email,
+					newPassword1, String.valueOf(userToUpdate.role), false);
+			user.registrationDate = userToUpdate.registrationDate;
+			user.save();
 			return null;
-		}
- else {
-			return "Cannot change Password. Sorry";
+		} else {
+			return "Cannot change Password. Please try again.";
 		}
 	}
-    
-    @Override
+
+	@Override
 	public String toString() {
-        return "User(" + email + ")";
-    }
+		return "User(" + email + ")";
+	}
 
 	public static boolean authenticateRegistration(String username,
 			String password, String password2, String email, String role) {
@@ -160,5 +157,15 @@ public class User extends Model {
 				&& password.length() > 6 && email.contains("@");
 	}
 
-}
+	public static void updateUser(User user, String password, String email) {
+		User newUser = user;
+		if (email != null) {
+			newUser.email = email;
+		}
+		if (password != null) {
+			newUser.password = password;
+		}
+		newUser.save();
+	}
 
+}

@@ -1,8 +1,7 @@
 package models;
 
-public class Treasurer implements Person {
+public class Treasurer extends Person {
 
-	@Override
 	public Permission getPermission() {
 		return Permission.TREASURER;
 	}

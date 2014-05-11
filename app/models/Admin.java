@@ -1,8 +1,7 @@
 package models;
 
-public class Admin implements Person {
+public class Admin extends Person {
 
-	@Override
 	public Permission getPermission() {
 		return Permission.ADMIN;
 	}

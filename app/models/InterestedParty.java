@@ -1,7 +1,7 @@
 package models;
 
-public class InterestedParty implements Person {
-	@Override
+public class InterestedParty extends Person {
+
 	public Permission getPermission() {
 		return Permission.INTERESTED_PARTY;
 	}
