@@ -7,28 +7,27 @@ import play.Routes;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
+import views.html.changePassword;
 import views.html.login;
 import views.html.moreinfo;
 import views.html.signup;
-import views.html.changePassword;
+
 public class Application extends Controller {
-  
-    // -- Authentication
-    
-    public static class Login {
-        
+
+	// -- Authentication
+
+	public static class Login {
+
 		public String username;
-        public String password;
-        
-        public String validate() {
+		public String password;
+
+		public String validate() {
 			if (User.authenticate(username, password) == null) {
 				return "Invalid username or password";
 			}
-            return null;
-        }
-        
-    }
-    
+			return null;
+		}
+	}
 	public static class SignUp {
 		public String username;
 		public String password;
@@ -41,11 +40,10 @@ public class Application extends Controller {
 					email, role)) {
 				return "Registration invalid. Try again.";
 			}
-			User.create(username, email, password, role, true);
+			User.createAndInsert(username, email, password, role);
 			return null;
 		}
 	}
-
 	public static class ChangePassword {
 		public String username;
 		public String newPassword1;
@@ -57,36 +55,33 @@ public class Application extends Controller {
 					newPassword2);
 		}
 	}
-    /**
-     * Login page.
-     */
-    public static Result login() {
-        return ok(
-            login.render(form(Login.class))
-        );
-    }
+
+	/**
+	 * Login page.
+	 */
+	public static Result login() {
+		return ok(login.render(form(Login.class)));
+	}
 
 	/**
 	 * Handle login form submission.
 	 */
-    public static Result authenticate() {
-        Form<Login> loginForm = form(Login.class).bindFromRequest();
-        if(loginForm.hasErrors()) {
-            return badRequest(login.render(loginForm));
-        } else {
+	public static Result authenticate() {
+		Form<Login> loginForm = form(Login.class).bindFromRequest();
+		if (loginForm.hasErrors()) {
+			return badRequest(login.render(loginForm));
+		} else {
 			session("username", loginForm.get().username);
-            return redirect(
-                routes.Projects.index()
-            );
-        }
-    }
+			return redirect(routes.Projects.index());
+		}
+	}
 
 	/**
 	 * more Info page.
 	 */
 	public static Result moreinfo(String username) {
 		if (User.find.where().eq("username", username).findUnique().role == 'G') {
-		return ok(moreinfo.render(username, form(models.Guardian.class)));
+			return ok(moreinfo.render(username, form(models.Guardian.class)));
 		}
 		session("username", username);
 		return redirect(routes.Projects.index());
@@ -100,16 +95,15 @@ public class Application extends Controller {
 		char role = user.role;
 		if (role == 'G') {
 			Form<Guardian> userForm = form(Guardian.class).bindFromRequest();
-		if (userForm.hasErrors()) {
+			if (userForm.hasErrors()) {
 				return badRequest(moreinfo.render(username, userForm));
-		} else {
+			} else {
 				session("firstName", userForm.get().firstName);
 				Guardian.create(userForm.get(), username).save();
 				return redirect(routes.Projects.index());
 			}
 
-	
-	}
+		}
 		return redirect(routes.Projects.index());
 	}
 
@@ -129,20 +123,19 @@ public class Application extends Controller {
 			return badRequest(signup.render(signupform));
 		} else {
 			session("username", signupform.get().username);
-			return redirect(routes.Application.moreInformation(
-signupform.get().username));
+			return redirect(routes.Application
+					.moreInformation(signupform.get().username));
 		}
 	}
-    /**
-     * Logout and clean the session.
-     */
-    public static Result logout() {
-        session().clear();
-        flash("success", "You've been logged out");
-        return redirect(
-            routes.Application.login()
-        );
-    }
+
+	/**
+	 * Logout and clean the session.
+	 */
+	public static Result logout() {
+		session().clear();
+		flash("success", "You've been logged out");
+		return redirect(routes.Application.login());
+	}
 
 	public static Result changePassword() {
 		return ok(changePassword.render(form(ChangePassword.class)));
@@ -161,34 +154,34 @@ signupform.get().username));
 			return redirect(routes.Projects.index());
 		}
 	}
-    // -- Javascript routing
-    
-    public static Result javascriptRoutes() {
-        response().setContentType("text/javascript");
-        return ok(
-            Routes.javascriptRouter("jsRoutes",
-            
-                // Routes for Projects
-                controllers.routes.javascript.Projects.add(), 
-                controllers.routes.javascript.Projects.delete(), 
-                controllers.routes.javascript.Projects.rename(),
-                controllers.routes.javascript.Projects.addGroup(), 
-                controllers.routes.javascript.Projects.deleteGroup(), 
-                controllers.routes.javascript.Projects.renameGroup(),
-                controllers.routes.javascript.Projects.addUser(), 
-                controllers.routes.javascript.Projects.removeUser(), 
-                
-                // Routes for Tasks
-                controllers.routes.javascript.Tasks.addFolder(), 
-                controllers.routes.javascript.Tasks.renameFolder(), 
-                controllers.routes.javascript.Tasks.deleteFolder(), 
-                controllers.routes.javascript.Tasks.index(),
-                controllers.routes.javascript.Tasks.add(), 
-                controllers.routes.javascript.Tasks.update(), 
-                controllers.routes.javascript.Tasks.delete()
-                
-            )
-        );
-    }
+
+	// -- Javascript routing
+
+	public static Result javascriptRoutes() {
+		response().setContentType("text/javascript");
+		return ok(Routes.javascriptRouter(
+				"jsRoutes",
+
+				// Routes for Projects
+				controllers.routes.javascript.Projects.add(),
+				controllers.routes.javascript.Projects.delete(),
+				controllers.routes.javascript.Projects.rename(),
+				controllers.routes.javascript.Projects.addGroup(),
+				controllers.routes.javascript.Projects.deleteGroup(),
+				controllers.routes.javascript.Projects.renameGroup(),
+				controllers.routes.javascript.Projects.addUser(),
+				controllers.routes.javascript.Projects.removeUser(),
+
+				// Routes for Tasks
+				controllers.routes.javascript.Tasks.addFolder(),
+				controllers.routes.javascript.Tasks.renameFolder(),
+				controllers.routes.javascript.Tasks.deleteFolder(),
+				controllers.routes.javascript.Tasks.index(),
+				controllers.routes.javascript.Tasks.add(),
+				controllers.routes.javascript.Tasks.update(),
+				controllers.routes.javascript.Tasks.delete()
+
+		));
+	}
 
 }
