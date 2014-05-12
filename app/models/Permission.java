@@ -1,5 +1,9 @@
 package models;
 
+import java.util.List;
+
+import com.google.common.collect.Lists;
+
 public enum Permission {
 
 	ADMIN("Admin", 255), TREASURER("Treasurer", 128), GUARDIAN("Guardian", 64), STUDENT(
@@ -8,7 +12,8 @@ public enum Permission {
 
 	private int value;
 	private String role;
-
+	public static List<String> roles = Lists.newArrayList("Admin", "Student",
+			"Guardian", "Institution", "Treasurer", "Other");
 	Permission(String role, int value) {
 		this.value = value;
 		this.role = role;
@@ -30,4 +35,5 @@ public enum Permission {
 		}
 		return false;
 	}
+
 }

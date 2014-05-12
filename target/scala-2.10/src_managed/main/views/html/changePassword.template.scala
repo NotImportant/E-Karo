@@ -20,13 +20,13 @@ import play.api.data.Field
 import play.mvc.Http.Context.Implicit._
 import views.html._
 /**/
-object changePassword extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template1[Form[Application.ChangePassword],play.api.templates.HtmlFormat.Appendable] {
+object changePassword extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template2[String,Form[Application.ChangePassword],play.api.templates.HtmlFormat.Appendable] {
 
     /**/
-    def apply/*1.2*/(form: Form[Application.ChangePassword]):play.api.templates.HtmlFormat.Appendable = {
+    def apply/*1.2*/(username: String, form: Form[Application.ChangePassword]):play.api.templates.HtmlFormat.Appendable = {
         _display_ {
 
-Seq[Any](format.raw/*1.42*/("""
+Seq[Any](format.raw/*1.60*/("""
 
 <html>
     <head>
@@ -40,9 +40,9 @@ Seq[Any](format.raw/*1.42*/("""
             <a href=""""),_display_(Seq[Any](/*12.23*/routes/*12.29*/.Projects.index)),format.raw/*12.44*/("""" id="logo"><span>E-</span>Karo</a>
         </header>
         
-        """),_display_(Seq[Any](/*15.10*/helper/*15.16*/.form(routes.Application.authenticateChangePassword)/*15.68*/ {_display_(Seq[Any](format.raw/*15.70*/("""
+        """),_display_(Seq[Any](/*15.10*/helper/*15.16*/.form(routes.Application.authenticateChangePassword(username))/*15.78*/ {_display_(Seq[Any](format.raw/*15.80*/("""
             
-            <h1>Sign in</h1>
+            <h1>Password Change</h1>
             
             """),_display_(Seq[Any](/*19.14*/if(form.hasGlobalErrors)/*19.38*/ {_display_(Seq[Any](format.raw/*19.40*/(""" 
                 <p class="error">
@@ -57,7 +57,7 @@ Seq[Any](format.raw/*1.42*/("""
             """)))})),format.raw/*29.14*/("""
             
             <p>
-                <input type="username" name="username" placeholder="Username" value=""""),_display_(Seq[Any](/*32.87*/form("username")/*32.103*/.value)),format.raw/*32.109*/("""">
+                <input type="username" name="username" placeholder="""),_display_(Seq[Any](/*32.69*/username)),format.raw/*32.77*/(""" value=""""),_display_(Seq[Any](/*32.86*/form("username")/*32.102*/.value)),format.raw/*32.108*/("""">
             </p>
             <p>
                 <input type="password" name="oldPassword" placeholder="Old Password">
@@ -83,20 +83,20 @@ Seq[Any](format.raw/*1.42*/("""
 """))}
     }
     
-    def render(form:Form[Application.ChangePassword]): play.api.templates.HtmlFormat.Appendable = apply(form)
+    def render(username:String,form:Form[Application.ChangePassword]): play.api.templates.HtmlFormat.Appendable = apply(username,form)
     
-    def f:((Form[Application.ChangePassword]) => play.api.templates.HtmlFormat.Appendable) = (form) => apply(form)
+    def f:((String,Form[Application.ChangePassword]) => play.api.templates.HtmlFormat.Appendable) = (username,form) => apply(username,form)
     
     def ref: this.type = this
 
 }
                 /*
                     -- GENERATED --
-                    DATE: Sun May 11 18:21:38 EDT 2014
+                    DATE: Sun May 11 20:29:44 EDT 2014
                     SOURCE: /Users/tituschirchir/E-Karo/E-Karo/app/views/changePassword.scala.html
-                    HASH: cc7ba4f642b51fb5c7d4b284f944b495503107c8
-                    MATRIX: 809->1|943->41|1086->149|1100->155|1153->187|1260->259|1274->265|1331->300|1441->374|1456->380|1493->395|1601->467|1616->473|1677->525|1717->527|1822->596|1855->620|1895->622|1988->679|2001->683|2043->703|2110->738|2173->765|2211->794|2251->796|2345->854|2359->859|2396->874|2463->909|2615->1025|2641->1041|2670->1047|3246->1587|3261->1593|3298->1608|3383->1661
-                    LINES: 26->1|29->1|34->6|34->6|34->6|35->7|35->7|35->7|40->12|40->12|40->12|43->15|43->15|43->15|43->15|47->19|47->19|47->19|49->21|49->21|49->21|51->23|53->25|53->25|53->25|55->27|55->27|55->27|57->29|60->32|60->32|60->32|74->46|74->46|74->46|75->47
+                    HASH: 26d5480aa7e765455b7bbe87fc72d0525f607334
+                    MATRIX: 816->1|968->59|1111->167|1125->173|1178->205|1285->277|1299->283|1356->318|1466->392|1481->398|1518->413|1626->485|1641->491|1712->553|1752->555|1865->632|1898->656|1938->658|2031->715|2044->719|2086->739|2153->774|2216->801|2254->830|2294->832|2388->890|2402->895|2439->910|2506->945|2640->1043|2670->1051|2715->1060|2741->1076|2770->1082|3346->1622|3361->1628|3398->1643|3483->1696
+                    LINES: 26->1|29->1|34->6|34->6|34->6|35->7|35->7|35->7|40->12|40->12|40->12|43->15|43->15|43->15|43->15|47->19|47->19|47->19|49->21|49->21|49->21|51->23|53->25|53->25|53->25|55->27|55->27|55->27|57->29|60->32|60->32|60->32|60->32|60->32|74->46|74->46|74->46|75->47
                     -- GENERATED --
                 */
             

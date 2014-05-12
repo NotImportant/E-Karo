@@ -1,0 +1,50 @@
+@(students: List[Student], user: User)
+<html>
+    <head>
+        <title>Welcome to E-Karo</title>
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+        <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/jquery-1.7.1.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/jquery-play-1.7.1.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/underscore-min.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/backbone-min.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/main.js")"></script>
+        <script type="text/javascript" src="@routes.Application.javascriptRoutes"></script>
+    </head>
+    <body>
+        <header>
+            <a href="@routes.Projects.index" id="logo"><span>E-</span>Karo</a>
+           
+            <dl id="user">
+                <dt>@user.username <span>(@user.email)</span></dt>
+                <dd>
+                    <a href="@routes.Application.logout(user.username)">Logout</a>
+                </dd>
+                
+                 <dd>
+                    <a href="@routes.Application.changePassword(user.username)">Change Password</a>
+                </dd>
+            </dl>           
+        </header>
+        <nav>
+            <h4 class="dashboard"><a href="#/">Students</a></h4>
+            <ul id="projects">
+               @display(student:models.Student) = { @student.firstName @student.lastName}
+		      <select multiple>
+		       @for( student <- students) {
+		      
+		      <option value=@display(student)> @display(student)</option>
+              
+		     }
+		     
+		     </select>
+            </ul>
+            <button id="newGroup">New group</button>
+        </nav>
+        <section id="main">
+            <p>ekaro.com - best educator.</p>
+<p><small>© 2014-2050 by Titus Chirchir.</small></p>
+        </section>
+    </body>
+</html>
+

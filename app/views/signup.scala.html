@@ -36,11 +36,10 @@
 	</p>
 	<p>
 		Role <select name="role">
-			<option value="Student">Student</option>
-			<option value="Admin">Admin</option>
-			<option value="Guardian">Guardian</option>
-			<option value="Treasurer">Treasurer</option>
-			<option value="Institution">Institution</option>
+		 @for(role <- models.Permission.roles) {
+			    <option value=@role>@role</option>
+			  }
+			
 		</select>
 	</p>
 	<span> </span>

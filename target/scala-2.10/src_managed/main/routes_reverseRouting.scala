@@ -1,6 +1,6 @@
 // @SOURCE:/Users/tituschirchir/E-Karo/E-Karo/conf/routes
-// @HASH:78ec85c8bb3d52bb1392b616ab38aba9f31d4969
-// @DATE:Sun May 11 18:21:33 EDT 2014
+// @HASH:709f7833b3a8403c16509601f0f349ff0628425a
+// @DATE:Sun May 11 21:23:43 EDT 2014
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -36,6 +36,7 @@ import Router.queryString
 // @LINE:19
 // @LINE:18
 // @LINE:16
+// @LINE:15
 // @LINE:13
 // @LINE:12
 // @LINE:10
@@ -187,6 +188,7 @@ def at(file:String): Call = {
 // @LINE:19
 // @LINE:18
 // @LINE:16
+// @LINE:15
 // @LINE:13
 // @LINE:12
 // @LINE:10
@@ -206,33 +208,27 @@ def moreinfo(username:String): Call = {
 }
                                                 
 
-// @LINE:13
-def authenticateChangePassword(): Call = {
-   Call("POST", _prefix + { _defaultPrefix } + "changePassword")
-}
-                                                
-
 // @LINE:18
 def signup(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "signup")
 }
                                                 
 
-// @LINE:16
+// @LINE:15
 def users(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "users")
 }
                                                 
 
-// @LINE:22
-def logout(): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "logout")
+// @LINE:12
+def changePassword(username:String): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "changePassword" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("username", username)))))
 }
                                                 
 
-// @LINE:12
-def changePassword(): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "changePassword")
+// @LINE:13
+def authenticateChangePassword(username:String): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "changePassword" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("username", username)))))
 }
                                                 
 
@@ -242,9 +238,21 @@ def moreInformation(username:String): Call = {
 }
                                                 
 
+// @LINE:16
+def othermain(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "othermain")
+}
+                                                
+
 // @LINE:10
 def authenticate(): Call = {
    Call("POST", _prefix + { _defaultPrefix } + "login")
+}
+                                                
+
+// @LINE:22
+def logout(username:String): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "logout" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("username", username)))))
 }
                                                 
 
@@ -289,6 +297,7 @@ def login(): Call = {
 // @LINE:19
 // @LINE:18
 // @LINE:16
+// @LINE:15
 // @LINE:13
 // @LINE:12
 // @LINE:10
@@ -525,6 +534,7 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 // @LINE:19
 // @LINE:18
 // @LINE:16
+// @LINE:15
 // @LINE:13
 // @LINE:12
 // @LINE:10
@@ -554,17 +564,6 @@ def moreinfo : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:13
-def authenticateChangePassword : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Application.authenticateChangePassword",
-   """
-      function() {
-      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "changePassword"})
-      }
-   """
-)
-                        
-
 // @LINE:18
 def signup : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.signup",
@@ -576,7 +575,7 @@ def signup : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:16
+// @LINE:15
 def users : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.users",
    """
@@ -587,23 +586,23 @@ def users : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:22
-def logout : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Application.logout",
+// @LINE:12
+def changePassword : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.changePassword",
    """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "logout"})
+      function(username) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "changePassword" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("username", username)])})
       }
    """
 )
                         
 
-// @LINE:12
-def changePassword : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Application.changePassword",
+// @LINE:13
+def authenticateChangePassword : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.authenticateChangePassword",
    """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "changePassword"})
+      function(username) {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "changePassword" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("username", username)])})
       }
    """
 )
@@ -620,12 +619,34 @@ def moreInformation : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
+// @LINE:16
+def othermain : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.othermain",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "othermain"})
+      }
+   """
+)
+                        
+
 // @LINE:10
 def authenticate : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.authenticate",
    """
       function() {
       return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
+      }
+   """
+)
+                        
+
+// @LINE:22
+def logout : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.logout",
+   """
+      function(username) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "logout" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("username", username)])})
       }
    """
 )
@@ -682,6 +703,7 @@ def login : JavascriptReverseRoute = JavascriptReverseRoute(
 // @LINE:19
 // @LINE:18
 // @LINE:16
+// @LINE:15
 // @LINE:13
 // @LINE:12
 // @LINE:10
@@ -834,6 +856,7 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 // @LINE:19
 // @LINE:18
 // @LINE:16
+// @LINE:15
 // @LINE:13
 // @LINE:12
 // @LINE:10
@@ -853,33 +876,27 @@ def moreinfo(username:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.Han
 )
                       
 
-// @LINE:13
-def authenticateChangePassword(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Application.authenticateChangePassword(), HandlerDef(this, "controllers.Application", "authenticateChangePassword", Seq(), "POST", """""", _prefix + """changePassword""")
-)
-                      
-
 // @LINE:18
 def signup(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.signup(), HandlerDef(this, "controllers.Application", "signup", Seq(), "GET", """""", _prefix + """signup""")
 )
                       
 
-// @LINE:16
+// @LINE:15
 def users(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.users(), HandlerDef(this, "controllers.Application", "users", Seq(), "GET", """""", _prefix + """users""")
 )
                       
 
-// @LINE:22
-def logout(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Application.logout(), HandlerDef(this, "controllers.Application", "logout", Seq(), "GET", """""", _prefix + """logout""")
+// @LINE:12
+def changePassword(username:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.changePassword(username), HandlerDef(this, "controllers.Application", "changePassword", Seq(classOf[String]), "GET", """""", _prefix + """changePassword""")
 )
                       
 
-// @LINE:12
-def changePassword(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Application.changePassword(), HandlerDef(this, "controllers.Application", "changePassword", Seq(), "GET", """""", _prefix + """changePassword""")
+// @LINE:13
+def authenticateChangePassword(username:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.authenticateChangePassword(username), HandlerDef(this, "controllers.Application", "authenticateChangePassword", Seq(classOf[String]), "POST", """""", _prefix + """changePassword""")
 )
                       
 
@@ -889,9 +906,21 @@ def moreInformation(username:String): play.api.mvc.HandlerRef[_] = new play.api.
 )
                       
 
+// @LINE:16
+def othermain(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.othermain(), HandlerDef(this, "controllers.Application", "othermain", Seq(), "GET", """""", _prefix + """othermain""")
+)
+                      
+
 // @LINE:10
 def authenticate(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.authenticate(), HandlerDef(this, "controllers.Application", "authenticate", Seq(), "POST", """""", _prefix + """login""")
+)
+                      
+
+// @LINE:22
+def logout(username:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.logout(username), HandlerDef(this, "controllers.Application", "logout", Seq(classOf[String]), "GET", """""", _prefix + """logout""")
 )
                       
 

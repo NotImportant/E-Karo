@@ -1,4 +1,4 @@
-@(institution : Institution, students: List[Student])
+@(institution : Institution, users: List[User])
 
 <html>
 <head>
@@ -8,12 +8,22 @@
 	href="@routes.Assets.at("stylesheets/login.css")">
 </head>
 <body>
-<h1>Welcome @institution.name!</h1>
-<ul>
-@for( student <- students) {
- <li>@student.firstName</li>
-}
-</ul>
+
+	<header>
+		<a href="@routes.Projects.index" id="logo"><span>E-</span>Karo</a>
+	</header>
+
+	<h1>Welcome @institution.name!</h1>
+	<ul>
+
+		@display(user:models.User) = { @user.email (@user.username)}
+		 @for( user <- users) {
+		  @if(user.role.equals('I')){
+		<ol>@display(user)
+		</ol>
+		}
+		}
+	</ul>
 </body>
 </html>
 

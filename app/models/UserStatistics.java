@@ -18,6 +18,9 @@ public class UserStatistics extends Model {
 	@Column(name = "lastlogin")
 	public Timestamp lastLogin;
 
+	public String status;
+	public Timestamp lastlogout;
+
 	public static Model.Finder<String, UserStatistics> find = new Model.Finder<String, UserStatistics>(
 			String.class, UserStatistics.class);
 
@@ -28,8 +31,22 @@ public class UserStatistics extends Model {
 			userStats.username = username;
 		}
 		userStats.lastLogin = new Timestamp(new Date().getTime());
+		userStats.status = "Logged In";
 		System.out.println("Saving login date for " + userStats.username
 				+ " as " + userStats.lastLogin);
+		userStats.save();
+	}
+
+	public static void recordLogout(String username) {
+		UserStatistics userStats = UserStatistics.find.byId(username);
+		if (userStats == null) {
+			userStats = new UserStatistics();
+			userStats.username = username;
+		}
+		userStats.lastlogout = new Timestamp(new Date().getTime());
+		userStats.status = "Logged out";
+		System.out.println("Saving logout date for " + userStats.username
+				+ " as " + userStats.lastlogout);
 		userStats.save();
 	}
 

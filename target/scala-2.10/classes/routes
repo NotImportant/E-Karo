@@ -9,14 +9,17 @@ GET     /                                   controllers.Projects.index()
 GET     /login                              controllers.Application.login()
 POST    /login                              controllers.Application.authenticate()
 
-GET     /changePassword                              controllers.Application.changePassword()
-POST    /changePassword                              controllers.Application.authenticateChangePassword()
+GET     /changePassword                              controllers.Application.changePassword(username: String)
+POST    /changePassword                              controllers.Application.authenticateChangePassword(username: String)
+
+GET     /users                              controllers.Application.users()
+GET     /othermain                              controllers.Application.othermain()
 
 GET     /signup                             controllers.Application.signup()
 POST    /signup                             controllers.Application.authenticateSignUp()
 GET     /moreinfo                             controllers.Application.moreinfo(username: String)
 POST    /moreinfo                             controllers.Application.moreInformation(username: String)
-GET     /logout                             controllers.Application.logout()
+GET     /logout                             controllers.Application.logout(username: String)
 
 # Projects
 POST    /projects                           controllers.Projects.add()

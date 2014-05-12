@@ -1,5 +1,6 @@
 package models;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -14,8 +15,10 @@ public class Person extends Model {
 	@Constraints.Required
 	public int id;
 	@Constraints.Required
+	@Column(name = "firstname")
 	public String firstName;
 	@Constraints.Required
+	@Column(name = "lastname")
 	public String lastName;
 	public String gender;
 }

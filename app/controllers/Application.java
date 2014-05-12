@@ -1,6 +1,7 @@
 package controllers;
 
 import static play.data.Form.form;
+import models.DateConstants;
 import models.Guardian;
 import models.Institution;
 import models.Student;
@@ -48,6 +49,19 @@ public class Application extends Controller {
 			return null;
 		}
 	}
+	public static class StudentRegistration {
+		public String firstName;
+		public String lastName;
+		public int role;
+		public String username;
+		public int classyear;
+		public int guardianid;
+
+		public String validate() {			
+			Student.createAndInsert(username, role, 348, firstName, lastName, classyear);
+			return null;
+		}
+	}
 	public static class ChangePassword {
 		public String username;
 		public String newPassword1;
@@ -84,16 +98,23 @@ public class Application extends Controller {
 	 * more Info page.
 	 */
 	public static Result moreinfo(String username) {
-		if (User.find.where().eq("username", username).findUnique().role == 'G') {
+		char role = User.find.where().eq("username", username).findUnique().role;
+		if (role == 'G') {
 			return ok(moreinfo.render(username, form(models.Guardian.class)));
+		} else if (role == 'S') {
+			return ok(moreStudentInfo.render(username,
+					form(StudentRegistration.class), Institution.find.all()));
 		}
 		session("username", username);
 		return redirect(routes.Projects.index());
 	}
 
 	public static Result users() {
-		return ok(users.render(Institution.find.byId(248), Student.find.where()
-				.eq("institutionId", 248).findList()));
+		return ok(users.render(Institution.find.byId(248), User.find.where().eq("removeDate", DateConstants.INFINITY.businessDate).findList()));
+	}
+
+	public static Result othermain() {
+		return ok(othermain.render(Student.find.all(),User.find.byId(248)));
 	}
 	/**
 	 * Add User info a user.
@@ -108,7 +129,17 @@ public class Application extends Controller {
 			} else {
 				session("firstName", userForm.get().firstName);
 				Guardian.create(userForm.get(), username).save();
-				return redirect(routes.Projects.index());
+				//return redirect(routes.Projects.index());
+			}
+
+		}
+		else if (role == 'S') {
+			Form<StudentRegistration> userForm = form(StudentRegistration.class).bindFromRequest();
+			if (userForm.hasErrors()) {
+				return badRequest(moreStudentInfo.render(username, userForm,Institution.find.all()));
+			} else {
+				session("firstName", userForm.get().firstName);
+				//return redirect(routes.Projects.index());
 			}
 
 		}
@@ -139,24 +170,25 @@ public class Application extends Controller {
 	/**
 	 * Logout and clean the session.
 	 */
-	public static Result logout() {
+	public static Result logout(String username) {
+		UserStatistics.recordLogout(username);
 		session().clear();
 		flash("success", "You've been logged out");
 		return redirect(routes.Application.login());
 	}
 
-	public static Result changePassword() {
-		return ok(changePassword.render(form(ChangePassword.class)));
+	public static Result changePassword(String username) {
+		return ok(changePassword.render(username, form(ChangePassword.class)));
 	}
 
 	/**
 	 * Handle registration form submission.
 	 */
-	public static Result authenticateChangePassword() {
+	public static Result authenticateChangePassword(String username) {
 		Form<ChangePassword> signupform = form(ChangePassword.class)
 				.bindFromRequest();
 		if (signupform.hasErrors()) {
-			return badRequest(changePassword.render(signupform));
+			return badRequest(changePassword.render(username, signupform));
 		} else {
 			session("username", signupform.get().username);
 			return redirect(routes.Projects.index());

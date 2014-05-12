@@ -14,15 +14,15 @@
     <body>
         <header>
             <a href="@routes.Projects.index" id="logo"><span>E-</span>Karo</a>
-           <dl><input id="search"></dl>
+           
             <dl id="user">
                 <dt>@user.username <span>(@user.email)</span></dt>
                 <dd>
-                    <a href="@routes.Application.logout()">Logout</a>
+                    <a href="@routes.Application.logout(user.username)">Logout</a>
                 </dd>
                 
                  <dd>
-                    <a href="@routes.Application.changePassword()">Change Password</a>
+                    <a href="@routes.Application.changePassword(user.username)">Change Password</a>
                 </dd>
             </dl>           
         </header>

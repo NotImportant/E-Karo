@@ -1,0 +1,61 @@
+@(username: String, form: Form[Application.StudentRegistration], institutions: List[Institution])
+
+<html>
+    <head>
+        <title>E-Karo - Sign Up</title>
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+        <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/login.css")">
+    </head>
+    <body>
+        
+        <header>
+            <a href="@routes.Projects.index" id="logo"><span>E-</span>Karo</a>
+        </header>
+        Welcome to E-Karo <h1>@username</h1>!
+        @helper.form(routes.Application.moreInformation(username)) {
+            
+            <h1>More Information</h1>
+            
+            @if(form.hasGlobalErrors) { 
+                <p class="error">
+                    @form.globalError.message
+                </p>
+            }
+            
+            @if(flash.contains("success")) {
+                <p class="success">
+                    @flash.get("success")
+                </p>
+            }
+            <p>
+              User Name  <input type="username" name="username" value="@form("username").value">
+            </p>
+            <p>
+              First Name  <input type="firstName" name="firstName" value="@form("firstName").value">
+            </p>
+            <p>
+              Last Name  <input type="lastName" name="lastName" value="@form("lastName").value">
+            </p>
+            <p>
+             Class Year <input type="classyear" name="classyear">
+            </p> 
+            <p>
+             Institution <select name="role">
+             @for( institution <- institutions) {
+			    <option value=@institution.id>@institution.name</option>
+			  }
+		      </select>
+	</p>
+            </p>
+            <p>
+                <button type="submit">Finish Registration</button>
+            </p>
+                 
+        }
+        
+            
+    </body>
+</html>
+    
+
+
